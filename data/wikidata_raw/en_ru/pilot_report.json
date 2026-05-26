@@ -324,5 +324,262 @@
     },
     "sentence_transformers_backend_name": "_SentenceTransformerBackend",
     "decision": "AMBIGUOUS — revisit with Mike"
+  },
+  "t4_threshold_sweep": {
+    "t4_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.72,
+      0.75,
+      0.78,
+      0.8,
+      0.85,
+      0.9
+    ],
+    "rows": [
+      {
+        "t4_threshold": 0.5,
+        "t3_recall": 0.45066666666666666,
+        "t4_recall": 0.9173333333333333,
+        "combined_recall": 0.928,
+        "t3_marginal_over_t4": 0.010666666666666666,
+        "t4_marginal_over_t3": 0.47733333333333333,
+        "both": 165,
+        "t3_only": 4,
+        "t4_only": 179,
+        "neither": 27
+      },
+      {
+        "t4_threshold": 0.55,
+        "t3_recall": 0.45066666666666666,
+        "t4_recall": 0.8746666666666667,
+        "combined_recall": 0.8933333333333333,
+        "t3_marginal_over_t4": 0.018666666666666668,
+        "t4_marginal_over_t3": 0.44266666666666665,
+        "both": 162,
+        "t3_only": 7,
+        "t4_only": 166,
+        "neither": 40
+      },
+      {
+        "t4_threshold": 0.6,
+        "t3_recall": 0.45066666666666666,
+        "t4_recall": 0.8293333333333334,
+        "combined_recall": 0.8613333333333333,
+        "t3_marginal_over_t4": 0.032,
+        "t4_marginal_over_t3": 0.4106666666666667,
+        "both": 157,
+        "t3_only": 12,
+        "t4_only": 154,
+        "neither": 52
+      },
+      {
+        "t4_threshold": 0.65,
+        "t3_recall": 0.45066666666666666,
+        "t4_recall": 0.7946666666666666,
+        "combined_recall": 0.84,
+        "t3_marginal_over_t4": 0.04533333333333334,
+        "t4_marginal_over_t3": 0.3893333333333333,
+        "both": 152,
+        "t3_only": 17,
+        "t4_only": 146,
+        "neither": 60
+      },
+      {
+        "t4_threshold": 0.7,
+        "t3_recall": 0.45066666666666666,
+        "t4_recall": 0.736,
+        "combined_recall": 0.8053333333333333,
+        "t3_marginal_over_t4": 0.06933333333333333,
+        "t4_marginal_over_t3": 0.3546666666666667,
+        "both": 143,
+        "t3_only": 26,
+        "t4_only": 133,
+        "neither": 73
+      },
+      {
+        "t4_threshold": 0.72,
+        "t3_recall": 0.45066666666666666,
+        "t4_recall": 0.704,
+        "combined_recall": 0.784,
+        "t3_marginal_over_t4": 0.08,
+        "t4_marginal_over_t3": 0.3333333333333333,
+        "both": 139,
+        "t3_only": 30,
+        "t4_only": 125,
+        "neither": 81
+      },
+      {
+        "t4_threshold": 0.75,
+        "t3_recall": 0.45066666666666666,
+        "t4_recall": 0.6666666666666666,
+        "combined_recall": 0.7573333333333333,
+        "t3_marginal_over_t4": 0.09066666666666667,
+        "t4_marginal_over_t3": 0.30666666666666664,
+        "both": 135,
+        "t3_only": 34,
+        "t4_only": 115,
+        "neither": 91
+      },
+      {
+        "t4_threshold": 0.78,
+        "t3_recall": 0.45066666666666666,
+        "t4_recall": 0.616,
+        "combined_recall": 0.7253333333333334,
+        "t3_marginal_over_t4": 0.10933333333333334,
+        "t4_marginal_over_t3": 0.27466666666666667,
+        "both": 128,
+        "t3_only": 41,
+        "t4_only": 103,
+        "neither": 103
+      },
+      {
+        "t4_threshold": 0.8,
+        "t3_recall": 0.45066666666666666,
+        "t4_recall": 0.5893333333333334,
+        "combined_recall": 0.7093333333333334,
+        "t3_marginal_over_t4": 0.12,
+        "t4_marginal_over_t3": 0.25866666666666666,
+        "both": 124,
+        "t3_only": 45,
+        "t4_only": 97,
+        "neither": 109
+      },
+      {
+        "t4_threshold": 0.85,
+        "t3_recall": 0.45066666666666666,
+        "t4_recall": 0.5013333333333333,
+        "combined_recall": 0.6506666666666666,
+        "t3_marginal_over_t4": 0.14933333333333335,
+        "t4_marginal_over_t3": 0.2,
+        "both": 113,
+        "t3_only": 56,
+        "t4_only": 75,
+        "neither": 131
+      },
+      {
+        "t4_threshold": 0.9,
+        "t3_recall": 0.45066666666666666,
+        "t4_recall": 0.41333333333333333,
+        "combined_recall": 0.6026666666666667,
+        "t3_marginal_over_t4": 0.18933333333333333,
+        "t4_marginal_over_t3": 0.152,
+        "both": 98,
+        "t3_only": 71,
+        "t4_only": 57,
+        "neither": 149
+      }
+    ]
+  },
+  "t3_only_inspection": {
+    "n": 34,
+    "by_bucket": {
+      "person": 11,
+      "organization": 4,
+      "city": 10,
+      "country": 2,
+      "film": 4,
+      "work_of_art": 1,
+      "business": 2
+    },
+    "t4_score_min": 0.22550258040428162,
+    "t4_score_median": 0.6590516567230225,
+    "t4_score_max": 0.7475704550743103,
+    "near_threshold": 8,
+    "samples": [
+      {
+        "bucket": "city",
+        "l1": "Cardiff",
+        "l2": "Кардифф",
+        "t4_score": 0.226
+      },
+      {
+        "bucket": "city",
+        "l1": "Malmö",
+        "l2": "Мальмё",
+        "t4_score": 0.316
+      },
+      {
+        "bucket": "city",
+        "l1": "Nanjing",
+        "l2": "Нанкин",
+        "t4_score": 0.36
+      },
+      {
+        "bucket": "city",
+        "l1": "Bad Salzuflen",
+        "l2": "Бад-Зальцуфлен",
+        "t4_score": 0.364
+      },
+      {
+        "bucket": "person",
+        "l1": "Aybar Zhaksylykov",
+        "l2": "Айбар Болатулы Жаксылыков",
+        "t4_score": 0.503
+      },
+      {
+        "bucket": "film",
+        "l1": "Godzilla",
+        "l2": "Годзилла",
+        "t4_score": 0.536
+      },
+      {
+        "bucket": "person",
+        "l1": "Levi Roach",
+        "l2": "Леви Роуч",
+        "t4_score": 0.539
+      },
+      {
+        "bucket": "country",
+        "l1": "Dominica",
+        "l2": "Доминика",
+        "t4_score": 0.568
+      },
+      {
+        "bucket": "business",
+        "l1": "TogliattiAzot",
+        "l2": "Тольяттиазот",
+        "t4_score": 0.578
+      },
+      {
+        "bucket": "person",
+        "l1": "Seth Jarvis",
+        "l2": "Сет Джарвис",
+        "t4_score": 0.581
+      },
+      {
+        "bucket": "country",
+        "l1": "Sint Maarten",
+        "l2": "Синт-Мартен",
+        "t4_score": 0.582
+      },
+      {
+        "bucket": "film",
+        "l1": "Alligator II: The Mutation",
+        "l2": "Аллигатор 2: Мутация",
+        "t4_score": 0.583
+      },
+      {
+        "bucket": "city",
+        "l1": "Mogadishu",
+        "l2": "Могадишо",
+        "t4_score": 0.607
+      },
+      {
+        "bucket": "business",
+        "l1": "Kamaz",
+        "l2": "КАМАЗ",
+        "t4_score": 0.612
+      },
+      {
+        "bucket": "city",
+        "l1": "Glasgow",
+        "l2": "Глазго",
+        "t4_score": 0.626
+      }
+    ]
   }
 }
