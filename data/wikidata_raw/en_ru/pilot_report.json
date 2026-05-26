@@ -1,0 +1,128 @@
+{
+  "n_pairs": 375,
+  "t3_recall": 0.384,
+  "t4_recall": 0.14133333333333334,
+  "t3_marginal_over_t4": 0.25066666666666665,
+  "t4_marginal_over_t3": 0.008,
+  "both": 50,
+  "neither": 228,
+  "t3_only": 94,
+  "t4_only": 3,
+  "per_bucket": {
+    "person": {
+      "n": 50,
+      "t3_only": 5,
+      "t4_only": 0,
+      "both": 0,
+      "neither": 45
+    },
+    "organization": {
+      "n": 50,
+      "t3_only": 12,
+      "t4_only": 0,
+      "both": 11,
+      "neither": 27
+    },
+    "city": {
+      "n": 50,
+      "t3_only": 30,
+      "t4_only": 0,
+      "both": 0,
+      "neither": 20
+    },
+    "country": {
+      "n": 50,
+      "t3_only": 23,
+      "t4_only": 0,
+      "both": 0,
+      "neither": 27
+    },
+    "film": {
+      "n": 50,
+      "t3_only": 7,
+      "t4_only": 0,
+      "both": 0,
+      "neither": 43
+    },
+    "book": {
+      "n": 26,
+      "t3_only": 1,
+      "t4_only": 2,
+      "both": 2,
+      "neither": 21
+    },
+    "chemical": {
+      "n": 3,
+      "t3_only": 1,
+      "t4_only": 0,
+      "both": 0,
+      "neither": 2
+    },
+    "work_of_art": {
+      "n": 46,
+      "t3_only": 5,
+      "t4_only": 0,
+      "both": 2,
+      "neither": 39
+    },
+    "business": {
+      "n": 50,
+      "t3_only": 10,
+      "t4_only": 1,
+      "both": 35,
+      "neither": 4
+    }
+  },
+  "sample_misses": [
+    {
+      "l1": "Liz Stephen",
+      "l2": "Стивен, Элизабет",
+      "bucket": "person"
+    },
+    {
+      "l1": "Alfred Ter-Mkrtchyan",
+      "l2": "Тер-Мкртчян, Альфред Айрапетович",
+      "bucket": "person"
+    },
+    {
+      "l1": "Tiraios I",
+      "l2": "Тирей I",
+      "bucket": "person"
+    },
+    {
+      "l1": "Fred (footballer, born 1979)",
+      "l2": "Фред (футболист, 1979)",
+      "bucket": "person"
+    },
+    {
+      "l1": "Ragnhild Gløersen Haga",
+      "l2": "Хага, Рагниль",
+      "bucket": "person"
+    },
+    {
+      "l1": "Kaspar von Stieler",
+      "l2": "Штилер, Каспар фон",
+      "bucket": "person"
+    },
+    {
+      "l1": "Amadou Traoré",
+      "l2": "Траоре, Амаду",
+      "bucket": "person"
+    },
+    {
+      "l1": "Buddy Greco",
+      "l2": "Греко, Бадди",
+      "bucket": "person"
+    },
+    {
+      "l1": "Zsuzsa Ferge",
+      "l2": "Ферге, Жужа",
+      "bucket": "person"
+    },
+    {
+      "l1": "János Ferenczi",
+      "l2": "Ференци, Янош",
+      "bucket": "person"
+    }
+  ]
+}

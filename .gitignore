@@ -19,3 +19,6 @@ venv/
 .DS_Store
 /tmp/
 *.log
+
+# Wikidata raw extracts — large, regenerable, per-machine
+/data/wikidata_raw/*/sitelinks.jsonl
