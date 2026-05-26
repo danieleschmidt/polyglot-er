@@ -26,6 +26,7 @@ from pathlib import Path
 from polyglot_er.datasets.wikidata import TYPE_BUCKETS, WikidataLoader
 from polyglot_er.matchers.embedding import EmbeddingMatcher
 from polyglot_er.matchers.phonetic import PhoneticMatcher
+from polyglot_er.normalization.title_format import normalize_wiki_title
 
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -46,10 +47,15 @@ def extract_pairs(cache_root: Path, n_per_type: int = 50) -> Path:
     return out
 
 
-def evaluate(pairs_path: Path) -> dict:
-    """Run T3 and T4 standalone against each pair; bucket the outcomes."""
+def evaluate(pairs_path: Path, normalize: bool = True) -> dict:
+    """Run T3 and T4 standalone against each pair; bucket the outcomes.
+
+    When ``normalize`` is True, applies ``normalize_wiki_title`` to both
+    titles before matching. This is the preprocessing under test in the
+    second pilot pass (cf. ``compare_normalize.py``).
+    """
     pairs = [json.loads(line) for line in pairs_path.read_text(encoding="utf-8").splitlines()]
-    logger.info("Evaluating %d pairs", len(pairs))
+    logger.info("Evaluating %d pairs (normalize=%s)", len(pairs), normalize)
 
     t3 = PhoneticMatcher(threshold=TIER3_THRESHOLD)
     t4 = EmbeddingMatcher(threshold=TIER4_THRESHOLD, force_tfidf=True)
@@ -60,9 +66,12 @@ def evaluate(pairs_path: Path) -> dict:
     sample_misses: list[dict] = []
 
     for pair in pairs:
-        l1 = pair["l1_title"]
-        l2 = pair["l2_title"]
+        l1_raw = pair["l1_title"]
+        l2_raw = pair["l2_title"]
         bucket = pair["bucket"]
+
+        l1 = normalize_wiki_title(l1_raw, "en") if normalize else l1_raw
+        l2 = normalize_wiki_title(l2_raw, "ru") if normalize else l2_raw
 
         t3_match = t3.match(l1, l2, lang_a="en", lang_b="ru").is_match
         t4_match = t4.match(l1, l2, lang_a="en", lang_b="ru").is_match
@@ -71,7 +80,15 @@ def evaluate(pairs_path: Path) -> dict:
         per_bucket.setdefault(bucket, Counter())[(t3_match, t4_match)] += 1
 
         if not t3_match and not t4_match and len(sample_misses) < 10:
-            sample_misses.append({"l1": l1, "l2": l2, "bucket": bucket})
+            sample_misses.append(
+                {
+                    "l1": l1,
+                    "l2": l2,
+                    "l1_raw": l1_raw,
+                    "l2_raw": l2_raw,
+                    "bucket": bucket,
+                }
+            )
 
     n = sum(outcomes.values())
     t3_only = outcomes[(True, False)]
@@ -111,39 +128,77 @@ def decision(t3_marginal: float) -> str:
     return "AMBIGUOUS — revisit with Mike before Stage 2"
 
 
-def main() -> None:
-    cache_root = Path("data/wikidata_raw")
-    pairs_path = extract_pairs(cache_root, n_per_type=50)
-    results = evaluate(pairs_path)
-
-    print()
-    print("=" * 72)
-    print(f"en↔ru pilot — n = {results['n_pairs']} pairs")
-    print("=" * 72)
+def _print_block(label: str, results: dict) -> None:
+    print(f"--- {label} ---")
     print(f"  T3 recall (phonetic alone):       {results['t3_recall']:.1%}")
     print(f"  T4 recall (embedding alone):      {results['t4_recall']:.1%}")
     print(f"  T3 marginal over T4 (key metric): {results['t3_marginal_over_t4']:.1%}")
     print(f"  T4 marginal over T3:              {results['t4_marginal_over_t3']:.1%}")
     print(f"  Both T3 and T4 match:             {results['both']}")
     print(f"  Neither matches:                  {results['neither']}")
+
+
+def main() -> None:
+    cache_root = Path("data/wikidata_raw")
+    pairs_path = extract_pairs(cache_root, n_per_type=50)
+
+    baseline = evaluate(pairs_path, normalize=False)
+    normalized = evaluate(pairs_path, normalize=True)
+
     print()
-    print("Per-type-bucket breakdown:")
+    print("=" * 72)
+    print(f"en↔ru pilot — n = {baseline['n_pairs']} pairs")
+    print("=" * 72)
+    _print_block("BASELINE (no title-format normalization)", baseline)
+    print()
+    _print_block("NORMALIZED (strip parens + swap Last,First)", normalized)
+    print()
+    print("Deltas (normalized - baseline):")
+    print(
+        f"  T3 recall:          {normalized['t3_recall'] - baseline['t3_recall']:+.1%}"
+    )
+    print(
+        f"  T4 recall:          {normalized['t4_recall'] - baseline['t4_recall']:+.1%}"
+    )
+    print(
+        f"  T3 marginal over T4:{normalized['t3_marginal_over_t4'] - baseline['t3_marginal_over_t4']:+.1%}"
+    )
+    print(
+        f"  Pairs newly matched:{baseline['neither'] - normalized['neither']:+d}"
+    )
+    print()
+    print("Per-bucket (normalized run):")
     print(f"  {'bucket':<14} {'n':>5} {'t3+t4':>6} {'t3only':>7} {'t4only':>7} {'miss':>5}")
-    for bucket, c in results["per_bucket"].items():
+    for bucket, c in normalized["per_bucket"].items():
         print(
             f"  {bucket:<14} {c['n']:>5} {c['both']:>6} {c['t3_only']:>7} {c['t4_only']:>7} {c['neither']:>5}"
         )
     print()
-    print("Sample missed pairs (both T3 and T4 miss):")
-    for m in results["sample_misses"]:
-        print(f"  [{m['bucket']:<14}] {m['l1']!r}  <-->  {m['l2']!r}")
+    print("Sample remaining misses (normalized run):")
+    for m in normalized["sample_misses"]:
+        print(
+            f"  [{m['bucket']:<14}] {m['l1']!r}  <-->  {m['l2']!r}"
+            + (f"   (raw L2: {m['l2_raw']!r})" if m["l2_raw"] != m["l2"] else "")
+        )
     print()
-    print(f"DECISION: {decision(results['t3_marginal_over_t4'])}")
+    print(f"DECISION (T3 marginal {normalized['t3_marginal_over_t4']:.1%}): {decision(normalized['t3_marginal_over_t4'])}")
     print("=" * 72)
 
-    # Persist for the §7 write-up.
+    # Persist both passes for the §7 write-up.
+    report = {
+        "baseline": baseline,
+        "normalized": normalized,
+        "deltas": {
+            "t3_recall": normalized["t3_recall"] - baseline["t3_recall"],
+            "t4_recall": normalized["t4_recall"] - baseline["t4_recall"],
+            "t3_marginal_over_t4": (
+                normalized["t3_marginal_over_t4"] - baseline["t3_marginal_over_t4"]
+            ),
+            "pairs_newly_matched": baseline["neither"] - normalized["neither"],
+        },
+    }
     report_path = pairs_path.parent / "pilot_report.json"
-    report_path.write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8")
+    report_path.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
     logger.info("Wrote report to %s", report_path)
 
 

@@ -1,128 +1,304 @@
 {
-  "n_pairs": 375,
-  "t3_recall": 0.384,
-  "t4_recall": 0.14133333333333334,
-  "t3_marginal_over_t4": 0.25066666666666665,
-  "t4_marginal_over_t3": 0.008,
-  "both": 50,
-  "neither": 228,
-  "t3_only": 94,
-  "t4_only": 3,
-  "per_bucket": {
-    "person": {
-      "n": 50,
-      "t3_only": 5,
-      "t4_only": 0,
-      "both": 0,
-      "neither": 45
+  "baseline": {
+    "n_pairs": 375,
+    "t3_recall": 0.4,
+    "t4_recall": 0.144,
+    "t3_marginal_over_t4": 0.2613333333333333,
+    "t4_marginal_over_t3": 0.005333333333333333,
+    "both": 52,
+    "neither": 223,
+    "t3_only": 98,
+    "t4_only": 2,
+    "per_bucket": {
+      "person": {
+        "n": 50,
+        "t3_only": 4,
+        "t4_only": 0,
+        "both": 0,
+        "neither": 46
+      },
+      "organization": {
+        "n": 50,
+        "t3_only": 10,
+        "t4_only": 0,
+        "both": 11,
+        "neither": 29
+      },
+      "city": {
+        "n": 50,
+        "t3_only": 33,
+        "t4_only": 0,
+        "both": 0,
+        "neither": 17
+      },
+      "country": {
+        "n": 50,
+        "t3_only": 24,
+        "t4_only": 0,
+        "both": 0,
+        "neither": 26
+      },
+      "film": {
+        "n": 50,
+        "t3_only": 9,
+        "t4_only": 0,
+        "both": 0,
+        "neither": 41
+      },
+      "book": {
+        "n": 26,
+        "t3_only": 1,
+        "t4_only": 2,
+        "both": 2,
+        "neither": 21
+      },
+      "chemical": {
+        "n": 3,
+        "t3_only": 1,
+        "t4_only": 0,
+        "both": 0,
+        "neither": 2
+      },
+      "work_of_art": {
+        "n": 46,
+        "t3_only": 5,
+        "t4_only": 0,
+        "both": 2,
+        "neither": 39
+      },
+      "business": {
+        "n": 50,
+        "t3_only": 11,
+        "t4_only": 0,
+        "both": 37,
+        "neither": 2
+      }
     },
-    "organization": {
-      "n": 50,
-      "t3_only": 12,
-      "t4_only": 0,
-      "both": 11,
-      "neither": 27
-    },
-    "city": {
-      "n": 50,
-      "t3_only": 30,
-      "t4_only": 0,
-      "both": 0,
-      "neither": 20
-    },
-    "country": {
-      "n": 50,
-      "t3_only": 23,
-      "t4_only": 0,
-      "both": 0,
-      "neither": 27
-    },
-    "film": {
-      "n": 50,
-      "t3_only": 7,
-      "t4_only": 0,
-      "both": 0,
-      "neither": 43
-    },
-    "book": {
-      "n": 26,
-      "t3_only": 1,
-      "t4_only": 2,
-      "both": 2,
-      "neither": 21
-    },
-    "chemical": {
-      "n": 3,
-      "t3_only": 1,
-      "t4_only": 0,
-      "both": 0,
-      "neither": 2
-    },
-    "work_of_art": {
-      "n": 46,
-      "t3_only": 5,
-      "t4_only": 0,
-      "both": 2,
-      "neither": 39
-    },
-    "business": {
-      "n": 50,
-      "t3_only": 10,
-      "t4_only": 1,
-      "both": 35,
-      "neither": 4
-    }
+    "sample_misses": [
+      {
+        "l1": "Sekhemrekhutawy Khabaw",
+        "l2": "Сехемра Хуитауи",
+        "l1_raw": "Sekhemrekhutawy Khabaw",
+        "l2_raw": "Сехемра Хуитауи",
+        "bucket": "person"
+      },
+      {
+        "l1": "Sergei Strunnikov",
+        "l2": "Струнников, Сергей Николаевич",
+        "l1_raw": "Sergei Strunnikov",
+        "l2_raw": "Струнников, Сергей Николаевич",
+        "bucket": "person"
+      },
+      {
+        "l1": "Fiatau Penitala Teo",
+        "l2": "Тео, Фиатау Пенитала",
+        "l1_raw": "Fiatau Penitala Teo",
+        "l2_raw": "Тео, Фиатау Пенитала",
+        "bucket": "person"
+      },
+      {
+        "l1": "Sándor Festetics",
+        "l2": "Фештетич, Шандор",
+        "l1_raw": "Sándor Festetics",
+        "l2_raw": "Фештетич, Шандор",
+        "bucket": "person"
+      },
+      {
+        "l1": "Olga Fialka",
+        "l2": "Фиалка, Ольга",
+        "l1_raw": "Olga Fialka",
+        "l2_raw": "Фиалка, Ольга",
+        "bucket": "person"
+      },
+      {
+        "l1": "Buddy Ebsen",
+        "l2": "Эбсен, Бадди",
+        "l1_raw": "Buddy Ebsen",
+        "l2_raw": "Эбсен, Бадди",
+        "bucket": "person"
+      },
+      {
+        "l1": "Thomas Montagu, 4th Earl of Salisbury",
+        "l2": "Монтегю, Томас, 4-й граф Солсбери",
+        "l1_raw": "Thomas Montagu, 4th Earl of Salisbury",
+        "l2_raw": "Монтегю, Томас, 4-й граф Солсбери",
+        "bucket": "person"
+      },
+      {
+        "l1": "Jiajing Emperor",
+        "l2": "Цзяцзин",
+        "l1_raw": "Jiajing Emperor",
+        "l2_raw": "Цзяцзин",
+        "bucket": "person"
+      },
+      {
+        "l1": "Zhengde Emperor",
+        "l2": "Чжэндэ",
+        "l1_raw": "Zhengde Emperor",
+        "l2_raw": "Чжэндэ",
+        "bucket": "person"
+      },
+      {
+        "l1": "László Sillai",
+        "l2": "Шиллаи, Ласло",
+        "l1_raw": "László Sillai",
+        "l2_raw": "Шиллаи, Ласло",
+        "bucket": "person"
+      }
+    ]
   },
-  "sample_misses": [
-    {
-      "l1": "Liz Stephen",
-      "l2": "Стивен, Элизабет",
-      "bucket": "person"
+  "normalized": {
+    "n_pairs": 375,
+    "t3_recall": 0.45066666666666666,
+    "t4_recall": 0.16,
+    "t3_marginal_over_t4": 0.296,
+    "t4_marginal_over_t3": 0.005333333333333333,
+    "both": 58,
+    "neither": 204,
+    "t3_only": 111,
+    "t4_only": 2,
+    "per_bucket": {
+      "person": {
+        "n": 50,
+        "t3_only": 26,
+        "t4_only": 0,
+        "both": 0,
+        "neither": 24
+      },
+      "organization": {
+        "n": 50,
+        "t3_only": 10,
+        "t4_only": 0,
+        "both": 13,
+        "neither": 27
+      },
+      "city": {
+        "n": 50,
+        "t3_only": 28,
+        "t4_only": 0,
+        "both": 0,
+        "neither": 22
+      },
+      "country": {
+        "n": 50,
+        "t3_only": 24,
+        "t4_only": 0,
+        "both": 0,
+        "neither": 26
+      },
+      "film": {
+        "n": 50,
+        "t3_only": 9,
+        "t4_only": 0,
+        "both": 0,
+        "neither": 41
+      },
+      "book": {
+        "n": 26,
+        "t3_only": 1,
+        "t4_only": 2,
+        "both": 2,
+        "neither": 21
+      },
+      "chemical": {
+        "n": 3,
+        "t3_only": 1,
+        "t4_only": 0,
+        "both": 0,
+        "neither": 2
+      },
+      "work_of_art": {
+        "n": 46,
+        "t3_only": 4,
+        "t4_only": 0,
+        "both": 3,
+        "neither": 39
+      },
+      "business": {
+        "n": 50,
+        "t3_only": 8,
+        "t4_only": 0,
+        "both": 40,
+        "neither": 2
+      }
     },
-    {
-      "l1": "Alfred Ter-Mkrtchyan",
-      "l2": "Тер-Мкртчян, Альфред Айрапетович",
-      "bucket": "person"
-    },
-    {
-      "l1": "Tiraios I",
-      "l2": "Тирей I",
-      "bucket": "person"
-    },
-    {
-      "l1": "Fred (footballer, born 1979)",
-      "l2": "Фред (футболист, 1979)",
-      "bucket": "person"
-    },
-    {
-      "l1": "Ragnhild Gløersen Haga",
-      "l2": "Хага, Рагниль",
-      "bucket": "person"
-    },
-    {
-      "l1": "Kaspar von Stieler",
-      "l2": "Штилер, Каспар фон",
-      "bucket": "person"
-    },
-    {
-      "l1": "Amadou Traoré",
-      "l2": "Траоре, Амаду",
-      "bucket": "person"
-    },
-    {
-      "l1": "Buddy Greco",
-      "l2": "Греко, Бадди",
-      "bucket": "person"
-    },
-    {
-      "l1": "Zsuzsa Ferge",
-      "l2": "Ферге, Жужа",
-      "bucket": "person"
-    },
-    {
-      "l1": "János Ferenczi",
-      "l2": "Ференци, Янош",
-      "bucket": "person"
-    }
-  ]
+    "sample_misses": [
+      {
+        "l1": "Sekhemrekhutawy Khabaw",
+        "l2": "Сехемра Хуитауи",
+        "l1_raw": "Sekhemrekhutawy Khabaw",
+        "l2_raw": "Сехемра Хуитауи",
+        "bucket": "person"
+      },
+      {
+        "l1": "Sergei Strunnikov",
+        "l2": "Сергей Николаевич Струнников",
+        "l1_raw": "Sergei Strunnikov",
+        "l2_raw": "Струнников, Сергей Николаевич",
+        "bucket": "person"
+      },
+      {
+        "l1": "Thomas Montagu, 4th Earl of Salisbury",
+        "l2": "Томас, 4-й граф Солсбери Монтегю",
+        "l1_raw": "Thomas Montagu, 4th Earl of Salisbury",
+        "l2_raw": "Монтегю, Томас, 4-й граф Солсбери",
+        "bucket": "person"
+      },
+      {
+        "l1": "Jiajing Emperor",
+        "l2": "Цзяцзин",
+        "l1_raw": "Jiajing Emperor",
+        "l2_raw": "Цзяцзин",
+        "bucket": "person"
+      },
+      {
+        "l1": "Zhengde Emperor",
+        "l2": "Чжэндэ",
+        "l1_raw": "Zhengde Emperor",
+        "l2_raw": "Чжэндэ",
+        "bucket": "person"
+      },
+      {
+        "l1": "Ihor Brusylo",
+        "l2": "Игорь Николаевич Брусило",
+        "l1_raw": "Ihor Brusylo",
+        "l2_raw": "Брусило, Игорь Николаевич",
+        "bucket": "person"
+      },
+      {
+        "l1": "Alexander Ionov",
+        "l2": "Александр Викторович Ионов",
+        "l1_raw": "Alexander Ionov",
+        "l2_raw": "Ионов, Александр Викторович",
+        "bucket": "person"
+      },
+      {
+        "l1": "Bolko II of Ziębice",
+        "l2": "Болеслав II Зембицкий",
+        "l1_raw": "Bolko II of Ziębice",
+        "l2_raw": "Болеслав II Зембицкий",
+        "bucket": "person"
+      },
+      {
+        "l1": "James of Baux",
+        "l2": "Жак де Бо",
+        "l1_raw": "James of Baux",
+        "l2_raw": "Жак де Бо",
+        "bucket": "person"
+      },
+      {
+        "l1": "Frederick III of Legnica",
+        "l2": "Фридрих III Легницкий",
+        "l1_raw": "Frederick III of Legnica",
+        "l2_raw": "Фридрих III Легницкий",
+        "bucket": "person"
+      }
+    ]
+  },
+  "deltas": {
+    "t3_recall": 0.05066666666666664,
+    "t4_recall": 0.016000000000000014,
+    "t3_marginal_over_t4": 0.03466666666666668,
+    "pairs_newly_matched": 19
+  }
 }
