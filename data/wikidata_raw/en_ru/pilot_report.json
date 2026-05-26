@@ -300,5 +300,29 @@
     "t4_recall": 0.016000000000000014,
     "t3_marginal_over_t4": 0.03466666666666668,
     "pairs_newly_matched": 19
+  },
+  "t4_backend_comparison": {
+    "tfidf": {
+      "n_pairs": 375,
+      "t3_recall": 0.45066666666666666,
+      "t4_recall": 0.16,
+      "t3_marginal_over_t4": 0.296,
+      "both": 58,
+      "neither": 204,
+      "t3_only": 111,
+      "t4_only": 2
+    },
+    "sentence_transformers": {
+      "n_pairs": 375,
+      "t3_recall": 0.45066666666666666,
+      "t4_recall": 0.6666666666666666,
+      "t3_marginal_over_t4": 0.09066666666666667,
+      "both": 135,
+      "neither": 91,
+      "t3_only": 34,
+      "t4_only": 115
+    },
+    "sentence_transformers_backend_name": "_SentenceTransformerBackend",
+    "decision": "AMBIGUOUS — revisit with Mike"
   }
 }
