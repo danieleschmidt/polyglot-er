@@ -100,23 +100,28 @@ def test_jsonl_input_output_roundtrip(tmp_path):
     assert cluster_ids  # non-empty
 
 
-def test_wikidata_loader_stub():
-    """WikidataLoader stub documents API without network call."""
-    from polyglot_er.datasets.wikidata import WikidataLoader
+def test_wikidata_loader_smoke():
+    """WikidataLoader constructs and exposes the documented public surface.
+
+    Detailed behavior (rate limiting, paging, query construction, response
+    parsing) is covered in tests/test_wikidata.py.
+    """
+    from polyglot_er.datasets.wikidata import (
+        SPARQL_ENDPOINT,
+        TYPE_BUCKETS,
+        WIKIDATA_API,
+        WikidataLoader,
+    )
+
+    assert SPARQL_ENDPOINT.startswith("https://")
+    assert WIKIDATA_API.startswith("https://")
+    assert len(TYPE_BUCKETS) == 10
 
     loader = WikidataLoader()
-    assert loader.WIKIDATA_API.startswith("https://")
-    assert loader.SPARQL_ENDPOINT.startswith("https://")
+    assert callable(loader.extract_sitelink_pairs)
+    assert callable(loader.fetch_labels)
+    assert callable(loader.fetch_by_sparql)
 
-    # fetch_labels raises NotImplementedError (stub)
-    with pytest.raises(NotImplementedError, match="stub"):
-        loader.fetch_labels(["Q7251"])
-
-    # fetch_by_sparql raises NotImplementedError (stub)
-    with pytest.raises(NotImplementedError, match="stub"):
-        loader.fetch_by_sparql("SELECT ?item WHERE { ?item wdt:P31 wd:Q5. } LIMIT 1")
-
-    # example_sparql_persons returns valid string
-    query = WikidataLoader.example_sparql_persons()
+    query = WikidataLoader.build_sitelink_query("en", "ru", "Q5")
     assert "SELECT" in query
-    assert "wikibase:language" in query
+    assert "wd:Q5" in query

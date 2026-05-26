@@ -14,6 +14,7 @@ setup(
     python_requires=">=3.9",
     install_requires=[
         "jellyfish>=0.11.2",
+        "requests>=2.28",
     ],
     extras_require={
         "embeddings": [
@@ -23,6 +24,7 @@ setup(
         "dev": [
             "pytest>=7.0",
             "pytest-cov",
+            "responses>=0.23",
         ],
     },
     entry_points={
