@@ -1,340 +1,13 @@
 {
-  "baseline": {
-    "n_pairs": 375,
-    "t3_recall": 0.4,
-    "t4_recall": 0.144,
-    "t3_marginal_over_t4": 0.2613333333333333,
-    "t4_marginal_over_t3": 0.005333333333333333,
-    "both": 52,
-    "neither": 223,
-    "t3_only": 98,
-    "t4_only": 2,
-    "per_bucket": {
-      "person": {
-        "n": 50,
-        "t3_only": 4,
-        "t4_only": 0,
-        "both": 0,
-        "neither": 46
-      },
-      "organization": {
-        "n": 50,
-        "t3_only": 10,
-        "t4_only": 0,
-        "both": 11,
-        "neither": 29
-      },
-      "city": {
-        "n": 50,
-        "t3_only": 33,
-        "t4_only": 0,
-        "both": 0,
-        "neither": 17
-      },
-      "country": {
-        "n": 50,
-        "t3_only": 24,
-        "t4_only": 0,
-        "both": 0,
-        "neither": 26
-      },
-      "film": {
-        "n": 50,
-        "t3_only": 9,
-        "t4_only": 0,
-        "both": 0,
-        "neither": 41
-      },
-      "book": {
-        "n": 26,
-        "t3_only": 1,
-        "t4_only": 2,
-        "both": 2,
-        "neither": 21
-      },
-      "chemical": {
-        "n": 3,
-        "t3_only": 1,
-        "t4_only": 0,
-        "both": 0,
-        "neither": 2
-      },
-      "work_of_art": {
-        "n": 46,
-        "t3_only": 5,
-        "t4_only": 0,
-        "both": 2,
-        "neither": 39
-      },
-      "business": {
-        "n": 50,
-        "t3_only": 11,
-        "t4_only": 0,
-        "both": 37,
-        "neither": 2
-      }
-    },
-    "sample_misses": [
-      {
-        "l1": "Sekhemrekhutawy Khabaw",
-        "l2": "Сехемра Хуитауи",
-        "l1_raw": "Sekhemrekhutawy Khabaw",
-        "l2_raw": "Сехемра Хуитауи",
-        "bucket": "person"
-      },
-      {
-        "l1": "Sergei Strunnikov",
-        "l2": "Струнников, Сергей Николаевич",
-        "l1_raw": "Sergei Strunnikov",
-        "l2_raw": "Струнников, Сергей Николаевич",
-        "bucket": "person"
-      },
-      {
-        "l1": "Fiatau Penitala Teo",
-        "l2": "Тео, Фиатау Пенитала",
-        "l1_raw": "Fiatau Penitala Teo",
-        "l2_raw": "Тео, Фиатау Пенитала",
-        "bucket": "person"
-      },
-      {
-        "l1": "Sándor Festetics",
-        "l2": "Фештетич, Шандор",
-        "l1_raw": "Sándor Festetics",
-        "l2_raw": "Фештетич, Шандор",
-        "bucket": "person"
-      },
-      {
-        "l1": "Olga Fialka",
-        "l2": "Фиалка, Ольга",
-        "l1_raw": "Olga Fialka",
-        "l2_raw": "Фиалка, Ольга",
-        "bucket": "person"
-      },
-      {
-        "l1": "Buddy Ebsen",
-        "l2": "Эбсен, Бадди",
-        "l1_raw": "Buddy Ebsen",
-        "l2_raw": "Эбсен, Бадди",
-        "bucket": "person"
-      },
-      {
-        "l1": "Thomas Montagu, 4th Earl of Salisbury",
-        "l2": "Монтегю, Томас, 4-й граф Солсбери",
-        "l1_raw": "Thomas Montagu, 4th Earl of Salisbury",
-        "l2_raw": "Монтегю, Томас, 4-й граф Солсбери",
-        "bucket": "person"
-      },
-      {
-        "l1": "Jiajing Emperor",
-        "l2": "Цзяцзин",
-        "l1_raw": "Jiajing Emperor",
-        "l2_raw": "Цзяцзин",
-        "bucket": "person"
-      },
-      {
-        "l1": "Zhengde Emperor",
-        "l2": "Чжэндэ",
-        "l1_raw": "Zhengde Emperor",
-        "l2_raw": "Чжэндэ",
-        "bucket": "person"
-      },
-      {
-        "l1": "László Sillai",
-        "l2": "Шиллаи, Ласло",
-        "l1_raw": "László Sillai",
-        "l2_raw": "Шиллаи, Ласло",
-        "bucket": "person"
-      }
-    ]
-  },
-  "normalized": {
-    "n_pairs": 375,
-    "t3_recall": 0.45066666666666666,
-    "t4_recall": 0.16,
-    "t3_marginal_over_t4": 0.296,
-    "t4_marginal_over_t3": 0.005333333333333333,
-    "both": 58,
-    "neither": 204,
-    "t3_only": 111,
-    "t4_only": 2,
-    "per_bucket": {
-      "person": {
-        "n": 50,
-        "t3_only": 26,
-        "t4_only": 0,
-        "both": 0,
-        "neither": 24
-      },
-      "organization": {
-        "n": 50,
-        "t3_only": 10,
-        "t4_only": 0,
-        "both": 13,
-        "neither": 27
-      },
-      "city": {
-        "n": 50,
-        "t3_only": 28,
-        "t4_only": 0,
-        "both": 0,
-        "neither": 22
-      },
-      "country": {
-        "n": 50,
-        "t3_only": 24,
-        "t4_only": 0,
-        "both": 0,
-        "neither": 26
-      },
-      "film": {
-        "n": 50,
-        "t3_only": 9,
-        "t4_only": 0,
-        "both": 0,
-        "neither": 41
-      },
-      "book": {
-        "n": 26,
-        "t3_only": 1,
-        "t4_only": 2,
-        "both": 2,
-        "neither": 21
-      },
-      "chemical": {
-        "n": 3,
-        "t3_only": 1,
-        "t4_only": 0,
-        "both": 0,
-        "neither": 2
-      },
-      "work_of_art": {
-        "n": 46,
-        "t3_only": 4,
-        "t4_only": 0,
-        "both": 3,
-        "neither": 39
-      },
-      "business": {
-        "n": 50,
-        "t3_only": 8,
-        "t4_only": 0,
-        "both": 40,
-        "neither": 2
-      }
-    },
-    "sample_misses": [
-      {
-        "l1": "Sekhemrekhutawy Khabaw",
-        "l2": "Сехемра Хуитауи",
-        "l1_raw": "Sekhemrekhutawy Khabaw",
-        "l2_raw": "Сехемра Хуитауи",
-        "bucket": "person"
-      },
-      {
-        "l1": "Sergei Strunnikov",
-        "l2": "Сергей Николаевич Струнников",
-        "l1_raw": "Sergei Strunnikov",
-        "l2_raw": "Струнников, Сергей Николаевич",
-        "bucket": "person"
-      },
-      {
-        "l1": "Thomas Montagu, 4th Earl of Salisbury",
-        "l2": "Томас, 4-й граф Солсбери Монтегю",
-        "l1_raw": "Thomas Montagu, 4th Earl of Salisbury",
-        "l2_raw": "Монтегю, Томас, 4-й граф Солсбери",
-        "bucket": "person"
-      },
-      {
-        "l1": "Jiajing Emperor",
-        "l2": "Цзяцзин",
-        "l1_raw": "Jiajing Emperor",
-        "l2_raw": "Цзяцзин",
-        "bucket": "person"
-      },
-      {
-        "l1": "Zhengde Emperor",
-        "l2": "Чжэндэ",
-        "l1_raw": "Zhengde Emperor",
-        "l2_raw": "Чжэндэ",
-        "bucket": "person"
-      },
-      {
-        "l1": "Ihor Brusylo",
-        "l2": "Игорь Николаевич Брусило",
-        "l1_raw": "Ihor Brusylo",
-        "l2_raw": "Брусило, Игорь Николаевич",
-        "bucket": "person"
-      },
-      {
-        "l1": "Alexander Ionov",
-        "l2": "Александр Викторович Ионов",
-        "l1_raw": "Alexander Ionov",
-        "l2_raw": "Ионов, Александр Викторович",
-        "bucket": "person"
-      },
-      {
-        "l1": "Bolko II of Ziębice",
-        "l2": "Болеслав II Зембицкий",
-        "l1_raw": "Bolko II of Ziębice",
-        "l2_raw": "Болеслав II Зембицкий",
-        "bucket": "person"
-      },
-      {
-        "l1": "James of Baux",
-        "l2": "Жак де Бо",
-        "l1_raw": "James of Baux",
-        "l2_raw": "Жак де Бо",
-        "bucket": "person"
-      },
-      {
-        "l1": "Frederick III of Legnica",
-        "l2": "Фридрих III Легницкий",
-        "l1_raw": "Frederick III of Legnica",
-        "l2_raw": "Фридрих III Легницкий",
-        "bucket": "person"
-      }
-    ]
-  },
-  "deltas": {
-    "t3_recall": 0.05066666666666664,
-    "t4_recall": 0.016000000000000014,
-    "t3_marginal_over_t4": 0.03466666666666668,
-    "pairs_newly_matched": 19
-  },
-  "t4_backend_comparison": {
-    "tfidf": {
-      "n_pairs": 375,
-      "t3_recall": 0.45066666666666666,
-      "t4_recall": 0.16,
-      "t3_marginal_over_t4": 0.296,
-      "both": 58,
-      "neither": 204,
-      "t3_only": 111,
-      "t4_only": 2
-    },
-    "sentence_transformers": {
-      "n_pairs": 375,
-      "t3_recall": 0.45066666666666666,
-      "t4_recall": 0.6666666666666666,
-      "t3_marginal_over_t4": 0.09066666666666667,
-      "both": 135,
-      "neither": 91,
-      "t3_only": 34,
-      "t4_only": 115
-    },
-    "sentence_transformers_backend_name": "_SentenceTransformerBackend",
-    "decision": "AMBIGUOUS — revisit with Mike"
-  },
+  "language_pair": "en_ru",
+  "n_pairs": 2786,
   "t4_threshold_sweep": {
     "t4_thresholds": [
       0.5,
-      0.55,
       0.6,
       0.65,
       0.7,
-      0.72,
       0.75,
-      0.78,
       0.8,
       0.85,
       0.9
@@ -342,159 +15,144 @@
     "rows": [
       {
         "t4_threshold": 0.5,
-        "t3_recall": 0.45066666666666666,
-        "t4_recall": 0.9173333333333333,
-        "combined_recall": 0.928,
-        "t3_marginal_over_t4": 0.010666666666666666,
-        "t4_marginal_over_t3": 0.47733333333333333,
-        "both": 165,
-        "t3_only": 4,
-        "t4_only": 179,
-        "neither": 27
-      },
-      {
-        "t4_threshold": 0.55,
-        "t3_recall": 0.45066666666666666,
-        "t4_recall": 0.8746666666666667,
-        "combined_recall": 0.8933333333333333,
-        "t3_marginal_over_t4": 0.018666666666666668,
-        "t4_marginal_over_t3": 0.44266666666666665,
-        "both": 162,
-        "t3_only": 7,
-        "t4_only": 166,
-        "neither": 40
+        "t3_recall": 0.548456568557071,
+        "t4_recall": 0.910624551328069,
+        "combined_recall": 0.9328786791098349,
+        "t3_marginal_over_t4": 0.022254127781765973,
+        "both": 1466,
+        "t3_only": 62,
+        "t4_only": 1071,
+        "neither": 187
       },
       {
         "t4_threshold": 0.6,
-        "t3_recall": 0.45066666666666666,
-        "t4_recall": 0.8293333333333334,
-        "combined_recall": 0.8613333333333333,
-        "t3_marginal_over_t4": 0.032,
-        "t4_marginal_over_t3": 0.4106666666666667,
-        "both": 157,
-        "t3_only": 12,
-        "t4_only": 154,
-        "neither": 52
+        "t3_recall": 0.548456568557071,
+        "t4_recall": 0.8330940416367552,
+        "combined_recall": 0.8844221105527639,
+        "t3_marginal_over_t4": 0.051328068916008614,
+        "both": 1385,
+        "t3_only": 143,
+        "t4_only": 936,
+        "neither": 322
       },
       {
         "t4_threshold": 0.65,
-        "t3_recall": 0.45066666666666666,
-        "t4_recall": 0.7946666666666666,
-        "combined_recall": 0.84,
-        "t3_marginal_over_t4": 0.04533333333333334,
-        "t4_marginal_over_t3": 0.3893333333333333,
-        "both": 152,
-        "t3_only": 17,
-        "t4_only": 146,
-        "neither": 60
+        "t3_recall": 0.548456568557071,
+        "t4_recall": 0.780689160086145,
+        "combined_recall": 0.8571428571428571,
+        "t3_marginal_over_t4": 0.07645369705671214,
+        "both": 1315,
+        "t3_only": 213,
+        "t4_only": 860,
+        "neither": 398
       },
       {
         "t4_threshold": 0.7,
-        "t3_recall": 0.45066666666666666,
-        "t4_recall": 0.736,
-        "combined_recall": 0.8053333333333333,
-        "t3_marginal_over_t4": 0.06933333333333333,
-        "t4_marginal_over_t3": 0.3546666666666667,
-        "both": 143,
-        "t3_only": 26,
-        "t4_only": 133,
-        "neither": 73
-      },
-      {
-        "t4_threshold": 0.72,
-        "t3_recall": 0.45066666666666666,
-        "t4_recall": 0.704,
-        "combined_recall": 0.784,
-        "t3_marginal_over_t4": 0.08,
-        "t4_marginal_over_t3": 0.3333333333333333,
-        "both": 139,
-        "t3_only": 30,
-        "t4_only": 125,
-        "neither": 81
+        "t3_recall": 0.548456568557071,
+        "t4_recall": 0.7275664034458005,
+        "combined_recall": 0.830940416367552,
+        "t3_marginal_over_t4": 0.10337401292175162,
+        "both": 1240,
+        "t3_only": 288,
+        "t4_only": 787,
+        "neither": 471
       },
       {
         "t4_threshold": 0.75,
-        "t3_recall": 0.45066666666666666,
-        "t4_recall": 0.6666666666666666,
-        "combined_recall": 0.7573333333333333,
-        "t3_marginal_over_t4": 0.09066666666666667,
-        "t4_marginal_over_t3": 0.30666666666666664,
-        "both": 135,
-        "t3_only": 34,
-        "t4_only": 115,
-        "neither": 91
-      },
-      {
-        "t4_threshold": 0.78,
-        "t3_recall": 0.45066666666666666,
-        "t4_recall": 0.616,
-        "combined_recall": 0.7253333333333334,
-        "t3_marginal_over_t4": 0.10933333333333334,
-        "t4_marginal_over_t3": 0.27466666666666667,
-        "both": 128,
-        "t3_only": 41,
-        "t4_only": 103,
-        "neither": 103
+        "t3_recall": 0.548456568557071,
+        "t4_recall": 0.6543431442928931,
+        "combined_recall": 0.7939698492462312,
+        "t3_marginal_over_t4": 0.13962670495333812,
+        "both": 1139,
+        "t3_only": 389,
+        "t4_only": 684,
+        "neither": 574
       },
       {
         "t4_threshold": 0.8,
-        "t3_recall": 0.45066666666666666,
-        "t4_recall": 0.5893333333333334,
-        "combined_recall": 0.7093333333333334,
-        "t3_marginal_over_t4": 0.12,
-        "t4_marginal_over_t3": 0.25866666666666666,
-        "both": 124,
-        "t3_only": 45,
-        "t4_only": 97,
-        "neither": 109
+        "t3_recall": 0.548456568557071,
+        "t4_recall": 0.5771715721464465,
+        "combined_recall": 0.7577171572146446,
+        "t3_marginal_over_t4": 0.18054558506819812,
+        "both": 1025,
+        "t3_only": 503,
+        "t4_only": 583,
+        "neither": 675
       },
       {
         "t4_threshold": 0.85,
-        "t3_recall": 0.45066666666666666,
-        "t4_recall": 0.5013333333333333,
-        "combined_recall": 0.6506666666666666,
-        "t3_marginal_over_t4": 0.14933333333333335,
-        "t4_marginal_over_t3": 0.2,
-        "both": 113,
-        "t3_only": 56,
-        "t4_only": 75,
-        "neither": 131
+        "t3_recall": 0.548456568557071,
+        "t4_recall": 0.48707824838478103,
+        "combined_recall": 0.7124910265613783,
+        "t3_marginal_over_t4": 0.22541277817659727,
+        "both": 900,
+        "t3_only": 628,
+        "t4_only": 457,
+        "neither": 801
       },
       {
         "t4_threshold": 0.9,
-        "t3_recall": 0.45066666666666666,
-        "t4_recall": 0.41333333333333333,
-        "combined_recall": 0.6026666666666667,
-        "t3_marginal_over_t4": 0.18933333333333333,
-        "t4_marginal_over_t3": 0.152,
-        "both": 98,
-        "t3_only": 71,
-        "t4_only": 57,
-        "neither": 149
+        "t3_recall": 0.548456568557071,
+        "t4_recall": 0.3973438621679828,
+        "combined_recall": 0.6687006460875807,
+        "t3_marginal_over_t4": 0.271356783919598,
+        "both": 772,
+        "t3_only": 756,
+        "t4_only": 335,
+        "neither": 923
       }
     ]
   },
-  "t3_only_inspection": {
-    "n": 34,
+  "t3_only_inspection_at_default": {
+    "n": 389,
+    "t4_score_min": 0.20758765935897827,
+    "t4_score_median": 0.6350088119506836,
+    "t4_score_max": 0.7493858933448792,
     "by_bucket": {
-      "person": 11,
-      "organization": 4,
-      "city": 10,
-      "country": 2,
-      "film": 4,
+      "person": 145,
+      "organization": 33,
+      "city": 151,
+      "country": 8,
+      "film": 24,
       "work_of_art": 1,
-      "business": 2
+      "business": 27
     },
-    "t4_score_min": 0.22550258040428162,
-    "t4_score_median": 0.6590516567230225,
-    "t4_score_max": 0.7475704550743103,
-    "near_threshold": 8,
     "samples": [
+      {
+        "bucket": "business",
+        "l1": "Pan Am",
+        "l2": "Pan American World Airways",
+        "t4_score": 0.208
+      },
       {
         "bucket": "city",
         "l1": "Cardiff",
         "l2": "Кардифф",
         "t4_score": 0.226
+      },
+      {
+        "bucket": "organization",
+        "l1": "Premonstratensians",
+        "l2": "Премонстранты",
+        "t4_score": 0.231
+      },
+      {
+        "bucket": "city",
+        "l1": "Ptuj",
+        "l2": "Птуй",
+        "t4_score": 0.254
+      },
+      {
+        "bucket": "organization",
+        "l1": "Prost Grand Prix",
+        "l2": "Прост",
+        "t4_score": 0.288
+      },
+      {
+        "bucket": "organization",
+        "l1": "Zastava Automobiles",
+        "l2": "Застава",
+        "t4_score": 0.314
       },
       {
         "bucket": "city",
@@ -503,82 +161,22 @@
         "t4_score": 0.316
       },
       {
-        "bucket": "city",
-        "l1": "Nanjing",
-        "l2": "Нанкин",
-        "t4_score": 0.36
-      },
-      {
-        "bucket": "city",
-        "l1": "Bad Salzuflen",
-        "l2": "Бад-Зальцуфлен",
-        "t4_score": 0.364
-      },
-      {
         "bucket": "person",
-        "l1": "Aybar Zhaksylykov",
-        "l2": "Айбар Болатулы Жаксылыков",
-        "t4_score": 0.503
+        "l1": "Brandon Lake",
+        "l2": "Брэндон Лейк",
+        "t4_score": 0.334
       },
       {
-        "bucket": "film",
-        "l1": "Godzilla",
-        "l2": "Годзилла",
-        "t4_score": 0.536
-      },
-      {
-        "bucket": "person",
-        "l1": "Levi Roach",
-        "l2": "Леви Роуч",
-        "t4_score": 0.539
-      },
-      {
-        "bucket": "country",
-        "l1": "Dominica",
-        "l2": "Доминика",
-        "t4_score": 0.568
-      },
-      {
-        "bucket": "business",
-        "l1": "TogliattiAzot",
-        "l2": "Тольяттиазот",
-        "t4_score": 0.578
-      },
-      {
-        "bucket": "person",
-        "l1": "Seth Jarvis",
-        "l2": "Сет Джарвис",
-        "t4_score": 0.581
-      },
-      {
-        "bucket": "country",
-        "l1": "Sint Maarten",
-        "l2": "Синт-Мартен",
-        "t4_score": 0.582
-      },
-      {
-        "bucket": "film",
-        "l1": "Alligator II: The Mutation",
-        "l2": "Аллигатор 2: Мутация",
-        "t4_score": 0.583
+        "bucket": "organization",
+        "l1": "Voina",
+        "l2": "Война",
+        "t4_score": 0.336
       },
       {
         "bucket": "city",
-        "l1": "Mogadishu",
-        "l2": "Могадишо",
-        "t4_score": 0.607
-      },
-      {
-        "bucket": "business",
-        "l1": "Kamaz",
-        "l2": "КАМАЗ",
-        "t4_score": 0.612
-      },
-      {
-        "bucket": "city",
-        "l1": "Glasgow",
-        "l2": "Глазго",
-        "t4_score": 0.626
+        "l1": "Salerno",
+        "l2": "Салерно",
+        "t4_score": 0.34
       }
     ]
   }

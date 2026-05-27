@@ -1,6 +1,6 @@
 {
   "language_pair": "en_ko",
-  "n_pairs": 338,
+  "n_pairs": 2750,
   "t4_threshold_sweep": {
     "t4_thresholds": [
       0.5,
@@ -15,168 +15,169 @@
     "rows": [
       {
         "t4_threshold": 0.5,
-        "t3_recall": 0.17455621301775148,
-        "t4_recall": 0.6597633136094675,
-        "combined_recall": 0.7011834319526628,
-        "t3_marginal_over_t4": 0.04142011834319527,
-        "both": 45,
-        "t3_only": 14,
-        "t4_only": 178,
-        "neither": 101
+        "t3_recall": 0.3330909090909091,
+        "t4_recall": 0.6298181818181818,
+        "combined_recall": 0.7174545454545455,
+        "t3_marginal_over_t4": 0.08763636363636364,
+        "both": 675,
+        "t3_only": 241,
+        "t4_only": 1057,
+        "neither": 777
       },
       {
         "t4_threshold": 0.6,
-        "t3_recall": 0.17455621301775148,
-        "t4_recall": 0.5177514792899408,
-        "combined_recall": 0.5976331360946746,
-        "t3_marginal_over_t4": 0.07988165680473373,
-        "both": 32,
-        "t3_only": 27,
-        "t4_only": 143,
-        "neither": 136
+        "t3_recall": 0.3330909090909091,
+        "t4_recall": 0.45745454545454545,
+        "combined_recall": 0.6054545454545455,
+        "t3_marginal_over_t4": 0.148,
+        "both": 509,
+        "t3_only": 407,
+        "t4_only": 749,
+        "neither": 1085
       },
       {
         "t4_threshold": 0.65,
-        "t3_recall": 0.17455621301775148,
-        "t4_recall": 0.4319526627218935,
-        "combined_recall": 0.5177514792899408,
-        "t3_marginal_over_t4": 0.08579881656804733,
-        "both": 30,
-        "t3_only": 29,
-        "t4_only": 116,
-        "neither": 163
+        "t3_recall": 0.3330909090909091,
+        "t4_recall": 0.38,
+        "combined_recall": 0.5523636363636364,
+        "t3_marginal_over_t4": 0.17236363636363636,
+        "both": 442,
+        "t3_only": 474,
+        "t4_only": 603,
+        "neither": 1231
       },
       {
         "t4_threshold": 0.7,
-        "t3_recall": 0.17455621301775148,
-        "t4_recall": 0.3668639053254438,
-        "combined_recall": 0.4556213017751479,
-        "t3_marginal_over_t4": 0.08875739644970414,
-        "both": 29,
-        "t3_only": 30,
-        "t4_only": 95,
-        "neither": 184
+        "t3_recall": 0.3330909090909091,
+        "t4_recall": 0.32145454545454544,
+        "combined_recall": 0.5167272727272727,
+        "t3_marginal_over_t4": 0.19527272727272726,
+        "both": 379,
+        "t3_only": 537,
+        "t4_only": 505,
+        "neither": 1329
       },
       {
         "t4_threshold": 0.75,
-        "t3_recall": 0.17455621301775148,
-        "t4_recall": 0.3165680473372781,
-        "combined_recall": 0.4171597633136095,
-        "t3_marginal_over_t4": 0.10059171597633136,
-        "both": 25,
-        "t3_only": 34,
-        "t4_only": 82,
-        "neither": 197
+        "t3_recall": 0.3330909090909091,
+        "t4_recall": 0.26145454545454544,
+        "combined_recall": 0.4789090909090909,
+        "t3_marginal_over_t4": 0.21745454545454546,
+        "both": 318,
+        "t3_only": 598,
+        "t4_only": 401,
+        "neither": 1433
       },
       {
         "t4_threshold": 0.8,
-        "t3_recall": 0.17455621301775148,
-        "t4_recall": 0.26627218934911245,
-        "combined_recall": 0.3727810650887574,
-        "t3_marginal_over_t4": 0.10650887573964497,
-        "both": 23,
-        "t3_only": 36,
-        "t4_only": 67,
-        "neither": 212
+        "t3_recall": 0.3330909090909091,
+        "t4_recall": 0.20436363636363636,
+        "combined_recall": 0.44836363636363635,
+        "t3_marginal_over_t4": 0.244,
+        "both": 245,
+        "t3_only": 671,
+        "t4_only": 317,
+        "neither": 1517
       },
       {
         "t4_threshold": 0.85,
-        "t3_recall": 0.17455621301775148,
-        "t4_recall": 0.21893491124260356,
-        "combined_recall": 0.33136094674556216,
-        "t3_marginal_over_t4": 0.11242603550295859,
-        "both": 21,
-        "t3_only": 38,
-        "t4_only": 53,
-        "neither": 226
+        "t3_recall": 0.3330909090909091,
+        "t4_recall": 0.1549090909090909,
+        "combined_recall": 0.41854545454545455,
+        "t3_marginal_over_t4": 0.2636363636363636,
+        "both": 191,
+        "t3_only": 725,
+        "t4_only": 235,
+        "neither": 1599
       },
       {
         "t4_threshold": 0.9,
-        "t3_recall": 0.17455621301775148,
-        "t4_recall": 0.16568047337278108,
-        "combined_recall": 0.2958579881656805,
-        "t3_marginal_over_t4": 0.1301775147928994,
-        "both": 15,
-        "t3_only": 44,
-        "t4_only": 41,
-        "neither": 238
+        "t3_recall": 0.3330909090909091,
+        "t4_recall": 0.11018181818181819,
+        "combined_recall": 0.38872727272727275,
+        "t3_marginal_over_t4": 0.27854545454545454,
+        "both": 150,
+        "t3_only": 766,
+        "t4_only": 153,
+        "neither": 1681
       }
     ]
   },
   "t3_only_inspection_at_default": {
-    "n": 34,
-    "t4_score_min": 0.34552672505378723,
-    "t4_score_median": 0.5371071100234985,
-    "t4_score_max": 0.7482169270515442,
+    "n": 598,
+    "t4_score_min": 0.13979969918727875,
+    "t4_score_median": 0.5276404619216919,
+    "t4_score_max": 0.7494977712631226,
     "by_bucket": {
-      "person": 12,
-      "organization": 1,
-      "city": 8,
-      "country": 5,
-      "film": 3,
-      "work_of_art": 2,
-      "business": 3
+      "person": 149,
+      "organization": 49,
+      "city": 191,
+      "country": 47,
+      "film": 49,
+      "book": 1,
+      "work_of_art": 3,
+      "business": 109
     },
     "samples": [
       {
-        "bucket": "city",
-        "l1": "Malmö",
-        "l2": "말뫼",
-        "t4_score": 0.346
+        "bucket": "business",
+        "l1": "Auto Union",
+        "l2": "아우토우니온",
+        "t4_score": 0.14
       },
       {
-        "bucket": "work_of_art",
-        "l1": "Sigillum Dei",
-        "l2": "시길룸 데이",
-        "t4_score": 0.353
+        "bucket": "person",
+        "l1": "Melissa Cohen Biden",
+        "l2": "멜리사 코헨 바이든",
+        "t4_score": 0.158
       },
       {
         "bucket": "business",
-        "l1": "Nokia",
-        "l2": "노키아",
-        "t4_score": 0.362
+        "l1": "Panasonic",
+        "l2": "파나소닉 홀딩스",
+        "t4_score": 0.163
       },
       {
-        "bucket": "country",
-        "l1": "Grenada",
-        "l2": "그레나다",
-        "t4_score": 0.411
+        "bucket": "business",
+        "l1": "Rolex",
+        "l2": "롤렉스",
+        "t4_score": 0.187
       },
       {
-        "bucket": "city",
-        "l1": "Belfast",
-        "l2": "벨파스트",
-        "t4_score": 0.413
+        "bucket": "organization",
+        "l1": "Yamaha Corporation",
+        "l2": "야마하",
+        "t4_score": 0.201
       },
       {
-        "bucket": "person",
-        "l1": "Hong Eui-jeong",
-        "l2": "홍의정",
-        "t4_score": 0.422
+        "bucket": "business",
+        "l1": "Aeroméxico",
+        "l2": "아에로멕시코",
+        "t4_score": 0.237
       },
       {
-        "bucket": "person",
-        "l1": "Han Youngsoo",
-        "l2": "한영수",
-        "t4_score": 0.423
-      },
-      {
-        "bucket": "person",
-        "l1": "Ri Son-gwon",
-        "l2": "리선권",
-        "t4_score": 0.43
-      },
-      {
-        "bucket": "city",
-        "l1": "Biella",
-        "l2": "비엘라",
-        "t4_score": 0.436
+        "bucket": "business",
+        "l1": "Mondragon Corporation",
+        "l2": "몬드라곤 협동조합",
+        "t4_score": 0.251
       },
       {
         "bucket": "film",
-        "l1": "Tell No One",
-        "l2": "텔 노 원",
-        "t4_score": 0.439
+        "l1": "Absolute Power",
+        "l2": "앱솔루트 파워",
+        "t4_score": 0.251
+      },
+      {
+        "bucket": "city",
+        "l1": "Huambo",
+        "l2": "우암부",
+        "t4_score": 0.254
+      },
+      {
+        "bucket": "film",
+        "l1": "Chasing Amy",
+        "l2": "체이싱 아미",
+        "t4_score": 0.257
       }
     ]
   }

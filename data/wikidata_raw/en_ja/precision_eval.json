@@ -1,80 +1,80 @@
 {
   "language_pair": "en_ja",
-  "n_positives": 351,
-  "n_negatives": 351,
+  "n_positives": 2761,
+  "n_negatives": 2761,
   "results": {
     "t3": {
-      "TP": 124,
-      "FP": 20,
-      "TN": 331,
-      "FN": 227,
-      "precision": 0.8611111111111112,
-      "recall": 0.35327635327635326,
-      "f1": 0.501010101010101
+      "TP": 968,
+      "FP": 199,
+      "TN": 2562,
+      "FN": 1793,
+      "precision": 0.829477292202228,
+      "recall": 0.350597609561753,
+      "f1": 0.49287169042769857
     },
     "t4": {
-      "TP": 120,
-      "FP": 11,
-      "TN": 340,
-      "FN": 231,
-      "precision": 0.916030534351145,
-      "recall": 0.3418803418803419,
-      "f1": 0.4979253112033195
+      "TP": 851,
+      "FP": 137,
+      "TN": 2624,
+      "FN": 1910,
+      "precision": 0.861336032388664,
+      "recall": 0.3082216588192684,
+      "f1": 0.4539877300613497
     },
     "combined": {
-      "TP": 193,
-      "FP": 29,
-      "TN": 322,
-      "FN": 158,
-      "precision": 0.8693693693693694,
-      "recall": 0.5498575498575499,
-      "f1": 0.6736474694589878
+      "TP": 1458,
+      "FP": 321,
+      "TN": 2440,
+      "FN": 1303,
+      "precision": 0.8195615514333895,
+      "recall": 0.5280695400217312,
+      "f1": 0.6422907488986784
     }
   },
   "negative_sample": [
     {
       "l1_title": "Magnus the Good",
-      "l2_title": "ジーン・スピーグル・ハワード",
+      "l2_title": "マルクス・ヘス",
       "bucket": "person",
       "positive_qid": "Q310999",
-      "negative_qid": "Q5249301",
-      "l1_jw_to_source": 0.6097953216374269,
+      "negative_qid": "Q100244",
+      "l1_jw_to_source": 0.6484848484848484,
       "label": "negative"
     },
     {
       "l1_title": "Vitali Klitschko",
-      "l2_title": "エレーナ・リアシェンコ",
+      "l2_title": "ヴィタリー・ムトコ",
       "bucket": "person",
       "positive_qid": "Q31919",
-      "negative_qid": "Q452674",
-      "l1_jw_to_source": 0.6361111111111111,
+      "negative_qid": "Q1320362",
+      "l1_jw_to_source": 0.8625,
       "label": "negative"
     },
     {
-      "l1_title": "Yamagata Aritomo",
-      "l2_title": "藤原璋子",
+      "l1_title": "Hijikata Toshizō",
+      "l2_title": "木戸孝允",
       "bucket": "person",
-      "positive_qid": "Q297636",
-      "negative_qid": "Q900258",
-      "l1_jw_to_source": 0.6268518518518519,
+      "positive_qid": "Q701182",
+      "negative_qid": "Q696402",
+      "l1_jw_to_source": 0.6797619047619049,
       "label": "negative"
     },
     {
-      "l1_title": "Fujiwara no Morosuke",
-      "l2_title": "藤原顕季",
+      "l1_title": "Yaa Asantewaa",
+      "l2_title": "和山やま",
       "bucket": "person",
-      "positive_qid": "Q325207",
-      "negative_qid": "Q3090620",
-      "l1_jw_to_source": 0.9252777777777778,
+      "positive_qid": "Q467803",
+      "negative_qid": "Q96712427",
+      "l1_jw_to_source": 0.77995337995338,
       "label": "negative"
     },
     {
-      "l1_title": "Emperor Nijō",
-      "l2_title": "宇多天皇",
+      "l1_title": "Lady Nijō",
+      "l2_title": "伊勢 (歌人)",
       "bucket": "person",
-      "positive_qid": "Q440149",
-      "negative_qid": "Q349267",
-      "l1_jw_to_source": 0.8787878787878788,
+      "positive_qid": "Q1981729",
+      "negative_qid": "Q272077",
+      "l1_jw_to_source": 0.836111111111111,
       "label": "negative"
     }
   ]

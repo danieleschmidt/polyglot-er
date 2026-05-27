@@ -1,80 +1,80 @@
 {
   "language_pair": "en_ru",
-  "n_positives": 375,
-  "n_negatives": 375,
+  "n_positives": 2786,
+  "n_negatives": 2786,
   "results": {
     "t3": {
-      "TP": 169,
-      "FP": 8,
-      "TN": 367,
-      "FN": 206,
-      "precision": 0.9548022598870056,
-      "recall": 0.45066666666666666,
-      "f1": 0.6123188405797101
+      "TP": 1528,
+      "FP": 216,
+      "TN": 2570,
+      "FN": 1258,
+      "precision": 0.8761467889908257,
+      "recall": 0.548456568557071,
+      "f1": 0.6746136865342163
     },
     "t4": {
-      "TP": 250,
-      "FP": 18,
-      "TN": 357,
-      "FN": 125,
-      "precision": 0.9328358208955224,
-      "recall": 0.6666666666666666,
-      "f1": 0.7776049766718507
+      "TP": 1823,
+      "FP": 214,
+      "TN": 2572,
+      "FN": 963,
+      "precision": 0.8949435444280806,
+      "recall": 0.6543431442928931,
+      "f1": 0.7559610201119635
     },
     "combined": {
-      "TP": 284,
-      "FP": 24,
-      "TN": 351,
-      "FN": 91,
-      "precision": 0.922077922077922,
-      "recall": 0.7573333333333333,
-      "f1": 0.8316251830161054
+      "TP": 2212,
+      "FP": 374,
+      "TN": 2412,
+      "FN": 574,
+      "precision": 0.8553750966744006,
+      "recall": 0.7939698492462312,
+      "f1": 0.823529411764706
     }
   },
   "negative_sample": [
     {
-      "l1_title": "Sekhemrekhutawy Khabaw",
-      "l2_title": "Яшар, Селим",
+      "l1_title": "Amadou Traoré",
+      "l2_title": "Аарон, Флориан",
       "bucket": "person",
-      "positive_qid": "Q1000926",
-      "negative_qid": "Q21191911",
-      "l1_jw_to_source": 0.6038961038961039,
+      "positive_qid": "Q100031473",
+      "negative_qid": "Q1002095",
+      "l1_jw_to_source": 0.6446886446886446,
       "label": "negative"
     },
     {
-      "l1_title": "Sergei Strunnikov",
-      "l2_title": "Стравинский, Игорь Фёдорович",
+      "l1_title": "Buddy Morrow",
+      "l2_title": "Нокс, Бадди",
       "bucket": "person",
-      "positive_qid": "Q1001202",
-      "negative_qid": "Q7314",
-      "l1_jw_to_source": 0.6183006535947713,
+      "positive_qid": "Q1001285",
+      "negative_qid": "Q1001254",
+      "l1_jw_to_source": 0.8566666666666667,
       "label": "negative"
     },
     {
-      "l1_title": "Fiatau Penitala Teo",
-      "l2_title": "Пати, Самюэль",
+      "l1_title": "Buddy Greco",
+      "l2_title": "Нокс, Бадди",
       "bucket": "person",
-      "positive_qid": "Q1001159",
-      "negative_qid": "Q100451506",
-      "l1_jw_to_source": 0.6327751196172249,
+      "positive_qid": "Q1001203",
+      "negative_qid": "Q1001254",
+      "l1_jw_to_source": 0.8672727272727273,
       "label": "negative"
     },
     {
-      "l1_title": "Sándor Festetics",
-      "l2_title": "Владислав Легницкий",
+      "l1_title": "Liz Stephen",
+      "l2_title": "Пляйтген, Фриц",
       "bucket": "person",
-      "positive_qid": "Q1000957",
-      "negative_qid": "Q558459",
-      "l1_jw_to_source": 0.5482142857142857,
+      "positive_qid": "Q100075",
+      "negative_qid": "Q100925",
+      "l1_jw_to_source": 0.6645021645021645,
       "label": "negative"
     },
     {
-      "l1_title": "Olga Fialka",
-      "l2_title": "Радченко, Елена Викторовна",
+      "l1_title": "Alfred Ter-Mkrtchyan",
+      "l2_title": "Эйтчисон, Хелен",
       "bucket": "person",
-      "positive_qid": "Q1001063",
-      "negative_qid": "Q2025106",
-      "l1_jw_to_source": 0.6484848484848484,
+      "positive_qid": "Q100030",
+      "negative_qid": "Q10115",
+      "l1_jw_to_source": 0.6462962962962963,
       "label": "negative"
     }
   ]

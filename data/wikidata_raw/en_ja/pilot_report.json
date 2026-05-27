@@ -1,6 +1,6 @@
 {
   "language_pair": "en_ja",
-  "n_pairs": 351,
+  "n_pairs": 2761,
   "t4_threshold_sweep": {
     "t4_thresholds": [
       0.5,
@@ -15,111 +15,159 @@
     "rows": [
       {
         "t4_threshold": 0.5,
-        "t3_recall": 0.35327635327635326,
-        "t4_recall": 0.7122507122507122,
-        "combined_recall": 0.7834757834757835,
-        "t3_marginal_over_t4": 0.07122507122507123,
-        "both": 99,
-        "t3_only": 25,
-        "t4_only": 151,
-        "neither": 76
+        "t3_recall": 0.350597609561753,
+        "t4_recall": 0.7069902209344441,
+        "combined_recall": 0.768562115175661,
+        "t3_marginal_over_t4": 0.06157189424121695,
+        "both": 798,
+        "t3_only": 170,
+        "t4_only": 1154,
+        "neither": 639
       },
       {
         "t4_threshold": 0.6,
-        "t3_recall": 0.35327635327635326,
-        "t4_recall": 0.5698005698005698,
-        "combined_recall": 0.6780626780626781,
-        "t3_marginal_over_t4": 0.10826210826210826,
-        "both": 86,
-        "t3_only": 38,
-        "t4_only": 114,
-        "neither": 113
+        "t3_recall": 0.350597609561753,
+        "t4_recall": 0.552698297718218,
+        "combined_recall": 0.6714958348424483,
+        "t3_marginal_over_t4": 0.11879753712423036,
+        "both": 640,
+        "t3_only": 328,
+        "t4_only": 886,
+        "neither": 907
       },
       {
         "t4_threshold": 0.65,
-        "t3_recall": 0.35327635327635326,
-        "t4_recall": 0.50997150997151,
-        "combined_recall": 0.6381766381766382,
-        "t3_marginal_over_t4": 0.1282051282051282,
-        "both": 79,
-        "t3_only": 45,
-        "t4_only": 100,
-        "neither": 127
+        "t3_recall": 0.350597609561753,
+        "t4_recall": 0.46867077145961605,
+        "combined_recall": 0.6207895689967403,
+        "t3_marginal_over_t4": 0.15211879753712423,
+        "both": 548,
+        "t3_only": 420,
+        "t4_only": 746,
+        "neither": 1047
       },
       {
         "t4_threshold": 0.7,
-        "t3_recall": 0.35327635327635326,
-        "t4_recall": 0.41025641025641024,
-        "combined_recall": 0.5811965811965812,
-        "t3_marginal_over_t4": 0.17094017094017094,
-        "both": 64,
-        "t3_only": 60,
-        "t4_only": 80,
-        "neither": 147
+        "t3_recall": 0.350597609561753,
+        "t4_recall": 0.3821079319087287,
+        "combined_recall": 0.5704454907642159,
+        "t3_marginal_over_t4": 0.18833755885548714,
+        "both": 448,
+        "t3_only": 520,
+        "t4_only": 607,
+        "neither": 1186
       },
       {
         "t4_threshold": 0.75,
-        "t3_recall": 0.35327635327635326,
-        "t4_recall": 0.3418803418803419,
-        "combined_recall": 0.5498575498575499,
-        "t3_marginal_over_t4": 0.20797720797720798,
-        "both": 51,
-        "t3_only": 73,
-        "t4_only": 69,
-        "neither": 158
+        "t3_recall": 0.350597609561753,
+        "t4_recall": 0.3082216588192684,
+        "combined_recall": 0.5280695400217312,
+        "t3_marginal_over_t4": 0.21984788120246287,
+        "both": 361,
+        "t3_only": 607,
+        "t4_only": 490,
+        "neither": 1303
       },
       {
         "t4_threshold": 0.8,
-        "t3_recall": 0.35327635327635326,
-        "t4_recall": 0.301994301994302,
-        "combined_recall": 0.5270655270655271,
-        "t3_marginal_over_t4": 0.22507122507122507,
-        "both": 45,
-        "t3_only": 79,
-        "t4_only": 61,
-        "neither": 166
+        "t3_recall": 0.350597609561753,
+        "t4_recall": 0.24049257515392974,
+        "combined_recall": 0.48533140166606303,
+        "t3_marginal_over_t4": 0.2448388265121333,
+        "both": 292,
+        "t3_only": 676,
+        "t4_only": 372,
+        "neither": 1421
       },
       {
         "t4_threshold": 0.85,
-        "t3_recall": 0.35327635327635326,
-        "t4_recall": 0.2564102564102564,
-        "combined_recall": 0.49002849002849,
-        "t3_marginal_over_t4": 0.2336182336182336,
-        "both": 42,
-        "t3_only": 82,
-        "t4_only": 48,
-        "neither": 179
+        "t3_recall": 0.350597609561753,
+        "t4_recall": 0.18435349511046722,
+        "combined_recall": 0.45237232886635276,
+        "t3_marginal_over_t4": 0.26801883375588553,
+        "both": 228,
+        "t3_only": 740,
+        "t4_only": 281,
+        "neither": 1512
       },
       {
         "t4_threshold": 0.9,
-        "t3_recall": 0.35327635327635326,
-        "t4_recall": 0.19943019943019943,
-        "combined_recall": 0.4444444444444444,
-        "t3_marginal_over_t4": 0.245014245014245,
-        "both": 38,
-        "t3_only": 86,
-        "t4_only": 32,
-        "neither": 195
+        "t3_recall": 0.350597609561753,
+        "t4_recall": 0.1343716044911264,
+        "combined_recall": 0.42086200651937705,
+        "t3_marginal_over_t4": 0.28649040202825066,
+        "both": 177,
+        "t3_only": 791,
+        "t4_only": 194,
+        "neither": 1599
       }
     ]
   },
   "t3_only_inspection_at_default": {
-    "n": 73,
-    "t4_score_min": 0.24114957451820374,
-    "t4_score_median": 0.5731133818626404,
-    "t4_score_max": 0.7450300455093384,
+    "n": 607,
+    "t4_score_min": 0.19734220206737518,
+    "t4_score_median": 0.5857526063919067,
+    "t4_score_max": 0.7489970326423645,
     "by_bucket": {
-      "person": 22,
-      "organization": 7,
-      "city": 16,
-      "country": 5,
-      "film": 4,
+      "person": 204,
+      "organization": 46,
+      "city": 183,
+      "country": 32,
+      "film": 32,
       "book": 1,
       "chemical": 1,
       "work_of_art": 4,
-      "business": 13
+      "business": 104
     },
     "samples": [
+      {
+        "bucket": "business",
+        "l1": "Herend Porcelain Manufactory",
+        "l2": "ヘレンド",
+        "t4_score": 0.197
+      },
+      {
+        "bucket": "business",
+        "l1": "Shinsegae",
+        "l2": "新世界百貨店",
+        "t4_score": 0.21
+      },
+      {
+        "bucket": "city",
+        "l1": "Porto-Novo",
+        "l2": "ポルトノボ",
+        "t4_score": 0.211
+      },
+      {
+        "bucket": "person",
+        "l1": "Nijō Michihira",
+        "l2": "二条道平",
+        "t4_score": 0.223
+      },
+      {
+        "bucket": "film",
+        "l1": "Shinsengumi",
+        "l2": "新選組",
+        "t4_score": 0.227
+      },
+      {
+        "bucket": "person",
+        "l1": "Matsukata Masayoshi",
+        "l2": "松方正義",
+        "t4_score": 0.233
+      },
+      {
+        "bucket": "business",
+        "l1": "Adobe Inc.",
+        "l2": "アドビ",
+        "t4_score": 0.237
+      },
+      {
+        "bucket": "person",
+        "l1": "Hijikata Toshizō",
+        "l2": "土方歳三",
+        "t4_score": 0.239
+      },
       {
         "bucket": "organization",
         "l1": "Yamaha Corporation",
@@ -127,58 +175,10 @@
         "t4_score": 0.241
       },
       {
-        "bucket": "person",
-        "l1": "Taira no Kiyomori",
-        "l2": "平清盛",
-        "t4_score": 0.286
-      },
-      {
-        "bucket": "book",
-        "l1": "Kojiki Taishō",
-        "l2": "乞食大将",
-        "t4_score": 0.315
-      },
-      {
-        "bucket": "business",
-        "l1": "Kia",
-        "l2": "起亜",
-        "t4_score": 0.316
-      },
-      {
-        "bucket": "business",
-        "l1": "Gazprom",
-        "l2": "ガスプロム",
-        "t4_score": 0.325
-      },
-      {
-        "bucket": "business",
-        "l1": "Juventus FC",
-        "l2": "ユヴェントスFC",
-        "t4_score": 0.325
-      },
-      {
-        "bucket": "business",
-        "l1": "GE Energy",
-        "l2": "GEエナジー",
-        "t4_score": 0.345
-      },
-      {
-        "bucket": "organization",
-        "l1": "Suez",
-        "l2": "スエズ",
-        "t4_score": 0.352
-      },
-      {
-        "bucket": "business",
-        "l1": "Nokia",
-        "l2": "ノキア",
-        "t4_score": 0.353
-      },
-      {
-        "bucket": "organization",
-        "l1": "Ubisoft",
-        "l2": "ユービーアイソフト",
-        "t4_score": 0.374
+        "bucket": "city",
+        "l1": "Kochi",
+        "l2": "コーチ",
+        "t4_score": 0.249
       }
     ]
   }

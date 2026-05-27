@@ -1,44 +1,44 @@
 {
   "language_pair": "en_ko",
-  "n_positives": 338,
-  "n_negatives": 337,
+  "n_positives": 2750,
+  "n_negatives": 2749,
   "results": {
     "t3": {
-      "TP": 59,
-      "FP": 0,
-      "TN": 337,
-      "FN": 279,
-      "precision": 1.0,
-      "recall": 0.17455621301775148,
-      "f1": 0.29722921914357686
+      "TP": 916,
+      "FP": 124,
+      "TN": 2625,
+      "FN": 1834,
+      "precision": 0.8807692307692307,
+      "recall": 0.3330909090909091,
+      "f1": 0.48337730870712403
     },
     "t4": {
-      "TP": 107,
-      "FP": 10,
-      "TN": 327,
-      "FN": 231,
-      "precision": 0.9145299145299145,
-      "recall": 0.3165680473372781,
-      "f1": 0.4703296703296704
+      "TP": 719,
+      "FP": 152,
+      "TN": 2597,
+      "FN": 2031,
+      "precision": 0.8254879448909299,
+      "recall": 0.26145454545454544,
+      "f1": 0.39712786523059923
     },
     "combined": {
-      "TP": 141,
-      "FP": 10,
-      "TN": 327,
-      "FN": 197,
-      "precision": 0.9337748344370861,
-      "recall": 0.4171597633136095,
-      "f1": 0.5766871165644171
+      "TP": 1317,
+      "FP": 261,
+      "TN": 2488,
+      "FN": 1433,
+      "precision": 0.8346007604562737,
+      "recall": 0.4789090909090909,
+      "f1": 0.6085951940850277
     }
   },
   "negative_sample": [
     {
       "l1_title": "Yulia Lipnitskaya",
-      "l2_title": "비탈리 클리치코",
+      "l2_title": "줄리아 맨쿠소",
       "bucket": "person",
       "positive_qid": "Q4262660",
-      "negative_qid": "Q31919",
-      "l1_jw_to_source": 0.6232298474945533,
+      "negative_qid": "Q10089",
+      "l1_jw_to_source": 0.653657616892911,
       "label": "negative"
     },
     {
@@ -60,21 +60,21 @@
       "label": "negative"
     },
     {
-      "l1_title": "Salomon Bochner",
-      "l2_title": "샤미트 카치루",
+      "l1_title": "Pope Marcellus II",
+      "l2_title": "교황 마르첼로 1세",
       "bucket": "person",
-      "positive_qid": "Q215967",
-      "negative_qid": "Q368407",
-      "l1_jw_to_source": 0.6683760683760683,
+      "positive_qid": "Q101776",
+      "negative_qid": "Q102131",
+      "l1_jw_to_source": 0.9882352941176471,
       "label": "negative"
     },
     {
-      "l1_title": "Anna Vissi",
-      "l2_title": "율리야 리프니츠카야",
+      "l1_title": "Pope Pius VII",
+      "l2_title": "교황 비오 2세",
       "bucket": "person",
-      "positive_qid": "Q229606",
-      "negative_qid": "Q4262660",
-      "l1_jw_to_source": 0.5954248366013072,
+      "positive_qid": "Q124754",
+      "negative_qid": "Q101437",
+      "l1_jw_to_source": 0.9846153846153847,
       "label": "negative"
     }
   ]
