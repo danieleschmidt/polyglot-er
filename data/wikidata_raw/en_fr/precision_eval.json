@@ -1,0 +1,81 @@
+{
+  "language_pair": "en_fr",
+  "n_positives": 388,
+  "n_negatives": 388,
+  "results": {
+    "t3": {
+      "TP": 264,
+      "FP": 10,
+      "TN": 378,
+      "FN": 124,
+      "precision": 0.9635036496350365,
+      "recall": 0.6804123711340206,
+      "f1": 0.797583081570997
+    },
+    "t4": {
+      "TP": 301,
+      "FP": 13,
+      "TN": 375,
+      "FN": 87,
+      "precision": 0.9585987261146497,
+      "recall": 0.7757731958762887,
+      "f1": 0.8575498575498576
+    },
+    "combined": {
+      "TP": 331,
+      "FP": 21,
+      "TN": 367,
+      "FN": 57,
+      "precision": 0.9403409090909091,
+      "recall": 0.8530927835051546,
+      "f1": 0.8945945945945946
+    }
+  },
+  "negative_sample": [
+    {
+      "l1_title": "John Singer Sargent",
+      "l2_title": "Jean II de Legnica",
+      "bucket": "person",
+      "positive_qid": "Q155626",
+      "negative_qid": "Q442604",
+      "l1_jw_to_source": 0.62729044834308,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Princess Birgitta of Sweden",
+      "l2_title": "Christine Goitschel",
+      "bucket": "person",
+      "positive_qid": "Q232695",
+      "negative_qid": "Q272707",
+      "l1_jw_to_source": 0.6565487793557968,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Christine Goitschel",
+      "l2_title": "Birgitte de Suède",
+      "bucket": "person",
+      "positive_qid": "Q272707",
+      "negative_qid": "Q232695",
+      "l1_jw_to_source": 0.6565487793557968,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Élisabeth of France",
+      "l2_title": "Élisabeth II",
+      "bucket": "person",
+      "positive_qid": "Q274709",
+      "negative_qid": "Q9682",
+      "l1_jw_to_source": 0.6959064327485379,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Marcel Lefebvre",
+      "l2_title": "Stephen Adams",
+      "bucket": "person",
+      "positive_qid": "Q312675",
+      "negative_qid": "Q3498494",
+      "l1_jw_to_source": 0.6361111111111111,
+      "label": "negative"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "language_pair": "en_ar",
+  "n_positives": 390,
+  "n_negatives": 389,
+  "results": {
+    "t3": {
+      "TP": 60,
+      "FP": 0,
+      "TN": 389,
+      "FN": 330,
+      "precision": 1.0,
+      "recall": 0.15384615384615385,
+      "f1": 0.2666666666666667
+    },
+    "t4": {
+      "TP": 181,
+      "FP": 24,
+      "TN": 365,
+      "FN": 209,
+      "precision": 0.8829268292682927,
+      "recall": 0.4641025641025641,
+      "f1": 0.6084033613445379
+    },
+    "combined": {
+      "TP": 218,
+      "FP": 24,
+      "TN": 365,
+      "FN": 172,
+      "precision": 0.9008264462809917,
+      "recall": 0.558974358974359,
+      "f1": 0.6898734177215189
+    }
+  },
+  "negative_sample": [
+    {
+      "l1_title": "Kerim Çalhanoğlu",
+      "l2_title": "سليم الحص",
+      "bucket": "person",
+      "positive_qid": "Q100025380",
+      "negative_qid": "Q2094707",
+      "l1_jw_to_source": 0.5634157509157509,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Noah Fatar",
+      "l2_title": "ناتان شارانسكي",
+      "bucket": "person",
+      "positive_qid": "Q100026920",
+      "negative_qid": "Q360961",
+      "l1_jw_to_source": 0.6944444444444445,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Amadou Traoré",
+      "l2_title": "أحمد طالب حميد",
+      "bucket": "person",
+      "positive_qid": "Q100031473",
+      "negative_qid": "Q16119485",
+      "l1_jw_to_source": 0.6424501424501424,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Etienne Green",
+      "l2_title": "مايرون في. جورج",
+      "bucket": "person",
+      "positive_qid": "Q100035544",
+      "negative_qid": "Q1000070",
+      "l1_jw_to_source": 0.5649572649572651,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Bud Scott",
+      "l2_title": "باد أولسون",
+      "bucket": "person",
+      "positive_qid": "Q1000534",
+      "negative_qid": "Q1000502",
+      "l1_jw_to_source": 0.8222222222222222,
+      "label": "negative"
+    }
+  ]
+}

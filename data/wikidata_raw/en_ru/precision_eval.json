@@ -1,0 +1,81 @@
+{
+  "language_pair": "en_ru",
+  "n_positives": 375,
+  "n_negatives": 375,
+  "results": {
+    "t3": {
+      "TP": 169,
+      "FP": 8,
+      "TN": 367,
+      "FN": 206,
+      "precision": 0.9548022598870056,
+      "recall": 0.45066666666666666,
+      "f1": 0.6123188405797101
+    },
+    "t4": {
+      "TP": 250,
+      "FP": 18,
+      "TN": 357,
+      "FN": 125,
+      "precision": 0.9328358208955224,
+      "recall": 0.6666666666666666,
+      "f1": 0.7776049766718507
+    },
+    "combined": {
+      "TP": 284,
+      "FP": 24,
+      "TN": 351,
+      "FN": 91,
+      "precision": 0.922077922077922,
+      "recall": 0.7573333333333333,
+      "f1": 0.8316251830161054
+    }
+  },
+  "negative_sample": [
+    {
+      "l1_title": "Sekhemrekhutawy Khabaw",
+      "l2_title": "Яшар, Селим",
+      "bucket": "person",
+      "positive_qid": "Q1000926",
+      "negative_qid": "Q21191911",
+      "l1_jw_to_source": 0.6038961038961039,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Sergei Strunnikov",
+      "l2_title": "Стравинский, Игорь Фёдорович",
+      "bucket": "person",
+      "positive_qid": "Q1001202",
+      "negative_qid": "Q7314",
+      "l1_jw_to_source": 0.6183006535947713,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Fiatau Penitala Teo",
+      "l2_title": "Пати, Самюэль",
+      "bucket": "person",
+      "positive_qid": "Q1001159",
+      "negative_qid": "Q100451506",
+      "l1_jw_to_source": 0.6327751196172249,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Sándor Festetics",
+      "l2_title": "Владислав Легницкий",
+      "bucket": "person",
+      "positive_qid": "Q1000957",
+      "negative_qid": "Q558459",
+      "l1_jw_to_source": 0.5482142857142857,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Olga Fialka",
+      "l2_title": "Радченко, Елена Викторовна",
+      "bucket": "person",
+      "positive_qid": "Q1001063",
+      "negative_qid": "Q2025106",
+      "l1_jw_to_source": 0.6484848484848484,
+      "label": "negative"
+    }
+  ]
+}

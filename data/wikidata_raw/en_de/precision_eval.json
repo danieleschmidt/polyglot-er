@@ -1,0 +1,81 @@
+{
+  "language_pair": "en_de",
+  "n_positives": 369,
+  "n_negatives": 369,
+  "results": {
+    "t3": {
+      "TP": 269,
+      "FP": 13,
+      "TN": 356,
+      "FN": 100,
+      "precision": 0.9539007092198581,
+      "recall": 0.7289972899728997,
+      "f1": 0.8264208909370199
+    },
+    "t4": {
+      "TP": 293,
+      "FP": 8,
+      "TN": 361,
+      "FN": 76,
+      "precision": 0.973421926910299,
+      "recall": 0.7940379403794038,
+      "f1": 0.8746268656716417
+    },
+    "combined": {
+      "TP": 309,
+      "FP": 20,
+      "TN": 349,
+      "FN": 60,
+      "precision": 0.939209726443769,
+      "recall": 0.8373983739837398,
+      "f1": 0.8853868194842406
+    }
+  },
+  "negative_sample": [
+    {
+      "l1_title": "Franz Liszt",
+      "l2_title": "Fatima Mernissi",
+      "bucket": "person",
+      "positive_qid": "Q41309",
+      "negative_qid": "Q242376",
+      "l1_jw_to_source": 0.5959595959595959,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Susanne Cramer",
+      "l2_title": "Frans Crabbe",
+      "bucket": "person",
+      "positive_qid": "Q102783",
+      "negative_qid": "Q1445420",
+      "l1_jw_to_source": 0.6150516150516151,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Ernst Mecklenburg",
+      "l2_title": "Frans Crabbe",
+      "bucket": "person",
+      "positive_qid": "Q97230",
+      "negative_qid": "Q1445420",
+      "l1_jw_to_source": 0.6294391882627176,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Hjalmar Schacht",
+      "l2_title": "Heinrich Schneier",
+      "bucket": "person",
+      "positive_qid": "Q151691",
+      "negative_qid": "Q1598801",
+      "l1_jw_to_source": 0.584640522875817,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Ferdinand Gregorovius",
+      "l2_title": "Alexandre Guy Pingré",
+      "bucket": "person",
+      "positive_qid": "Q61425",
+      "negative_qid": "Q705731",
+      "l1_jw_to_source": 0.6281440781440781,
+      "label": "negative"
+    }
+  ]
+}

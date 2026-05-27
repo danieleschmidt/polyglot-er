@@ -1,0 +1,81 @@
+{
+  "language_pair": "en_zh",
+  "n_positives": 384,
+  "n_negatives": 384,
+  "results": {
+    "t3": {
+      "TP": 56,
+      "FP": 8,
+      "TN": 376,
+      "FN": 328,
+      "precision": 0.875,
+      "recall": 0.14583333333333334,
+      "f1": 0.25000000000000006
+    },
+    "t4": {
+      "TP": 146,
+      "FP": 14,
+      "TN": 370,
+      "FN": 238,
+      "precision": 0.9125,
+      "recall": 0.3802083333333333,
+      "f1": 0.5367647058823529
+    },
+    "combined": {
+      "TP": 174,
+      "FP": 20,
+      "TN": 364,
+      "FN": 210,
+      "precision": 0.8969072164948454,
+      "recall": 0.453125,
+      "f1": 0.6020761245674741
+    }
+  },
+  "negative_sample": [
+    {
+      "l1_title": "Sappho",
+      "l2_title": "謝韶光",
+      "bucket": "person",
+      "positive_qid": "Q17892",
+      "negative_qid": "Q1002661",
+      "l1_jw_to_source": 0.5747863247863249,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Joscelin III, Count of Edessa",
+      "l2_title": "乔治林二世",
+      "bucket": "person",
+      "positive_qid": "Q503875",
+      "negative_qid": "Q55503",
+      "l1_jw_to_source": 0.993103448275862,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Vitali Klitschko",
+      "l2_title": "楊國樞",
+      "bucket": "person",
+      "positive_qid": "Q31919",
+      "negative_qid": "Q9298773",
+      "l1_jw_to_source": 0.576388888888889,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Karolos Papoulias",
+      "l2_title": "小林俊彦",
+      "bucket": "person",
+      "positive_qid": "Q57303",
+      "negative_qid": "Q1002730",
+      "l1_jw_to_source": 0.5936245843366587,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Li Ang (writer)",
+      "l2_title": "梁时泰",
+      "bucket": "person",
+      "positive_qid": "Q699704",
+      "negative_qid": "Q100264027",
+      "l1_jw_to_source": 0.6357142857142857,
+      "label": "negative"
+    }
+  ]
+}
