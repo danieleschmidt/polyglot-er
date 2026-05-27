@@ -221,9 +221,12 @@ def transliterate_hangul(text: str) -> str:
     Transliterate Korean Hangul text to Latin via simplified Revised Romanization.
 
     Each Hangul syllable in U+AC00..U+D7A3 decomposes to (initial, medial, final)
-    jamo, each romanized through the standard RR mappings. Syllables are joined
-    with spaces so downstream Jaro-Winkler aligns word-by-word; this matches the
-    spacing convention used by the pypinyin path.
+    jamo, each romanized through the standard RR mappings. Syllables within a
+    word are CONCATENATED WITHOUT INTERNAL SPACES — the per-syllable spacing
+    in our v1 was empirically catastrophic for downstream Jaro-Winkler against
+    the English Wikipedia title (see scripts/diagnose_en_ko.py: spacing cost
+    +16pp T3 recall on en_ko). Word boundaries from the source string (spaces,
+    punctuation) are preserved verbatim.
 
     Args:
         text: String containing Hangul syllables
@@ -233,17 +236,17 @@ def transliterate_hangul(text: str) -> str:
 
     Examples:
         >>> transliterate_hangul("율리야")
-        'yul ri ya'
-        >>> transliterate_hangul("리프니츠카야")
-        'ri peu ni cheu ka ya'
+        'yulriya'
+        >>> transliterate_hangul("율리야 리프니츠카야")
+        'yulriya ripeunicheukaya'
     """
     out: list[str] = []
-    syllables: list[str] = []
+    word: list[str] = []
 
     def flush() -> None:
-        if syllables:
-            out.append(" ".join(syllables))
-            syllables.clear()
+        if word:
+            out.append("".join(word))
+            word.clear()
 
     for ch in text:
         code = ord(ch)
@@ -252,12 +255,11 @@ def transliterate_hangul(text: str) -> str:
             initial_idx = offset // (21 * 28)
             medial_idx = (offset // 28) % 21
             final_idx = offset % 28
-            syllable = (
+            word.append(
                 _HANGUL_INITIAL[initial_idx]
                 + _HANGUL_MEDIAL[medial_idx]
                 + _HANGUL_FINAL[final_idx]
             )
-            syllables.append(syllable)
         else:
             flush()
             out.append(ch)

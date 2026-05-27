@@ -1,0 +1,197 @@
+{
+  "h1_whitespace_test": {
+    "t3_recall_standard": 0.17159763313609466,
+    "t3_recall_nospace": 0.3343195266272189,
+    "delta_t3_recall": 0.16272189349112426,
+    "delta_miss_both": -0.10650887573964497
+  },
+  "h2_miss_both_composition": {
+    "n_miss_both": 197,
+    "n_near_recovery": 86,
+    "n_far_miss": 23,
+    "by_bucket": {
+      "person": 34,
+      "organization": 33,
+      "city": 27,
+      "country": 14,
+      "film": 38,
+      "book": 5,
+      "work_of_art": 13,
+      "business": 33
+    }
+  },
+  "far_miss_samples": [
+    {
+      "bucket": "organization",
+      "l1": "Interpol",
+      "l2": "국제형사경찰기구",
+      "l2_rr": "gug je hyeong sa gyeong chal gi gu",
+      "jw_standard": 0.37663398692810457,
+      "t4_score": 0.3606485426425934
+    },
+    {
+      "bucket": "person",
+      "l1": "Qilibi Khan",
+      "l2": "아사나사마",
+      "l2_rr": "a sa na sa ma",
+      "jw_standard": 0.3900543900543901,
+      "t4_score": 0.5345134139060974
+    },
+    {
+      "bucket": "city",
+      "l1": "Overijssel Kampen",
+      "l2": "캄펀",
+      "l2_rr": "kam peon",
+      "jw_standard": 0.406045751633987,
+      "t4_score": 0.6477029323577881
+    },
+    {
+      "bucket": "business",
+      "l1": "Yle",
+      "l2": "핀란드 일반방송",
+      "l2_rr": "pin ran deu il ban bang song",
+      "jw_standard": 0.41269841269841273,
+      "t4_score": 0.28174149990081787
+    },
+    {
+      "bucket": "book",
+      "l1": "Boxer Protocol",
+      "l2": "신축조약",
+      "l2_rr": "sin chug jo yag",
+      "jw_standard": 0.4253968253968254,
+      "t4_score": 0.38457825779914856
+    },
+    {
+      "bucket": "film",
+      "l1": "Bastille Day",
+      "l2": "독립기념일",
+      "l2_rr": "dog rib gi nyeom il",
+      "jw_standard": 0.4266081871345029,
+      "t4_score": 0.17077675461769104
+    },
+    {
+      "bucket": "film",
+      "l1": "Delirious",
+      "l2": "내가 찍은 그녀는 최고의 슈퍼스타",
+      "l2_rr": "nae ga jjig eun geu nyeo neun choe go ui syu peo seu ta",
+      "jw_standard": 0.42239057239057237,
+      "t4_score": 0.3932734429836273
+    },
+    {
+      "bucket": "film",
+      "l1": "A Gang Story",
+      "l2": "대부: 끝나지 않은 이야기",
+      "l2_rr": "dae bu: kkeut na ji anh eun i ya gi",
+      "jw_standard": 0.44603174603174606,
+      "t4_score": 0.5422545075416565
+    },
+    {
+      "bucket": "city",
+      "l1": "Albania Patos",
+      "l2": "파토스",
+      "l2_rr": "pa to seu",
+      "jw_standard": 0.4586894586894587,
+      "t4_score": 0.4879648983478546
+    },
+    {
+      "bucket": "film",
+      "l1": "Swept Away",
+      "l2": "귀부인과 승무원",
+      "l2_rr": "gwi bu in gwa seung mu won",
+      "jw_standard": 0.4346153846153846,
+      "t4_score": 0.3364010453224182
+    }
+  ],
+  "near_recovery_samples": [
+    {
+      "bucket": "city",
+      "l1": "Parma",
+      "l2": "파르마",
+      "l2_rr": "pa reu ma",
+      "jw_standard": 0.6444444444444445,
+      "jw_nospace": 0.9333333333333333,
+      "t4_score": 0.6307428479194641
+    },
+    {
+      "bucket": "person",
+      "l1": "Maria Elena Kyriakou",
+      "l2": "마리아 엘레나 키리아쿠",
+      "l2_rr": "ma ri a el re na ki ri a ku",
+      "jw_standard": 0.8103703703703704,
+      "jw_nospace": 0.9305555555555555,
+      "t4_score": 0.6062231063842773
+    },
+    {
+      "bucket": "city",
+      "l1": "Bern",
+      "l2": "베른",
+      "l2_rr": "be reun",
+      "jw_standard": 0.7809523809523811,
+      "jw_nospace": 0.9222222222222222,
+      "t4_score": 0.55873042345047
+    },
+    {
+      "bucket": "person",
+      "l1": "Eleni Foureira",
+      "l2": "엘레니 푸레이라",
+      "l2_rr": "el re ni pu re i ra",
+      "jw_standard": 0.7747702589807852,
+      "jw_nospace": 0.917948717948718,
+      "t4_score": 0.5967458486557007
+    },
+    {
+      "bucket": "organization",
+      "l1": "Brita",
+      "l2": "브리타",
+      "l2_rr": "beu ri ta",
+      "jw_standard": 0.6444444444444445,
+      "jw_nospace": 0.9142857142857143,
+      "t4_score": 0.7129722237586975
+    },
+    {
+      "bucket": "film",
+      "l1": "Argo",
+      "l2": "아르고",
+      "l2_rr": "a reu go",
+      "jw_standard": 0.5833333333333334,
+      "jw_nospace": 0.9111111111111111,
+      "t4_score": 0.7334396839141846
+    },
+    {
+      "bucket": "person",
+      "l1": "Karolos Papoulias",
+      "l2": "카롤로스 파풀리아스",
+      "l2_rr": "ka rol ro seu pa pul ri a seu",
+      "jw_standard": 0.7814401622718052,
+      "jw_nospace": 0.9036904761904762,
+      "t4_score": 0.6850817203521729
+    },
+    {
+      "bucket": "city",
+      "l1": "Bajram Curri",
+      "l2": "바이람추리",
+      "l2_rr": "ba i ram chu ri",
+      "jw_standard": 0.8133333333333332,
+      "jw_nospace": 0.9030303030303031,
+      "t4_score": 0.42861130833625793
+    },
+    {
+      "bucket": "person",
+      "l1": "Heorhiy Sudakov",
+      "l2": "헤오르히 수다코우",
+      "l2_rr": "he o reu hi su da ko u",
+      "jw_standard": 0.7938150738150738,
+      "jw_nospace": 0.8980952380952382,
+      "t4_score": 0.4837532937526703
+    },
+    {
+      "bucket": "city",
+      "l1": "Palermo",
+      "l2": "팔레르모",
+      "l2_rr": "pal re reu mo",
+      "jw_standard": 0.632967032967033,
+      "jw_nospace": 0.8966666666666666,
+      "t4_score": 0.4844692349433899
+    }
+  ]
+}

@@ -37,7 +37,7 @@ logger = logging.getLogger("cross_pair_sweep")
 TIER3_THRESHOLD = 0.82
 T4_THRESHOLDS = [0.50, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90]
 DEFAULT_T4_THRESHOLD = 0.75
-N_PER_TYPE = 50
+DEFAULT_N_PER_TYPE = 50
 
 # Default pairs when run with no CLI args. Additional pairs can be specified
 # via --pair l1 l2 (repeatable). See main().
@@ -47,15 +47,15 @@ DEFAULT_PAIRS = [
 ]
 
 
-def extract(l1: str, l2: str, cache_root: Path) -> Path:
-    """Extract sitelink pairs, reusing the cached JSONL if it already exists."""
+def extract(l1: str, l2: str, cache_root: Path, n_per_type: int, force: bool) -> Path:
+    """Extract sitelink pairs, reusing the cached JSONL unless force=True."""
     out_dir = cache_root / f"{l1}_{l2}"
     out_path = out_dir / "sitelinks.jsonl"
-    if out_path.exists():
+    if out_path.exists() and not force:
         logger.info("[%s↔%s] cached extract found at %s — skipping SPARQL", l1, l2, out_path)
         return out_path
     loader = WikidataLoader()
-    return loader.extract_sitelink_pairs(l1, l2, n_per_type=N_PER_TYPE, cache_root=cache_root)
+    return loader.extract_sitelink_pairs(l1, l2, n_per_type=n_per_type, cache_root=cache_root)
 
 
 def score_all(pairs: list[dict], l1: str, l2: str, t3, t4) -> list[dict]:
@@ -124,8 +124,8 @@ def inspect_t3_only(scored: list[dict], thr: float) -> dict:
     }
 
 
-def run_pair(l1: str, l2: str, cache_root: Path, t3, t4) -> dict:
-    pairs_path = extract(l1, l2, cache_root)
+def run_pair(l1: str, l2: str, cache_root: Path, t3, t4, n_per_type: int = DEFAULT_N_PER_TYPE, force: bool = False) -> dict:
+    pairs_path = extract(l1, l2, cache_root, n_per_type=n_per_type, force=force)
     raw = [json.loads(line) for line in pairs_path.read_text(encoding="utf-8").splitlines()]
     logger.info("[%s↔%s] extracted %d pairs", l1, l2, len(raw))
     scored = score_all(raw, l1, l2, t3, t4)
@@ -209,6 +209,17 @@ def main() -> None:
         help="Language pair to evaluate (e.g. --pair en fr). Repeatable. "
         "Defaults to en_de + en_zh.",
     )
+    parser.add_argument(
+        "--n-per-type",
+        type=int,
+        default=DEFAULT_N_PER_TYPE,
+        help=f"Pairs to extract per type bucket (default {DEFAULT_N_PER_TYPE}).",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Force re-extraction even if cached sitelinks.jsonl exists.",
+    )
     args = parser.parse_args()
     pairs_to_run = [tuple(p) for p in (args.pair or DEFAULT_PAIRS)]
 
@@ -216,10 +227,10 @@ def main() -> None:
     t3 = PhoneticMatcher(threshold=TIER3_THRESHOLD)
     t4 = EmbeddingMatcher(threshold=0.0, force_tfidf=False)
     logger.info("T4 backend: %s", t4.backend_name)
-    logger.info("Pairs to run: %s", pairs_to_run)
+    logger.info("Pairs to run: %s (n_per_type=%d, force=%s)", pairs_to_run, args.n_per_type, args.force)
 
     for l1, l2 in pairs_to_run:
-        run_pair(l1, l2, cache_root, t3, t4)
+        run_pair(l1, l2, cache_root, t3, t4, n_per_type=args.n_per_type, force=args.force)
 
     # Aggregate all per-pair reports into the summary, not just the ones we
     # ran this invocation. This makes the summary grow monotonically across

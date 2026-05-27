@@ -162,6 +162,19 @@ def test_transliterate_to_latin_hangul():
     assert all(c.isalpha() or c.isspace() for c in out), out
 
 
+def test_transliterate_hangul_no_internal_spaces():
+    """Syllables within a word are concatenated without internal spaces.
+    Per-syllable spacing (the v1 behavior) inserted artificial token
+    boundaries that Jaro-Winkler penalized heavily — costing +16pp T3
+    recall on en_ko. Source-string spaces between words are preserved."""
+    from polyglot_er.normalization.transliterate import transliterate_hangul
+
+    # One Hangul word → one continuous romanization, no internal spaces.
+    assert transliterate_hangul("율리야") == "yulriya"
+    # Two source words → two romanizations separated by the original space.
+    assert " " in transliterate_hangul("율리야 리프니츠카야")
+
+
 def test_transliterate_to_latin_cjk_uses_pinyin():
     """CJK ideographs should pinyin-transliterate, not fall through to codepoint hex.
 
