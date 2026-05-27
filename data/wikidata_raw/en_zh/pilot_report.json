@@ -15,379 +15,166 @@
     "rows": [
       {
         "t4_threshold": 0.5,
-        "t3_recall": 0.046875,
+        "t3_recall": 0.14583333333333334,
         "t4_recall": 0.7734375,
-        "combined_recall": 0.7760416666666666,
-        "t3_marginal_over_t4": 0.0026041666666666665,
-        "both": 17,
-        "t3_only": 1,
-        "t4_only": 280,
-        "neither": 86
+        "combined_recall": 0.796875,
+        "t3_marginal_over_t4": 0.0234375,
+        "both": 47,
+        "t3_only": 9,
+        "t4_only": 250,
+        "neither": 78
       },
       {
         "t4_threshold": 0.6,
-        "t3_recall": 0.046875,
+        "t3_recall": 0.14583333333333334,
         "t4_recall": 0.6015625,
-        "combined_recall": 0.6041666666666666,
-        "t3_marginal_over_t4": 0.0026041666666666665,
-        "both": 17,
-        "t3_only": 1,
-        "t4_only": 214,
-        "neither": 152
+        "combined_recall": 0.6510416666666666,
+        "t3_marginal_over_t4": 0.049479166666666664,
+        "both": 37,
+        "t3_only": 19,
+        "t4_only": 194,
+        "neither": 134
       },
       {
         "t4_threshold": 0.65,
-        "t3_recall": 0.046875,
+        "t3_recall": 0.14583333333333334,
         "t4_recall": 0.5052083333333334,
-        "combined_recall": 0.5078125,
-        "t3_marginal_over_t4": 0.0026041666666666665,
-        "both": 17,
-        "t3_only": 1,
-        "t4_only": 177,
-        "neither": 189
+        "combined_recall": 0.5703125,
+        "t3_marginal_over_t4": 0.06510416666666667,
+        "both": 31,
+        "t3_only": 25,
+        "t4_only": 163,
+        "neither": 165
       },
       {
         "t4_threshold": 0.7,
-        "t3_recall": 0.046875,
+        "t3_recall": 0.14583333333333334,
         "t4_recall": 0.4375,
-        "combined_recall": 0.4401041666666667,
-        "t3_marginal_over_t4": 0.0026041666666666665,
-        "both": 17,
-        "t3_only": 1,
-        "t4_only": 151,
-        "neither": 215
+        "combined_recall": 0.5104166666666666,
+        "t3_marginal_over_t4": 0.07291666666666667,
+        "both": 28,
+        "t3_only": 28,
+        "t4_only": 140,
+        "neither": 188
       },
       {
         "t4_threshold": 0.75,
-        "t3_recall": 0.046875,
+        "t3_recall": 0.14583333333333334,
         "t4_recall": 0.3802083333333333,
-        "combined_recall": 0.3828125,
-        "t3_marginal_over_t4": 0.0026041666666666665,
-        "both": 17,
-        "t3_only": 1,
-        "t4_only": 129,
-        "neither": 237
+        "combined_recall": 0.453125,
+        "t3_marginal_over_t4": 0.07291666666666667,
+        "both": 28,
+        "t3_only": 28,
+        "t4_only": 118,
+        "neither": 210
       },
       {
         "t4_threshold": 0.8,
-        "t3_recall": 0.046875,
+        "t3_recall": 0.14583333333333334,
         "t4_recall": 0.3255208333333333,
-        "combined_recall": 0.3307291666666667,
-        "t3_marginal_over_t4": 0.005208333333333333,
-        "both": 16,
-        "t3_only": 2,
-        "t4_only": 109,
-        "neither": 257
+        "combined_recall": 0.4088541666666667,
+        "t3_marginal_over_t4": 0.08333333333333333,
+        "both": 24,
+        "t3_only": 32,
+        "t4_only": 101,
+        "neither": 227
       },
       {
         "t4_threshold": 0.85,
-        "t3_recall": 0.046875,
+        "t3_recall": 0.14583333333333334,
         "t4_recall": 0.2604166666666667,
-        "combined_recall": 0.265625,
-        "t3_marginal_over_t4": 0.005208333333333333,
-        "both": 16,
-        "t3_only": 2,
-        "t4_only": 84,
-        "neither": 282
+        "combined_recall": 0.3489583333333333,
+        "t3_marginal_over_t4": 0.08854166666666667,
+        "both": 22,
+        "t3_only": 34,
+        "t4_only": 78,
+        "neither": 250
       },
       {
         "t4_threshold": 0.9,
-        "t3_recall": 0.046875,
+        "t3_recall": 0.14583333333333334,
         "t4_recall": 0.19270833333333334,
-        "combined_recall": 0.20052083333333334,
-        "t3_marginal_over_t4": 0.0078125,
-        "both": 15,
-        "t3_only": 3,
-        "t4_only": 59,
-        "neither": 307
+        "combined_recall": 0.2890625,
+        "t3_marginal_over_t4": 0.09635416666666667,
+        "both": 19,
+        "t3_only": 37,
+        "t4_only": 55,
+        "neither": 273
       }
     ]
   },
   "t3_only_inspection_at_default": {
-    "n": 1,
-    "t4_score_min": 0.3391668498516083,
-    "t4_score_median": 0.3391668498516083,
-    "t4_score_max": 0.3391668498516083,
+    "n": 28,
+    "t4_score_min": 0.10841716825962067,
+    "t4_score_median": 0.5743855237960815,
+    "t4_score_max": 0.6776962876319885,
     "by_bucket": {
-      "business": 1
+      "person": 21,
+      "city": 4,
+      "country": 1,
+      "business": 2
     },
     "samples": [
+      {
+        "bucket": "person",
+        "l1": "Zhang Chiyu",
+        "l2": "张吃鱼",
+        "t4_score": 0.108
+      },
+      {
+        "bucket": "city",
+        "l1": "Biella",
+        "l2": "比耶拉",
+        "t4_score": 0.277
+      },
       {
         "bucket": "business",
         "l1": "Jysk",
         "l2": "JYSK北欧睡眠",
         "t4_score": 0.339
+      },
+      {
+        "bucket": "person",
+        "l1": "Zhuo Wenjun",
+        "l2": "卓文君",
+        "t4_score": 0.361
+      },
+      {
+        "bucket": "person",
+        "l1": "Gong Li",
+        "l2": "巩俐",
+        "t4_score": 0.361
+      },
+      {
+        "bucket": "person",
+        "l1": "Ci Sha",
+        "l2": "此沙",
+        "t4_score": 0.414
+      },
+      {
+        "bucket": "person",
+        "l1": "Chen Fuzhao",
+        "l2": "陈福兆",
+        "t4_score": 0.442
+      },
+      {
+        "bucket": "person",
+        "l1": "Xie Shaoguang",
+        "l2": "謝韶光",
+        "t4_score": 0.456
+      },
+      {
+        "bucket": "business",
+        "l1": "Lancia",
+        "l2": "蓝旗亚",
+        "t4_score": 0.486
+      },
+      {
+        "bucket": "city",
+        "l1": "Sanaa",
+        "l2": "萨那",
+        "t4_score": 0.52
       }
     ]
-  },
-  "en_zh_diagnosis": {
-    "q1_transliteration_behavior": {
-      "sample_size": 50,
-      "n_empty": 0,
-      "n_passthrough": 0,
-      "n_changed": 50,
-      "samples": [
-        {
-          "zh": "莎孚",
-          "transliterated": "x838ex5b5a"
-        },
-        {
-          "zh": "若斯兰三世",
-          "transliterated": "x82e5x65afx5170x4e09x4e16"
-        },
-        {
-          "zh": "维塔利·克利奇科",
-          "transliterated": "x7ef4x5854x5229·kex5229x5947x79d1"
-        },
-        {
-          "zh": "卡罗洛斯·帕普利亚斯",
-          "transliterated": "x5361luox6d1bx65af·x5e15pux5229x4e9ax65af"
-        },
-        {
-          "zh": "李昂 (作家)",
-          "transliterated": "lix6602 (x4f5cx5bb6)"
-        },
-        {
-          "zh": "滕麗名",
-          "transliterated": "x6ed5x9e97x540d"
-        },
-        {
-          "zh": "許地山",
-          "transliterated": "x8a31x5730x5c71"
-        },
-        {
-          "zh": "乾隆帝",
-          "transliterated": "x4e7ex9686x5e1d"
-        },
-        {
-          "zh": "张吃鱼",
-          "transliterated": "zhangx5403x9c7c"
-        },
-        {
-          "zh": "砂田將宏",
-          "transliterated": "x7802x7530x5c07x5b8f"
-        },
-        {
-          "zh": "陈卫华 (1963年)",
-          "transliterated": "chenx536bx534e (1963x5e74)"
-        },
-        {
-          "zh": "莎蓮·哈里斯",
-          "transliterated": "x838ex84ee·x54c8x91ccx65af"
-        },
-        {
-          "zh": "巩俐",
-          "transliterated": "x5de9x4fd0"
-        },
-        {
-          "zh": "李予信",
-          "transliterated": "lix4e88x4fe1"
-        },
-        {
-          "zh": "卓文君",
-          "transliterated": "x5353x6587x541b"
-        }
-      ]
-    },
-    "q2_miss_both_categorization": {
-      "n_miss_both": 237,
-      "n_l1_ascii_proper_noun": 226,
-      "n_l2_has_ascii": 2,
-      "by_bucket": {
-        "person": 43,
-        "organization": 31,
-        "city": 36,
-        "country": 14,
-        "film": 39,
-        "book": 10,
-        "chemical": 12,
-        "work_of_art": 19,
-        "business": 33
-      },
-      "samples_low_t4": [
-        {
-          "bucket": "organization",
-          "l1": "IFFHS",
-          "l2": "國際足球歷史和統計聯合會",
-          "t4_score": 0.08410242944955826
-        },
-        {
-          "bucket": "work_of_art",
-          "l1": "WeiweiCam",
-          "l2": "爱神进行时",
-          "t4_score": 0.1054755449295044
-        },
-        {
-          "bucket": "organization",
-          "l1": "Pfizer",
-          "l2": "輝瑞",
-          "t4_score": 0.10656223446130753
-        },
-        {
-          "bucket": "person",
-          "l1": "Zhang Chiyu",
-          "l2": "张吃鱼",
-          "t4_score": 0.10841716825962067
-        },
-        {
-          "bucket": "film",
-          "l1": "The Intouchables",
-          "l2": "无法触碰",
-          "t4_score": 0.18791154026985168
-        },
-        {
-          "bucket": "business",
-          "l1": "Canon Inc.",
-          "l2": "佳能",
-          "t4_score": 0.19426222145557404
-        },
-        {
-          "bucket": "city",
-          "l1": "Bahamas Nassau",
-          "l2": "拿骚",
-          "t4_score": 0.21637220680713654
-        },
-        {
-          "bucket": "business",
-          "l1": "Land Rover",
-          "l2": "路虎",
-          "t4_score": 0.25204721093177795
-        },
-        {
-          "bucket": "city",
-          "l1": "Poliçan",
-          "l2": "波利钱",
-          "t4_score": 0.255154013633728
-        },
-        {
-          "bucket": "film",
-          "l1": "Brazil",
-          "l2": "妙想天开",
-          "t4_score": 0.26148438453674316
-        },
-        {
-          "bucket": "business",
-          "l1": "Canadian Bank Note Company",
-          "l2": "加拿大印钞有限公司",
-          "t4_score": 0.26566895842552185
-        },
-        {
-          "bucket": "business",
-          "l1": "Mercedes-Benz",
-          "l2": "梅賽德斯-賓士",
-          "t4_score": 0.2663729786872864
-        },
-        {
-          "bucket": "chemical",
-          "l1": "Gadolinium disilicide",
-          "l2": "二硅化钆",
-          "t4_score": 0.27397170662879944
-        },
-        {
-          "bucket": "film",
-          "l1": "The Hunt",
-          "l2": "謊言的烙印",
-          "t4_score": 0.2761183977127075
-        },
-        {
-          "bucket": "city",
-          "l1": "Biella",
-          "l2": "比耶拉",
-          "t4_score": 0.2774616777896881
-        }
-      ],
-      "samples_near_threshold": [
-        {
-          "bucket": "work_of_art",
-          "l1": "Portland Vase",
-          "l2": "波特蘭花瓶",
-          "t4_score": 0.7498671412467957
-        },
-        {
-          "bucket": "city",
-          "l1": "Pescara",
-          "l2": "佩斯卡拉",
-          "t4_score": 0.7490580081939697
-        },
-        {
-          "bucket": "person",
-          "l1": "Jabari Smith Jr.",
-          "l2": "小贾巴里·史密斯",
-          "t4_score": 0.7480751276016235
-        },
-        {
-          "bucket": "country",
-          "l1": "Dominican Republic",
-          "l2": "多明尼加",
-          "t4_score": 0.7470512986183167
-        },
-        {
-          "bucket": "city",
-          "l1": "Fujairah",
-          "l2": "富查伊拉",
-          "t4_score": 0.7468509078025818
-        },
-        {
-          "bucket": "film",
-          "l1": "8½",
-          "l2": "八部半",
-          "t4_score": 0.7440723776817322
-        },
-        {
-          "bucket": "book",
-          "l1": "The Shanghai Capitalists and the Nationalist Government",
-          "l2": "江浙财阀与国民政府",
-          "t4_score": 0.7403406500816345
-        },
-        {
-          "bucket": "person",
-          "l1": "Bob Barrett",
-          "l2": "鮑勃·巴雷特",
-          "t4_score": 0.7363570928573608
-        },
-        {
-          "bucket": "city",
-          "l1": "Vianen",
-          "l2": "菲亞嫩",
-          "t4_score": 0.7362027764320374
-        },
-        {
-          "bucket": "organization",
-          "l1": "International Council on Monuments and Sites",
-          "l2": "國際文化紀念物與歷史場所委員會",
-          "t4_score": 0.7359750866889954
-        },
-        {
-          "bucket": "business",
-          "l1": "Sega",
-          "l2": "世嘉",
-          "t4_score": 0.7337630987167358
-        },
-        {
-          "bucket": "work_of_art",
-          "l1": "Wedding dress of Catherine Middleton",
-          "l2": "嘉芙蓮·密道頓的婚紗",
-          "t4_score": 0.7296875715255737
-        },
-        {
-          "bucket": "business",
-          "l1": "Koenigsegg",
-          "l2": "科尼賽克",
-          "t4_score": 0.7289332151412964
-        },
-        {
-          "bucket": "organization",
-          "l1": "Lions Clubs International",
-          "l2": "国际狮子会",
-          "t4_score": 0.7270671129226685
-        },
-        {
-          "bucket": "book",
-          "l1": "The Medusa and the Snail",
-          "l2": "水母与蜗牛",
-          "t4_score": 0.7268247008323669
-        }
-      ]
-    }
   }
 }

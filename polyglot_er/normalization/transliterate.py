@@ -3,11 +3,18 @@ Basic transliteration: convert Cyrillic, CJK, and Arabic characters
 to approximate Latin phonetic representations.
 
 These are simplified, heuristic transliterations intended to enable
-cross-script fuzzy phonetic matching. For production use, consider
-dedicated libraries like `transliterate`, `pinyin`, or `arabic-reshaper`.
+cross-script fuzzy phonetic matching. The CJK path prefers ``pypinyin``
+when installed (Hanyu Pinyin coverage of ~all CJK Unified Ideographs);
+the built-in lookup table is a fallback for environments without it.
 """
 
 from typing import Dict
+
+try:
+    from pypinyin import lazy_pinyin, Style  # type: ignore[import-not-found]
+    _PYPINYIN_AVAILABLE = True
+except ImportError:
+    _PYPINYIN_AVAILABLE = False
 
 # ---------------------------------------------------------------------------
 # Cyrillic → Latin (BGN/PCGN-inspired, simplified)
@@ -85,12 +92,21 @@ def transliterate_cyrillic(text: str) -> str:
     return "".join(_CYRILLIC_TO_LATIN.get(ch, ch) for ch in text)
 
 
+def _is_cjk_ideograph(ch: str) -> bool:
+    """True if ``ch`` is in the CJK Unified Ideographs ranges we transliterate."""
+    return "\u4e00" <= ch <= "\u9fff" or "\u3400" <= ch <= "\u4dbf"
+
+
 def transliterate_cjk(text: str) -> str:
     """
-    Transliterate CJK characters to Pinyin (simplified table lookup).
+    Transliterate CJK characters to Hanyu Pinyin.
 
-    For characters not in the table, the original character is preserved.
-    For production use, install `pypinyin`: ``pip install pypinyin``.
+    When ``pypinyin`` is installed, runs the full library for ideograph coverage
+    (recommended). Without it, falls back to the small built-in lookup table
+    and emits ``x{codepoint}`` for unknown ideographs.
+
+    Pinyin syllables are joined with single spaces, so downstream Jaro-Winkler
+    matching aligns word-by-word against romanized input.
 
     Args:
         text: String containing CJK characters
@@ -98,12 +114,43 @@ def transliterate_cjk(text: str) -> str:
     Returns:
         Approximate Latin phonetic representation
     """
+    if _PYPINYIN_AVAILABLE:
+        return _transliterate_cjk_pypinyin(text)
+    return _transliterate_cjk_fallback(text)
+
+
+def _transliterate_cjk_pypinyin(text: str) -> str:
+    """Primary CJK path: pypinyin for ideographs, passthrough for everything else.
+
+    We process runs of ideograph vs. non-ideograph characters separately so
+    non-CJK punctuation/whitespace is preserved verbatim.
+    """
+    out: list[str] = []
+    buf: list[str] = []
+
+    def flush_ideographs() -> None:
+        if buf:
+            syllables = lazy_pinyin("".join(buf), style=Style.NORMAL)
+            out.append(" ".join(syllables))
+            buf.clear()
+
+    for ch in text:
+        if _is_cjk_ideograph(ch):
+            buf.append(ch)
+        else:
+            flush_ideographs()
+            out.append(ch)
+    flush_ideographs()
+    return "".join(out)
+
+
+def _transliterate_cjk_fallback(text: str) -> str:
+    """Pre-pypinyin fallback: small hand-maintained lookup + codepoint-hex."""
     parts = []
     for ch in text:
         if ch in _CJK_TO_PINYIN:
             parts.append(_CJK_TO_PINYIN[ch])
-        elif "\u4e00" <= ch <= "\u9fff" or "\u3400" <= ch <= "\u4dbf":
-            # Unknown CJK: use Unicode codepoint as fallback token
+        elif _is_cjk_ideograph(ch):
             parts.append(f"x{ord(ch):04x}")
         else:
             parts.append(ch)

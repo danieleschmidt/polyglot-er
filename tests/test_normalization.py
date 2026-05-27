@@ -130,3 +130,23 @@ def test_transliterate_to_latin_arabic():
     result = transliterate_to_latin("بوتين")
     assert isinstance(result, str)
     assert len(result) > 0
+
+
+def test_transliterate_to_latin_cjk_uses_pinyin():
+    """CJK ideographs should pinyin-transliterate, not fall through to codepoint hex.
+
+    The pre-pypinyin path emitted ``x{codepoint_hex}`` for ideographs absent from
+    the hand-maintained lookup table. That hex output broke downstream
+    Jaro-Winkler matching for en↔zh. With pypinyin wired in, ideographs are
+    converted to Hanyu Pinyin syllables (space-separated for word alignment).
+    """
+    # Simplified Chinese — Mao Zedong
+    assert transliterate_to_latin("毛泽东") == "mao ze dong"
+    # Traditional Chinese — Pfizer (transliterated as a phonetic borrowing)
+    assert transliterate_to_latin("輝瑞") == "hui rui"
+    # Mixed punctuation should be preserved
+    assert transliterate_to_latin("鮑勃·巴雷特") == "bao bo·ba lei te"
+    # No codepoint-hex leakage even on rare characters
+    out = transliterate_to_latin("莎孚")
+    assert "x" not in out, f"codepoint-hex leaked into pypinyin output: {out!r}"
+    assert all(c.isalpha() or c.isspace() for c in out), out

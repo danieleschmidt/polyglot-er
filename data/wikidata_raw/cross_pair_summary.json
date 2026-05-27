@@ -827,108 +827,165 @@
       "rows": [
         {
           "t4_threshold": 0.5,
-          "t3_recall": 0.046875,
+          "t3_recall": 0.14583333333333334,
           "t4_recall": 0.7734375,
-          "combined_recall": 0.7760416666666666,
-          "t3_marginal_over_t4": 0.0026041666666666665,
-          "both": 17,
-          "t3_only": 1,
-          "t4_only": 280,
-          "neither": 86
+          "combined_recall": 0.796875,
+          "t3_marginal_over_t4": 0.0234375,
+          "both": 47,
+          "t3_only": 9,
+          "t4_only": 250,
+          "neither": 78
         },
         {
           "t4_threshold": 0.6,
-          "t3_recall": 0.046875,
+          "t3_recall": 0.14583333333333334,
           "t4_recall": 0.6015625,
-          "combined_recall": 0.6041666666666666,
-          "t3_marginal_over_t4": 0.0026041666666666665,
-          "both": 17,
-          "t3_only": 1,
-          "t4_only": 214,
-          "neither": 152
+          "combined_recall": 0.6510416666666666,
+          "t3_marginal_over_t4": 0.049479166666666664,
+          "both": 37,
+          "t3_only": 19,
+          "t4_only": 194,
+          "neither": 134
         },
         {
           "t4_threshold": 0.65,
-          "t3_recall": 0.046875,
+          "t3_recall": 0.14583333333333334,
           "t4_recall": 0.5052083333333334,
-          "combined_recall": 0.5078125,
-          "t3_marginal_over_t4": 0.0026041666666666665,
-          "both": 17,
-          "t3_only": 1,
-          "t4_only": 177,
-          "neither": 189
+          "combined_recall": 0.5703125,
+          "t3_marginal_over_t4": 0.06510416666666667,
+          "both": 31,
+          "t3_only": 25,
+          "t4_only": 163,
+          "neither": 165
         },
         {
           "t4_threshold": 0.7,
-          "t3_recall": 0.046875,
+          "t3_recall": 0.14583333333333334,
           "t4_recall": 0.4375,
-          "combined_recall": 0.4401041666666667,
-          "t3_marginal_over_t4": 0.0026041666666666665,
-          "both": 17,
-          "t3_only": 1,
-          "t4_only": 151,
-          "neither": 215
+          "combined_recall": 0.5104166666666666,
+          "t3_marginal_over_t4": 0.07291666666666667,
+          "both": 28,
+          "t3_only": 28,
+          "t4_only": 140,
+          "neither": 188
         },
         {
           "t4_threshold": 0.75,
-          "t3_recall": 0.046875,
+          "t3_recall": 0.14583333333333334,
           "t4_recall": 0.3802083333333333,
-          "combined_recall": 0.3828125,
-          "t3_marginal_over_t4": 0.0026041666666666665,
-          "both": 17,
-          "t3_only": 1,
-          "t4_only": 129,
-          "neither": 237
+          "combined_recall": 0.453125,
+          "t3_marginal_over_t4": 0.07291666666666667,
+          "both": 28,
+          "t3_only": 28,
+          "t4_only": 118,
+          "neither": 210
         },
         {
           "t4_threshold": 0.8,
-          "t3_recall": 0.046875,
+          "t3_recall": 0.14583333333333334,
           "t4_recall": 0.3255208333333333,
-          "combined_recall": 0.3307291666666667,
-          "t3_marginal_over_t4": 0.005208333333333333,
-          "both": 16,
-          "t3_only": 2,
-          "t4_only": 109,
-          "neither": 257
+          "combined_recall": 0.4088541666666667,
+          "t3_marginal_over_t4": 0.08333333333333333,
+          "both": 24,
+          "t3_only": 32,
+          "t4_only": 101,
+          "neither": 227
         },
         {
           "t4_threshold": 0.85,
-          "t3_recall": 0.046875,
+          "t3_recall": 0.14583333333333334,
           "t4_recall": 0.2604166666666667,
-          "combined_recall": 0.265625,
-          "t3_marginal_over_t4": 0.005208333333333333,
-          "both": 16,
-          "t3_only": 2,
-          "t4_only": 84,
-          "neither": 282
+          "combined_recall": 0.3489583333333333,
+          "t3_marginal_over_t4": 0.08854166666666667,
+          "both": 22,
+          "t3_only": 34,
+          "t4_only": 78,
+          "neither": 250
         },
         {
           "t4_threshold": 0.9,
-          "t3_recall": 0.046875,
+          "t3_recall": 0.14583333333333334,
           "t4_recall": 0.19270833333333334,
-          "combined_recall": 0.20052083333333334,
-          "t3_marginal_over_t4": 0.0078125,
-          "both": 15,
-          "t3_only": 3,
-          "t4_only": 59,
-          "neither": 307
+          "combined_recall": 0.2890625,
+          "t3_marginal_over_t4": 0.09635416666666667,
+          "both": 19,
+          "t3_only": 37,
+          "t4_only": 55,
+          "neither": 273
         }
       ]
     },
     "t3_only_inspection_at_default": {
-      "n": 1,
-      "t4_score_min": 0.3391668498516083,
-      "t4_score_median": 0.3391668498516083,
-      "t4_score_max": 0.3391668498516083,
+      "n": 28,
+      "t4_score_min": 0.10841716825962067,
+      "t4_score_median": 0.5743855237960815,
+      "t4_score_max": 0.6776962876319885,
       "by_bucket": {
-        "business": 1
+        "person": 21,
+        "city": 4,
+        "country": 1,
+        "business": 2
       },
       "samples": [
+        {
+          "bucket": "person",
+          "l1": "Zhang Chiyu",
+          "l2": "张吃鱼",
+          "t4_score": 0.108
+        },
+        {
+          "bucket": "city",
+          "l1": "Biella",
+          "l2": "比耶拉",
+          "t4_score": 0.277
+        },
         {
           "bucket": "business",
           "l1": "Jysk",
           "l2": "JYSK北欧睡眠",
           "t4_score": 0.339
+        },
+        {
+          "bucket": "person",
+          "l1": "Zhuo Wenjun",
+          "l2": "卓文君",
+          "t4_score": 0.361
+        },
+        {
+          "bucket": "person",
+          "l1": "Gong Li",
+          "l2": "巩俐",
+          "t4_score": 0.361
+        },
+        {
+          "bucket": "person",
+          "l1": "Ci Sha",
+          "l2": "此沙",
+          "t4_score": 0.414
+        },
+        {
+          "bucket": "person",
+          "l1": "Chen Fuzhao",
+          "l2": "陈福兆",
+          "t4_score": 0.442
+        },
+        {
+          "bucket": "person",
+          "l1": "Xie Shaoguang",
+          "l2": "謝韶光",
+          "t4_score": 0.456
+        },
+        {
+          "bucket": "business",
+          "l1": "Lancia",
+          "l2": "蓝旗亚",
+          "t4_score": 0.486
+        },
+        {
+          "bucket": "city",
+          "l1": "Sanaa",
+          "l2": "萨那",
+          "t4_score": 0.52
         }
       ]
     }

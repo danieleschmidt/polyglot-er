@@ -15,6 +15,7 @@ setup(
     install_requires=[
         "jellyfish>=0.11.2",
         "requests>=2.28",
+        "pypinyin>=0.50",
     ],
     extras_require={
         "embeddings": [
