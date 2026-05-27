@@ -1,0 +1,184 @@
+{
+  "language_pair": "en_ar",
+  "n_pairs": 390,
+  "t4_threshold_sweep": {
+    "t4_thresholds": [
+      0.5,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9
+    ],
+    "rows": [
+      {
+        "t4_threshold": 0.5,
+        "t3_recall": 0.15384615384615385,
+        "t4_recall": 0.7615384615384615,
+        "combined_recall": 0.8076923076923077,
+        "t3_marginal_over_t4": 0.046153846153846156,
+        "both": 42,
+        "t3_only": 18,
+        "t4_only": 255,
+        "neither": 75
+      },
+      {
+        "t4_threshold": 0.6,
+        "t3_recall": 0.15384615384615385,
+        "t4_recall": 0.6410256410256411,
+        "combined_recall": 0.7076923076923077,
+        "t3_marginal_over_t4": 0.06666666666666667,
+        "both": 34,
+        "t3_only": 26,
+        "t4_only": 216,
+        "neither": 114
+      },
+      {
+        "t4_threshold": 0.65,
+        "t3_recall": 0.15384615384615385,
+        "t4_recall": 0.5948717948717949,
+        "combined_recall": 0.6692307692307692,
+        "t3_marginal_over_t4": 0.07435897435897436,
+        "both": 31,
+        "t3_only": 29,
+        "t4_only": 201,
+        "neither": 129
+      },
+      {
+        "t4_threshold": 0.7,
+        "t3_recall": 0.15384615384615385,
+        "t4_recall": 0.5205128205128206,
+        "combined_recall": 0.6076923076923076,
+        "t3_marginal_over_t4": 0.08717948717948718,
+        "both": 26,
+        "t3_only": 34,
+        "t4_only": 177,
+        "neither": 153
+      },
+      {
+        "t4_threshold": 0.75,
+        "t3_recall": 0.15384615384615385,
+        "t4_recall": 0.4641025641025641,
+        "combined_recall": 0.558974358974359,
+        "t3_marginal_over_t4": 0.09487179487179487,
+        "both": 23,
+        "t3_only": 37,
+        "t4_only": 158,
+        "neither": 172
+      },
+      {
+        "t4_threshold": 0.8,
+        "t3_recall": 0.15384615384615385,
+        "t4_recall": 0.3641025641025641,
+        "combined_recall": 0.4717948717948718,
+        "t3_marginal_over_t4": 0.1076923076923077,
+        "both": 18,
+        "t3_only": 42,
+        "t4_only": 124,
+        "neither": 206
+      },
+      {
+        "t4_threshold": 0.85,
+        "t3_recall": 0.15384615384615385,
+        "t4_recall": 0.3076923076923077,
+        "combined_recall": 0.4230769230769231,
+        "t3_marginal_over_t4": 0.11538461538461539,
+        "both": 15,
+        "t3_only": 45,
+        "t4_only": 105,
+        "neither": 225
+      },
+      {
+        "t4_threshold": 0.9,
+        "t3_recall": 0.15384615384615385,
+        "t4_recall": 0.2282051282051282,
+        "combined_recall": 0.358974358974359,
+        "t3_marginal_over_t4": 0.13076923076923078,
+        "both": 9,
+        "t3_only": 51,
+        "t4_only": 80,
+        "neither": 250
+      }
+    ]
+  },
+  "t3_only_inspection_at_default": {
+    "n": 37,
+    "t4_score_min": 0.20830631256103516,
+    "t4_score_median": 0.5426769256591797,
+    "t4_score_max": 0.7461497783660889,
+    "by_bucket": {
+      "person": 6,
+      "organization": 4,
+      "city": 9,
+      "country": 2,
+      "film": 5,
+      "book": 3,
+      "work_of_art": 1,
+      "business": 7
+    },
+    "samples": [
+      {
+        "bucket": "organization",
+        "l1": "Zastava Automobiles",
+        "l2": "زاستافا",
+        "t4_score": 0.208
+      },
+      {
+        "bucket": "book",
+        "l1": "Salat al-Fatih",
+        "l2": "صلاة الفاتح",
+        "t4_score": 0.235
+      },
+      {
+        "bucket": "book",
+        "l1": "Qamus al-Rijal",
+        "l2": "قاموس الرجال",
+        "t4_score": 0.249
+      },
+      {
+        "bucket": "business",
+        "l1": "Meta Platforms",
+        "l2": "ميتا بلاتفورمز",
+        "t4_score": 0.253
+      },
+      {
+        "bucket": "city",
+        "l1": "Malmö",
+        "l2": "مالمو",
+        "t4_score": 0.282
+      },
+      {
+        "bucket": "business",
+        "l1": "Lamborghini",
+        "l2": "لامبورغيني",
+        "t4_score": 0.289
+      },
+      {
+        "bucket": "city",
+        "l1": "Belfast",
+        "l2": "بلفاست",
+        "t4_score": 0.327
+      },
+      {
+        "bucket": "business",
+        "l1": "Intel",
+        "l2": "إنتل",
+        "t4_score": 0.344
+      },
+      {
+        "bucket": "person",
+        "l1": "Esther Mbabazi",
+        "l2": "إستير مبابازي",
+        "t4_score": 0.377
+      },
+      {
+        "bucket": "city",
+        "l1": "Mysore",
+        "l2": "ميسور",
+        "t4_score": 0.382
+      }
+    ]
+  }
+}

@@ -18,6 +18,7 @@ a top-level data/wikidata_raw/cross_pair_summary.json.
 
 from __future__ import annotations
 
+import argparse
 import json
 import logging
 from collections import Counter
@@ -38,14 +39,21 @@ T4_THRESHOLDS = [0.50, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90]
 DEFAULT_T4_THRESHOLD = 0.75
 N_PER_TYPE = 50
 
-# Pairs to test. (l1, l2) — Wikidata sitelink directionality.
-PAIRS = [
+# Default pairs when run with no CLI args. Additional pairs can be specified
+# via --pair l1 l2 (repeatable). See main().
+DEFAULT_PAIRS = [
     ("en", "de"),  # same-script baseline (Latin/Latin)
     ("en", "zh"),  # different-system stress case (Latin/Han)
 ]
 
 
 def extract(l1: str, l2: str, cache_root: Path) -> Path:
+    """Extract sitelink pairs, reusing the cached JSONL if it already exists."""
+    out_dir = cache_root / f"{l1}_{l2}"
+    out_path = out_dir / "sitelinks.jsonl"
+    if out_path.exists():
+        logger.info("[%s↔%s] cached extract found at %s — skipping SPARQL", l1, l2, out_path)
+        return out_path
     loader = WikidataLoader()
     return loader.extract_sitelink_pairs(l1, l2, n_per_type=N_PER_TYPE, cache_root=cache_root)
 
@@ -169,54 +177,84 @@ def _print_inspection(label: str, inspection: dict) -> None:
         print(f"    [{s['bucket']:<14}] T4={s['t4_score']:>5.3f}  {s['l1']!r}  <-->  {s['l2']!r}")
 
 
+def _load_report_for_pair(cache_root: Path, l1: str, l2: str) -> dict | None:
+    """Load a previously-written per-pair report, if it exists."""
+    p = cache_root / f"{l1}_{l2}" / "pilot_report.json"
+    if not p.exists():
+        return None
+    return json.loads(p.read_text(encoding="utf-8"))
+
+
+def _normalize_legacy_en_ru(report: dict) -> dict:
+    """The original en_ru pilot report has a different top-level schema (it
+    pre-dates cross_pair_sweep.py). Map it to the cross-pair report layout
+    so the summary printer can handle it uniformly."""
+    if "t4_threshold_sweep" in report and "language_pair" in report:
+        return report
+    return {
+        "language_pair": "en_ru",
+        "n_pairs": report.get("normalized", {}).get("n_pairs", 375),
+        "t4_threshold_sweep": report.get("t4_threshold_sweep"),
+        "t3_only_inspection_at_default": report.get("t3_only_inspection"),
+    }
+
+
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--pair",
+        nargs=2,
+        metavar=("L1", "L2"),
+        action="append",
+        help="Language pair to evaluate (e.g. --pair en fr). Repeatable. "
+        "Defaults to en_de + en_zh.",
+    )
+    args = parser.parse_args()
+    pairs_to_run = [tuple(p) for p in (args.pair or DEFAULT_PAIRS)]
+
     cache_root = Path("data/wikidata_raw")
     t3 = PhoneticMatcher(threshold=TIER3_THRESHOLD)
     t4 = EmbeddingMatcher(threshold=0.0, force_tfidf=False)
     logger.info("T4 backend: %s", t4.backend_name)
+    logger.info("Pairs to run: %s", pairs_to_run)
 
-    summary = {}
-    for l1, l2 in PAIRS:
-        report = run_pair(l1, l2, cache_root, t3, t4)
-        summary[f"{l1}_{l2}"] = report
+    for l1, l2 in pairs_to_run:
+        run_pair(l1, l2, cache_root, t3, t4)
 
-    # Also load the en_ru report so we can render the three-way comparison.
-    en_ru_path = cache_root / "en_ru" / "pilot_report.json"
-    if en_ru_path.exists():
-        en_ru_report = json.loads(en_ru_path.read_text(encoding="utf-8"))
-        en_ru_for_summary = {
-            "language_pair": "en_ru",
-            "n_pairs": en_ru_report.get("normalized", {}).get("n_pairs", 375),
-            "t4_threshold_sweep": en_ru_report.get("t4_threshold_sweep"),
-            "t3_only_inspection_at_default": en_ru_report.get("t3_only_inspection"),
-        }
-        summary["en_ru"] = en_ru_for_summary
+    # Aggregate all per-pair reports into the summary, not just the ones we
+    # ran this invocation. This makes the summary grow monotonically across
+    # incremental runs rather than being overwritten each time.
+    summary: dict[str, dict] = {}
+    for pair_dir in sorted(cache_root.iterdir()):
+        if not pair_dir.is_dir():
+            continue
+        report = _load_report_for_pair(cache_root, *pair_dir.name.split("_", 1))
+        if report is None:
+            continue
+        summary[pair_dir.name] = _normalize_legacy_en_ru(report)
 
     print()
     print("=" * 84)
     print(f"Cross-pair sweep — production T4 (paraphrase-multilingual-MiniLM-L12-v2)")
     print("=" * 84)
 
-    for pair_key in ["en_de", "en_ru", "en_zh"]:
-        if pair_key not in summary:
-            continue
+    ordered_keys = sorted(summary.keys())
+    for pair_key in ordered_keys:
         rpt = summary[pair_key]
-        if rpt.get("t4_threshold_sweep"):
-            _print_sweep_table(
-                f"--- {pair_key} ---", rpt["n_pairs"], rpt["t4_threshold_sweep"]["rows"]
-            )
-            _print_inspection(
-                f"--- {pair_key} ---", rpt["t3_only_inspection_at_default"]
-            )
+        if not rpt.get("t4_threshold_sweep"):
+            continue
+        _print_sweep_table(
+            f"--- {pair_key} ---", rpt["n_pairs"], rpt["t4_threshold_sweep"]["rows"]
+        )
+        _print_inspection(
+            f"--- {pair_key} ---", rpt["t3_only_inspection_at_default"]
+        )
 
-    # Headline comparison: T3 marginal at default T4 threshold for each pair.
     print()
     print("=" * 84)
     print(f"HEADLINE: T3 marginal at T4 threshold {DEFAULT_T4_THRESHOLD}")
     print("=" * 84)
-    for pair_key in ["en_de", "en_ru", "en_zh"]:
-        if pair_key not in summary:
-            continue
+    for pair_key in ordered_keys:
         rows = summary[pair_key].get("t4_threshold_sweep", {}).get("rows", [])
         for r in rows:
             if r["t4_threshold"] == DEFAULT_T4_THRESHOLD:
@@ -230,7 +268,7 @@ def main() -> None:
 
     out = cache_root / "cross_pair_summary.json"
     out.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
-    logger.info("Wrote cross-pair summary to %s", out)
+    logger.info("Wrote cross-pair summary to %s (%d pairs)", out, len(summary))
 
 
 if __name__ == "__main__":

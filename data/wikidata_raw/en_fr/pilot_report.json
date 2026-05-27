@@ -1,0 +1,182 @@
+{
+  "language_pair": "en_fr",
+  "n_pairs": 388,
+  "t4_threshold_sweep": {
+    "t4_thresholds": [
+      0.5,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9
+    ],
+    "rows": [
+      {
+        "t4_threshold": 0.5,
+        "t3_recall": 0.6804123711340206,
+        "t4_recall": 0.9304123711340206,
+        "combined_recall": 0.9458762886597938,
+        "t3_marginal_over_t4": 0.015463917525773196,
+        "both": 258,
+        "t3_only": 6,
+        "t4_only": 103,
+        "neither": 21
+      },
+      {
+        "t4_threshold": 0.6,
+        "t3_recall": 0.6804123711340206,
+        "t4_recall": 0.904639175257732,
+        "combined_recall": 0.9278350515463918,
+        "t3_marginal_over_t4": 0.023195876288659795,
+        "both": 255,
+        "t3_only": 9,
+        "t4_only": 96,
+        "neither": 28
+      },
+      {
+        "t4_threshold": 0.65,
+        "t3_recall": 0.6804123711340206,
+        "t4_recall": 0.8737113402061856,
+        "combined_recall": 0.9123711340206185,
+        "t3_marginal_over_t4": 0.03865979381443299,
+        "both": 249,
+        "t3_only": 15,
+        "t4_only": 90,
+        "neither": 34
+      },
+      {
+        "t4_threshold": 0.7,
+        "t3_recall": 0.6804123711340206,
+        "t4_recall": 0.8221649484536082,
+        "combined_recall": 0.8788659793814433,
+        "t3_marginal_over_t4": 0.05670103092783505,
+        "both": 242,
+        "t3_only": 22,
+        "t4_only": 77,
+        "neither": 47
+      },
+      {
+        "t4_threshold": 0.75,
+        "t3_recall": 0.6804123711340206,
+        "t4_recall": 0.7757731958762887,
+        "combined_recall": 0.8530927835051546,
+        "t3_marginal_over_t4": 0.07731958762886598,
+        "both": 234,
+        "t3_only": 30,
+        "t4_only": 67,
+        "neither": 57
+      },
+      {
+        "t4_threshold": 0.8,
+        "t3_recall": 0.6804123711340206,
+        "t4_recall": 0.7319587628865979,
+        "combined_recall": 0.8221649484536082,
+        "t3_marginal_over_t4": 0.09020618556701031,
+        "both": 229,
+        "t3_only": 35,
+        "t4_only": 55,
+        "neither": 69
+      },
+      {
+        "t4_threshold": 0.85,
+        "t3_recall": 0.6804123711340206,
+        "t4_recall": 0.6829896907216495,
+        "combined_recall": 0.7938144329896907,
+        "t3_marginal_over_t4": 0.11082474226804123,
+        "both": 221,
+        "t3_only": 43,
+        "t4_only": 44,
+        "neither": 80
+      },
+      {
+        "t4_threshold": 0.9,
+        "t3_recall": 0.6804123711340206,
+        "t4_recall": 0.6443298969072165,
+        "combined_recall": 0.7654639175257731,
+        "t3_marginal_over_t4": 0.1211340206185567,
+        "both": 217,
+        "t3_only": 47,
+        "t4_only": 33,
+        "neither": 91
+      }
+    ]
+  },
+  "t3_only_inspection_at_default": {
+    "n": 30,
+    "t4_score_min": 0.24262891709804535,
+    "t4_score_median": 0.6506144404411316,
+    "t4_score_max": 0.7488013505935669,
+    "by_bucket": {
+      "person": 5,
+      "organization": 7,
+      "city": 5,
+      "country": 7,
+      "work_of_art": 2,
+      "business": 4
+    },
+    "samples": [
+      {
+        "bucket": "country",
+        "l1": "Grenada",
+        "l2": "Grenade",
+        "t4_score": 0.243
+      },
+      {
+        "bucket": "work_of_art",
+        "l1": "Tribuna of the Uffizi",
+        "l2": "Tribune des Offices",
+        "t4_score": 0.267
+      },
+      {
+        "bucket": "city",
+        "l1": "Nanjing",
+        "l2": "Nankin",
+        "t4_score": 0.337
+      },
+      {
+        "bucket": "city",
+        "l1": "Palermo",
+        "l2": "Palerme",
+        "t4_score": 0.462
+      },
+      {
+        "bucket": "city",
+        "l1": "Frankfurt",
+        "l2": "Francfort-sur-l'Oder",
+        "t4_score": 0.467
+      },
+      {
+        "bucket": "person",
+        "l1": "Guaram I",
+        "l2": "Gouaram Ier d'Ibérie",
+        "t4_score": 0.494
+      },
+      {
+        "bucket": "organization",
+        "l1": "Sauber Motorsport",
+        "l2": "Sauber",
+        "t4_score": 0.521
+      },
+      {
+        "bucket": "organization",
+        "l1": "Lutheranism",
+        "l2": "Luthéranisme",
+        "t4_score": 0.556
+      },
+      {
+        "bucket": "person",
+        "l1": "Bolesław of Oleśnica",
+        "l2": "Boleslas d'Oleśnica",
+        "t4_score": 0.6
+      },
+      {
+        "bucket": "organization",
+        "l1": "Masters Tournament",
+        "l2": "Masters de golf",
+        "t4_score": 0.61
+      }
+    ]
+  }
+}
