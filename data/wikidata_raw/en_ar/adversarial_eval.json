@@ -1,0 +1,93 @@
+{
+  "language_pair": "en_ar",
+  "n_positives": 390,
+  "n_negatives": 296,
+  "negative_levenshtein_distribution": {
+    "1": 4,
+    "2": 4,
+    "3": 95,
+    "4": 96,
+    "5": 97
+  },
+  "results": {
+    "t3": {
+      "TP": 60,
+      "FP": 0,
+      "TN": 296,
+      "FN": 330,
+      "precision": 1.0,
+      "recall": 0.15384615384615385,
+      "f1": 0.2666666666666667
+    },
+    "t4": {
+      "TP": 181,
+      "FP": 17,
+      "TN": 279,
+      "FN": 209,
+      "precision": 0.9141414141414141,
+      "recall": 0.4641025641025641,
+      "f1": 0.6156462585034015
+    },
+    "combined": {
+      "TP": 218,
+      "FP": 17,
+      "TN": 279,
+      "FN": 172,
+      "precision": 0.9276595744680851,
+      "recall": 0.558974358974359,
+      "f1": 0.6976
+    }
+  },
+  "negative_sample": [
+    {
+      "l1_title": "Bud Scott",
+      "l2_title": "باد أولسون",
+      "bucket_positive": "person",
+      "bucket_negative": "person",
+      "positive_qid": "Q1000534",
+      "negative_qid": "Q1000502",
+      "l1_levenshtein": 5,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Bud Olson",
+      "l2_title": "باد كولين",
+      "bucket_positive": "person",
+      "bucket_negative": "person",
+      "positive_qid": "Q1000502",
+      "negative_qid": "Q1000439",
+      "l1_levenshtein": 4,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Bud Olson",
+      "l2_title": "باد سكوت",
+      "bucket_positive": "person",
+      "bucket_negative": "person",
+      "positive_qid": "Q1000502",
+      "negative_qid": "Q1000534",
+      "l1_levenshtein": 5,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Bud Olson",
+      "l2_title": "باد فيشر",
+      "bucket_positive": "person",
+      "bucket_negative": "person",
+      "positive_qid": "Q1000502",
+      "negative_qid": "Q1000471",
+      "l1_levenshtein": 5,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Bud Fisher",
+      "l2_title": "باد أولسون",
+      "bucket_positive": "person",
+      "bucket_negative": "person",
+      "positive_qid": "Q1000471",
+      "negative_qid": "Q1000502",
+      "l1_levenshtein": 5,
+      "label": "negative"
+    }
+  ]
+}

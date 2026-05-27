@@ -1,0 +1,93 @@
+{
+  "language_pair": "en_zh",
+  "n_positives": 384,
+  "n_negatives": 332,
+  "negative_levenshtein_distribution": {
+    "1": 6,
+    "2": 8,
+    "3": 97,
+    "4": 114,
+    "5": 107
+  },
+  "results": {
+    "t3": {
+      "TP": 56,
+      "FP": 4,
+      "TN": 328,
+      "FN": 328,
+      "precision": 0.9333333333333333,
+      "recall": 0.14583333333333334,
+      "f1": 0.2522522522522523
+    },
+    "t4": {
+      "TP": 146,
+      "FP": 16,
+      "TN": 316,
+      "FN": 238,
+      "precision": 0.9012345679012346,
+      "recall": 0.3802083333333333,
+      "f1": 0.5347985347985348
+    },
+    "combined": {
+      "TP": 174,
+      "FP": 20,
+      "TN": 312,
+      "FN": 210,
+      "precision": 0.8969072164948454,
+      "recall": 0.453125,
+      "f1": 0.6020761245674741
+    }
+  },
+  "negative_sample": [
+    {
+      "l1_title": "Sappho",
+      "l2_title": "萨那",
+      "bucket_positive": "person",
+      "bucket_negative": "city",
+      "positive_qid": "Q17892",
+      "negative_qid": "Q2471",
+      "l1_levenshtein": 4,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Sappho",
+      "l2_title": "那不勒斯",
+      "bucket_positive": "person",
+      "bucket_negative": "city",
+      "positive_qid": "Q17892",
+      "negative_qid": "Q2634",
+      "l1_levenshtein": 4,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Sappho",
+      "l2_title": "日本",
+      "bucket_positive": "person",
+      "bucket_negative": "country",
+      "positive_qid": "Q17892",
+      "negative_qid": "Q17",
+      "l1_levenshtein": 4,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Joscelin III, Count of Edessa",
+      "l2_title": "乔治林二世",
+      "bucket_positive": "person",
+      "bucket_negative": "person",
+      "positive_qid": "Q503875",
+      "negative_qid": "Q55503",
+      "l1_levenshtein": 1,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Xu Dishan",
+      "l2_title": "区希范",
+      "bucket_positive": "person",
+      "bucket_negative": "person",
+      "positive_qid": "Q713079",
+      "negative_qid": "Q45429040",
+      "l1_levenshtein": 4,
+      "label": "negative"
+    }
+  ]
+}

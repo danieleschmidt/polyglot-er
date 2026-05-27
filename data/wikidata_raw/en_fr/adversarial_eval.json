@@ -1,0 +1,93 @@
+{
+  "language_pair": "en_fr",
+  "n_positives": 388,
+  "n_negatives": 288,
+  "negative_levenshtein_distribution": {
+    "1": 2,
+    "2": 4,
+    "3": 76,
+    "4": 105,
+    "5": 101
+  },
+  "results": {
+    "t3": {
+      "TP": 264,
+      "FP": 10,
+      "TN": 278,
+      "FN": 124,
+      "precision": 0.9635036496350365,
+      "recall": 0.6804123711340206,
+      "f1": 0.797583081570997
+    },
+    "t4": {
+      "TP": 301,
+      "FP": 10,
+      "TN": 278,
+      "FN": 87,
+      "precision": 0.9678456591639871,
+      "recall": 0.7757731958762887,
+      "f1": 0.8612303290414879
+    },
+    "combined": {
+      "TP": 331,
+      "FP": 20,
+      "TN": 268,
+      "FN": 57,
+      "precision": 0.9430199430199431,
+      "recall": 0.8530927835051546,
+      "f1": 0.895805142083897
+    }
+  },
+  "negative_sample": [
+    {
+      "l1_title": "Malcolm X",
+      "l2_title": "Malmö",
+      "bucket_positive": "person",
+      "bucket_negative": "city",
+      "positive_qid": "Q43303",
+      "negative_qid": "Q2211",
+      "l1_levenshtein": 5,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Guaram I",
+      "l2_title": "Communauté européenne de l'énergie atomique",
+      "bucket_positive": "person",
+      "bucket_negative": "organization",
+      "positive_qid": "Q1092477",
+      "negative_qid": "Q8919",
+      "l1_levenshtein": 5,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Guaram I",
+      "l2_title": "Curaçao",
+      "bucket_positive": "person",
+      "bucket_negative": "country",
+      "positive_qid": "Q1092477",
+      "negative_qid": "Q25279",
+      "l1_levenshtein": 5,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Guaram I",
+      "l2_title": "Guatemala",
+      "bucket_positive": "person",
+      "bucket_negative": "country",
+      "positive_qid": "Q1092477",
+      "negative_qid": "Q774",
+      "l1_levenshtein": 5,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Preslava",
+      "l2_title": "Grenade (pays)",
+      "bucket_positive": "person",
+      "bucket_negative": "country",
+      "positive_qid": "Q271704",
+      "negative_qid": "Q769",
+      "l1_levenshtein": 4,
+      "label": "negative"
+    }
+  ]
+}

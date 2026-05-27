@@ -1,0 +1,467 @@
+{
+  "en_de": {
+    "language_pair": "en_de",
+    "n_positives": 369,
+    "n_negatives": 277,
+    "negative_levenshtein_distribution": {
+      "1": 2,
+      "2": 4,
+      "3": 82,
+      "4": 99,
+      "5": 90
+    },
+    "results": {
+      "t3": {
+        "TP": 269,
+        "FP": 11,
+        "TN": 266,
+        "FN": 100,
+        "precision": 0.9607142857142857,
+        "recall": 0.7289972899728997,
+        "f1": 0.8289676425269645
+      },
+      "t4": {
+        "TP": 293,
+        "FP": 3,
+        "TN": 274,
+        "FN": 76,
+        "precision": 0.9898648648648649,
+        "recall": 0.7940379403794038,
+        "f1": 0.881203007518797
+      },
+      "combined": {
+        "TP": 309,
+        "FP": 14,
+        "TN": 263,
+        "FN": 60,
+        "precision": 0.9566563467492261,
+        "recall": 0.8373983739837398,
+        "f1": 0.893063583815029
+      }
+    },
+    "negative_sample": [
+      {
+        "l1_title": "Karl Holl",
+        "l2_title": "Karosa",
+        "bucket_positive": "person",
+        "bucket_negative": "business",
+        "positive_qid": "Q92113",
+        "negative_qid": "Q35305",
+        "l1_levenshtein": 5,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Kambly",
+        "l2_title": "Italien",
+        "bucket_positive": "organization",
+        "bucket_negative": "country",
+        "positive_qid": "Q57208",
+        "negative_qid": "Q38",
+        "l1_levenshtein": 4,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Kambly",
+        "l2_title": "Karosa",
+        "bucket_positive": "organization",
+        "bucket_negative": "business",
+        "positive_qid": "Q57208",
+        "negative_qid": "Q35305",
+        "l1_levenshtein": 4,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Kambly",
+        "l2_title": "Kumon",
+        "bucket_positive": "organization",
+        "bucket_negative": "business",
+        "positive_qid": "Q57208",
+        "negative_qid": "Q142054",
+        "l1_levenshtein": 4,
+        "label": "negative"
+      },
+      {
+        "l1_title": "EBay",
+        "l2_title": "Laç",
+        "bucket_positive": "organization",
+        "bucket_negative": "city",
+        "positive_qid": "Q58024",
+        "negative_qid": "Q18768",
+        "l1_levenshtein": 3,
+        "label": "negative"
+      }
+    ]
+  },
+  "en_fr": {
+    "language_pair": "en_fr",
+    "n_positives": 388,
+    "n_negatives": 288,
+    "negative_levenshtein_distribution": {
+      "1": 2,
+      "2": 4,
+      "3": 76,
+      "4": 105,
+      "5": 101
+    },
+    "results": {
+      "t3": {
+        "TP": 264,
+        "FP": 10,
+        "TN": 278,
+        "FN": 124,
+        "precision": 0.9635036496350365,
+        "recall": 0.6804123711340206,
+        "f1": 0.797583081570997
+      },
+      "t4": {
+        "TP": 301,
+        "FP": 10,
+        "TN": 278,
+        "FN": 87,
+        "precision": 0.9678456591639871,
+        "recall": 0.7757731958762887,
+        "f1": 0.8612303290414879
+      },
+      "combined": {
+        "TP": 331,
+        "FP": 20,
+        "TN": 268,
+        "FN": 57,
+        "precision": 0.9430199430199431,
+        "recall": 0.8530927835051546,
+        "f1": 0.895805142083897
+      }
+    },
+    "negative_sample": [
+      {
+        "l1_title": "Malcolm X",
+        "l2_title": "Malmö",
+        "bucket_positive": "person",
+        "bucket_negative": "city",
+        "positive_qid": "Q43303",
+        "negative_qid": "Q2211",
+        "l1_levenshtein": 5,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Guaram I",
+        "l2_title": "Communauté européenne de l'énergie atomique",
+        "bucket_positive": "person",
+        "bucket_negative": "organization",
+        "positive_qid": "Q1092477",
+        "negative_qid": "Q8919",
+        "l1_levenshtein": 5,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Guaram I",
+        "l2_title": "Curaçao",
+        "bucket_positive": "person",
+        "bucket_negative": "country",
+        "positive_qid": "Q1092477",
+        "negative_qid": "Q25279",
+        "l1_levenshtein": 5,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Guaram I",
+        "l2_title": "Guatemala",
+        "bucket_positive": "person",
+        "bucket_negative": "country",
+        "positive_qid": "Q1092477",
+        "negative_qid": "Q774",
+        "l1_levenshtein": 5,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Preslava",
+        "l2_title": "Grenade (pays)",
+        "bucket_positive": "person",
+        "bucket_negative": "country",
+        "positive_qid": "Q271704",
+        "negative_qid": "Q769",
+        "l1_levenshtein": 4,
+        "label": "negative"
+      }
+    ]
+  },
+  "en_ru": {
+    "language_pair": "en_ru",
+    "n_positives": 375,
+    "n_negatives": 310,
+    "negative_levenshtein_distribution": {
+      "1": 2,
+      "2": 12,
+      "3": 104,
+      "4": 107,
+      "5": 85
+    },
+    "results": {
+      "t3": {
+        "TP": 169,
+        "FP": 9,
+        "TN": 301,
+        "FN": 206,
+        "precision": 0.949438202247191,
+        "recall": 0.45066666666666666,
+        "f1": 0.6112115732368898
+      },
+      "t4": {
+        "TP": 250,
+        "FP": 18,
+        "TN": 292,
+        "FN": 125,
+        "precision": 0.9328358208955224,
+        "recall": 0.6666666666666666,
+        "f1": 0.7776049766718507
+      },
+      "combined": {
+        "TP": 284,
+        "FP": 26,
+        "TN": 284,
+        "FN": 91,
+        "precision": 0.9161290322580645,
+        "recall": 0.7573333333333333,
+        "f1": 0.8291970802919708
+      }
+    },
+    "negative_sample": [
+      {
+        "l1_title": "Shiban",
+        "l2_title": "Kaipan",
+        "bucket_positive": "person",
+        "bucket_negative": "business",
+        "positive_qid": "Q935963",
+        "negative_qid": "Q30373",
+        "l1_levenshtein": 3,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Shiban",
+        "l2_title": "Aixam-MEGA",
+        "bucket_positive": "person",
+        "bucket_negative": "organization",
+        "positive_qid": "Q935963",
+        "negative_qid": "Q6751",
+        "l1_levenshtein": 4,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Shiban",
+        "l2_title": "Арика",
+        "bucket_positive": "person",
+        "bucket_negative": "city",
+        "positive_qid": "Q935963",
+        "negative_qid": "Q2203",
+        "l1_levenshtein": 4,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Guaram I",
+        "l2_title": "Кюрасао",
+        "bucket_positive": "person",
+        "bucket_negative": "country",
+        "positive_qid": "Q1092477",
+        "negative_qid": "Q25279",
+        "l1_levenshtein": 5,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Guaram I",
+        "l2_title": "Гватемала",
+        "bucket_positive": "person",
+        "bucket_negative": "country",
+        "positive_qid": "Q1092477",
+        "negative_qid": "Q774",
+        "l1_levenshtein": 5,
+        "label": "negative"
+      }
+    ]
+  },
+  "en_ar": {
+    "language_pair": "en_ar",
+    "n_positives": 390,
+    "n_negatives": 296,
+    "negative_levenshtein_distribution": {
+      "1": 4,
+      "2": 4,
+      "3": 95,
+      "4": 96,
+      "5": 97
+    },
+    "results": {
+      "t3": {
+        "TP": 60,
+        "FP": 0,
+        "TN": 296,
+        "FN": 330,
+        "precision": 1.0,
+        "recall": 0.15384615384615385,
+        "f1": 0.2666666666666667
+      },
+      "t4": {
+        "TP": 181,
+        "FP": 17,
+        "TN": 279,
+        "FN": 209,
+        "precision": 0.9141414141414141,
+        "recall": 0.4641025641025641,
+        "f1": 0.6156462585034015
+      },
+      "combined": {
+        "TP": 218,
+        "FP": 17,
+        "TN": 279,
+        "FN": 172,
+        "precision": 0.9276595744680851,
+        "recall": 0.558974358974359,
+        "f1": 0.6976
+      }
+    },
+    "negative_sample": [
+      {
+        "l1_title": "Bud Scott",
+        "l2_title": "باد أولسون",
+        "bucket_positive": "person",
+        "bucket_negative": "person",
+        "positive_qid": "Q1000534",
+        "negative_qid": "Q1000502",
+        "l1_levenshtein": 5,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Bud Olson",
+        "l2_title": "باد كولين",
+        "bucket_positive": "person",
+        "bucket_negative": "person",
+        "positive_qid": "Q1000502",
+        "negative_qid": "Q1000439",
+        "l1_levenshtein": 4,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Bud Olson",
+        "l2_title": "باد سكوت",
+        "bucket_positive": "person",
+        "bucket_negative": "person",
+        "positive_qid": "Q1000502",
+        "negative_qid": "Q1000534",
+        "l1_levenshtein": 5,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Bud Olson",
+        "l2_title": "باد فيشر",
+        "bucket_positive": "person",
+        "bucket_negative": "person",
+        "positive_qid": "Q1000502",
+        "negative_qid": "Q1000471",
+        "l1_levenshtein": 5,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Bud Fisher",
+        "l2_title": "باد أولسون",
+        "bucket_positive": "person",
+        "bucket_negative": "person",
+        "positive_qid": "Q1000471",
+        "negative_qid": "Q1000502",
+        "l1_levenshtein": 5,
+        "label": "negative"
+      }
+    ]
+  },
+  "en_zh": {
+    "language_pair": "en_zh",
+    "n_positives": 384,
+    "n_negatives": 332,
+    "negative_levenshtein_distribution": {
+      "1": 6,
+      "2": 8,
+      "3": 97,
+      "4": 114,
+      "5": 107
+    },
+    "results": {
+      "t3": {
+        "TP": 56,
+        "FP": 4,
+        "TN": 328,
+        "FN": 328,
+        "precision": 0.9333333333333333,
+        "recall": 0.14583333333333334,
+        "f1": 0.2522522522522523
+      },
+      "t4": {
+        "TP": 146,
+        "FP": 16,
+        "TN": 316,
+        "FN": 238,
+        "precision": 0.9012345679012346,
+        "recall": 0.3802083333333333,
+        "f1": 0.5347985347985348
+      },
+      "combined": {
+        "TP": 174,
+        "FP": 20,
+        "TN": 312,
+        "FN": 210,
+        "precision": 0.8969072164948454,
+        "recall": 0.453125,
+        "f1": 0.6020761245674741
+      }
+    },
+    "negative_sample": [
+      {
+        "l1_title": "Sappho",
+        "l2_title": "萨那",
+        "bucket_positive": "person",
+        "bucket_negative": "city",
+        "positive_qid": "Q17892",
+        "negative_qid": "Q2471",
+        "l1_levenshtein": 4,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Sappho",
+        "l2_title": "那不勒斯",
+        "bucket_positive": "person",
+        "bucket_negative": "city",
+        "positive_qid": "Q17892",
+        "negative_qid": "Q2634",
+        "l1_levenshtein": 4,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Sappho",
+        "l2_title": "日本",
+        "bucket_positive": "person",
+        "bucket_negative": "country",
+        "positive_qid": "Q17892",
+        "negative_qid": "Q17",
+        "l1_levenshtein": 4,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Joscelin III, Count of Edessa",
+        "l2_title": "乔治林二世",
+        "bucket_positive": "person",
+        "bucket_negative": "person",
+        "positive_qid": "Q503875",
+        "negative_qid": "Q55503",
+        "l1_levenshtein": 1,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Xu Dishan",
+        "l2_title": "区希范",
+        "bucket_positive": "person",
+        "bucket_negative": "person",
+        "positive_qid": "Q713079",
+        "negative_qid": "Q45429040",
+        "l1_levenshtein": 4,
+        "label": "negative"
+      }
+    ]
+  }
+}

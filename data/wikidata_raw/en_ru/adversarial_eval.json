@@ -1,0 +1,93 @@
+{
+  "language_pair": "en_ru",
+  "n_positives": 375,
+  "n_negatives": 310,
+  "negative_levenshtein_distribution": {
+    "1": 2,
+    "2": 12,
+    "3": 104,
+    "4": 107,
+    "5": 85
+  },
+  "results": {
+    "t3": {
+      "TP": 169,
+      "FP": 9,
+      "TN": 301,
+      "FN": 206,
+      "precision": 0.949438202247191,
+      "recall": 0.45066666666666666,
+      "f1": 0.6112115732368898
+    },
+    "t4": {
+      "TP": 250,
+      "FP": 18,
+      "TN": 292,
+      "FN": 125,
+      "precision": 0.9328358208955224,
+      "recall": 0.6666666666666666,
+      "f1": 0.7776049766718507
+    },
+    "combined": {
+      "TP": 284,
+      "FP": 26,
+      "TN": 284,
+      "FN": 91,
+      "precision": 0.9161290322580645,
+      "recall": 0.7573333333333333,
+      "f1": 0.8291970802919708
+    }
+  },
+  "negative_sample": [
+    {
+      "l1_title": "Shiban",
+      "l2_title": "Kaipan",
+      "bucket_positive": "person",
+      "bucket_negative": "business",
+      "positive_qid": "Q935963",
+      "negative_qid": "Q30373",
+      "l1_levenshtein": 3,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Shiban",
+      "l2_title": "Aixam-MEGA",
+      "bucket_positive": "person",
+      "bucket_negative": "organization",
+      "positive_qid": "Q935963",
+      "negative_qid": "Q6751",
+      "l1_levenshtein": 4,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Shiban",
+      "l2_title": "Арика",
+      "bucket_positive": "person",
+      "bucket_negative": "city",
+      "positive_qid": "Q935963",
+      "negative_qid": "Q2203",
+      "l1_levenshtein": 4,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Guaram I",
+      "l2_title": "Кюрасао",
+      "bucket_positive": "person",
+      "bucket_negative": "country",
+      "positive_qid": "Q1092477",
+      "negative_qid": "Q25279",
+      "l1_levenshtein": 5,
+      "label": "negative"
+    },
+    {
+      "l1_title": "Guaram I",
+      "l2_title": "Гватемала",
+      "bucket_positive": "person",
+      "bucket_negative": "country",
+      "positive_qid": "Q1092477",
+      "negative_qid": "Q774",
+      "l1_levenshtein": 5,
+      "label": "negative"
+    }
+  ]
+}
