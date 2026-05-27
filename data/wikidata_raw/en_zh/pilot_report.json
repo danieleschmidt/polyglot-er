@@ -1,6 +1,6 @@
 {
   "language_pair": "en_zh",
-  "n_pairs": 384,
+  "n_pairs": 2796,
   "t4_threshold_sweep": {
     "t4_thresholds": [
       0.5,
@@ -15,104 +15,105 @@
     "rows": [
       {
         "t4_threshold": 0.5,
-        "t3_recall": 0.14583333333333334,
-        "t4_recall": 0.7734375,
-        "combined_recall": 0.796875,
-        "t3_marginal_over_t4": 0.0234375,
-        "both": 47,
-        "t3_only": 9,
-        "t4_only": 250,
-        "neither": 78
+        "t3_recall": 0.1276824034334764,
+        "t4_recall": 0.7321173104434907,
+        "combined_recall": 0.7564377682403434,
+        "t3_marginal_over_t4": 0.024320457796852647,
+        "both": 289,
+        "t3_only": 68,
+        "t4_only": 1758,
+        "neither": 681
       },
       {
         "t4_threshold": 0.6,
-        "t3_recall": 0.14583333333333334,
-        "t4_recall": 0.6015625,
-        "combined_recall": 0.6510416666666666,
-        "t3_marginal_over_t4": 0.049479166666666664,
-        "both": 37,
-        "t3_only": 19,
-        "t4_only": 194,
-        "neither": 134
+        "t3_recall": 0.1276824034334764,
+        "t4_recall": 0.5829756795422032,
+        "combined_recall": 0.6237482117310443,
+        "t3_marginal_over_t4": 0.0407725321888412,
+        "both": 243,
+        "t3_only": 114,
+        "t4_only": 1387,
+        "neither": 1052
       },
       {
         "t4_threshold": 0.65,
-        "t3_recall": 0.14583333333333334,
-        "t4_recall": 0.5052083333333334,
-        "combined_recall": 0.5703125,
-        "t3_marginal_over_t4": 0.06510416666666667,
-        "both": 31,
-        "t3_only": 25,
-        "t4_only": 163,
-        "neither": 165
+        "t3_recall": 0.1276824034334764,
+        "t4_recall": 0.5014306151645207,
+        "combined_recall": 0.5515021459227468,
+        "t3_marginal_over_t4": 0.05007153075822604,
+        "both": 217,
+        "t3_only": 140,
+        "t4_only": 1185,
+        "neither": 1254
       },
       {
         "t4_threshold": 0.7,
-        "t3_recall": 0.14583333333333334,
-        "t4_recall": 0.4375,
-        "combined_recall": 0.5104166666666666,
-        "t3_marginal_over_t4": 0.07291666666666667,
-        "both": 28,
-        "t3_only": 28,
-        "t4_only": 140,
-        "neither": 188
+        "t3_recall": 0.1276824034334764,
+        "t4_recall": 0.4248927038626609,
+        "combined_recall": 0.4864091559370529,
+        "t3_marginal_over_t4": 0.06151645207439199,
+        "both": 185,
+        "t3_only": 172,
+        "t4_only": 1003,
+        "neither": 1436
       },
       {
         "t4_threshold": 0.75,
-        "t3_recall": 0.14583333333333334,
-        "t4_recall": 0.3802083333333333,
-        "combined_recall": 0.453125,
-        "t3_marginal_over_t4": 0.07291666666666667,
-        "both": 28,
-        "t3_only": 28,
-        "t4_only": 118,
-        "neither": 210
+        "t3_recall": 0.1276824034334764,
+        "t4_recall": 0.34513590844062947,
+        "combined_recall": 0.413447782546495,
+        "t3_marginal_over_t4": 0.06831187410586552,
+        "both": 166,
+        "t3_only": 191,
+        "t4_only": 799,
+        "neither": 1640
       },
       {
         "t4_threshold": 0.8,
-        "t3_recall": 0.14583333333333334,
-        "t4_recall": 0.3255208333333333,
-        "combined_recall": 0.4088541666666667,
-        "t3_marginal_over_t4": 0.08333333333333333,
-        "both": 24,
-        "t3_only": 32,
-        "t4_only": 101,
-        "neither": 227
+        "t3_recall": 0.1276824034334764,
+        "t4_recall": 0.2800429184549356,
+        "combined_recall": 0.3562231759656652,
+        "t3_marginal_over_t4": 0.07618025751072961,
+        "both": 144,
+        "t3_only": 213,
+        "t4_only": 639,
+        "neither": 1800
       },
       {
         "t4_threshold": 0.85,
-        "t3_recall": 0.14583333333333334,
-        "t4_recall": 0.2604166666666667,
-        "combined_recall": 0.3489583333333333,
-        "t3_marginal_over_t4": 0.08854166666666667,
-        "both": 22,
-        "t3_only": 34,
-        "t4_only": 78,
-        "neither": 250
+        "t3_recall": 0.1276824034334764,
+        "t4_recall": 0.20994277539341916,
+        "combined_recall": 0.2932761087267525,
+        "t3_marginal_over_t4": 0.08333333333333333,
+        "both": 124,
+        "t3_only": 233,
+        "t4_only": 463,
+        "neither": 1976
       },
       {
         "t4_threshold": 0.9,
-        "t3_recall": 0.14583333333333334,
-        "t4_recall": 0.19270833333333334,
-        "combined_recall": 0.2890625,
-        "t3_marginal_over_t4": 0.09635416666666667,
-        "both": 19,
-        "t3_only": 37,
-        "t4_only": 55,
-        "neither": 273
+        "t3_recall": 0.1276824034334764,
+        "t4_recall": 0.14663805436337626,
+        "combined_recall": 0.2374821173104435,
+        "t3_marginal_over_t4": 0.09084406294706723,
+        "both": 103,
+        "t3_only": 254,
+        "t4_only": 307,
+        "neither": 2132
       }
     ]
   },
   "t3_only_inspection_at_default": {
-    "n": 28,
+    "n": 191,
     "t4_score_min": 0.10841716825962067,
-    "t4_score_median": 0.5743855237960815,
-    "t4_score_max": 0.6776962876319885,
+    "t4_score_median": 0.565599799156189,
+    "t4_score_max": 0.7495742440223694,
     "by_bucket": {
-      "person": 21,
-      "city": 4,
-      "country": 1,
-      "business": 2
+      "person": 111,
+      "organization": 5,
+      "city": 47,
+      "country": 10,
+      "business": 18
     },
     "samples": [
       {
@@ -122,58 +123,58 @@
         "t4_score": 0.108
       },
       {
-        "bucket": "city",
-        "l1": "Biella",
-        "l2": "比耶拉",
-        "t4_score": 0.277
+        "bucket": "person",
+        "l1": "Shen Shixi",
+        "l2": "沈石溪",
+        "t4_score": 0.13
+      },
+      {
+        "bucket": "person",
+        "l1": "Yu Xuanji",
+        "l2": "魚玄機",
+        "t4_score": 0.195
+      },
+      {
+        "bucket": "person",
+        "l1": "Yongming Yanshou",
+        "l2": "永明延壽",
+        "t4_score": 0.231
       },
       {
         "bucket": "business",
-        "l1": "Jysk",
-        "l2": "JYSK北欧睡眠",
-        "t4_score": 0.339
+        "l1": "Haribo",
+        "l2": "哈瑞寶",
+        "t4_score": 0.253
       },
       {
         "bucket": "person",
-        "l1": "Zhuo Wenjun",
-        "l2": "卓文君",
-        "t4_score": 0.361
+        "l1": "Kong Chuan",
+        "l2": "孔穿",
+        "t4_score": 0.258
       },
       {
         "bucket": "person",
-        "l1": "Gong Li",
-        "l2": "巩俐",
-        "t4_score": 0.361
+        "l1": "Sun Yanling",
+        "l2": "孙延龄",
+        "t4_score": 0.264
       },
       {
         "bucket": "person",
-        "l1": "Ci Sha",
-        "l2": "此沙",
-        "t4_score": 0.414
+        "l1": "Chen Xiaofeng",
+        "l2": "陳嘯風",
+        "t4_score": 0.264
       },
       {
         "bucket": "person",
-        "l1": "Chen Fuzhao",
-        "l2": "陈福兆",
-        "t4_score": 0.442
+        "l1": "Shuiqiu Zhaoquan",
+        "l2": "水丘昭券",
+        "t4_score": 0.273
       },
       {
         "bucket": "person",
-        "l1": "Xie Shaoguang",
-        "l2": "謝韶光",
-        "t4_score": 0.456
-      },
-      {
-        "bucket": "business",
-        "l1": "Lancia",
-        "l2": "蓝旗亚",
-        "t4_score": 0.486
-      },
-      {
-        "bucket": "city",
-        "l1": "Sanaa",
-        "l2": "萨那",
-        "t4_score": 0.52
+        "l1": "Nanquan Puyuan",
+        "l2": "南泉普願",
+        "t4_score": 0.276
       }
     ]
   }

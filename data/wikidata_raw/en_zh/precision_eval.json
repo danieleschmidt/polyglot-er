@@ -1,80 +1,80 @@
 {
   "language_pair": "en_zh",
-  "n_positives": 384,
-  "n_negatives": 384,
+  "n_positives": 2796,
+  "n_negatives": 2796,
   "results": {
     "t3": {
-      "TP": 56,
-      "FP": 8,
-      "TN": 376,
-      "FN": 328,
-      "precision": 0.875,
-      "recall": 0.14583333333333334,
-      "f1": 0.25000000000000006
+      "TP": 357,
+      "FP": 59,
+      "TN": 2737,
+      "FN": 2439,
+      "precision": 0.8581730769230769,
+      "recall": 0.1276824034334764,
+      "f1": 0.22229140722291407
     },
     "t4": {
-      "TP": 146,
-      "FP": 14,
-      "TN": 370,
-      "FN": 238,
-      "precision": 0.9125,
-      "recall": 0.3802083333333333,
-      "f1": 0.5367647058823529
+      "TP": 965,
+      "FP": 158,
+      "TN": 2638,
+      "FN": 1831,
+      "precision": 0.8593054318788959,
+      "recall": 0.34513590844062947,
+      "f1": 0.49247256953304414
     },
     "combined": {
-      "TP": 174,
-      "FP": 20,
-      "TN": 364,
-      "FN": 210,
-      "precision": 0.8969072164948454,
-      "recall": 0.453125,
-      "f1": 0.6020761245674741
+      "TP": 1156,
+      "FP": 206,
+      "TN": 2590,
+      "FN": 1640,
+      "precision": 0.8487518355359766,
+      "recall": 0.413447782546495,
+      "f1": 0.5560365560365561
     }
   },
   "negative_sample": [
     {
       "l1_title": "Sappho",
-      "l2_title": "謝韶光",
+      "l2_title": "白砂沙帆",
       "bucket": "person",
       "positive_qid": "Q17892",
-      "negative_qid": "Q1002661",
-      "l1_jw_to_source": 0.5747863247863249,
+      "negative_qid": "Q100454524",
+      "l1_jw_to_source": 0.6666666666666666,
       "label": "negative"
     },
     {
-      "l1_title": "Joscelin III, Count of Edessa",
-      "l2_title": "乔治林二世",
+      "l1_title": "Charlaine Harris",
+      "l2_title": "雪若比·狄恩",
       "bucket": "person",
-      "positive_qid": "Q503875",
-      "negative_qid": "Q55503",
-      "l1_jw_to_source": 0.993103448275862,
+      "positive_qid": "Q233566",
+      "negative_qid": "Q101064944",
+      "l1_jw_to_source": 0.8516666666666668,
       "label": "negative"
     },
     {
-      "l1_title": "Vitali Klitschko",
-      "l2_title": "楊國樞",
+      "l1_title": "Gong Li",
+      "l2_title": "鍾玲",
       "bucket": "person",
-      "positive_qid": "Q31919",
-      "negative_qid": "Q9298773",
-      "l1_jw_to_source": 0.576388888888889,
+      "positive_qid": "Q150903",
+      "negative_qid": "Q19841138",
+      "l1_jw_to_source": 0.7380952380952381,
       "label": "negative"
     },
     {
-      "l1_title": "Karolos Papoulias",
-      "l2_title": "小林俊彦",
+      "l1_title": "Zi Yu (entertainer)",
+      "l2_title": "孙位",
       "bucket": "person",
-      "positive_qid": "Q57303",
-      "negative_qid": "Q1002730",
-      "l1_jw_to_source": 0.5936245843366587,
+      "positive_qid": "Q128001981",
+      "negative_qid": "Q10112313",
+      "l1_jw_to_source": 0.7106000294854784,
       "label": "negative"
     },
     {
-      "l1_title": "Li Ang (writer)",
-      "l2_title": "梁时泰",
+      "l1_title": "Olena Khomrova",
+      "l2_title": "瓦列里·克列伊苗诺夫",
       "bucket": "person",
-      "positive_qid": "Q699704",
-      "negative_qid": "Q100264027",
-      "l1_jw_to_source": 0.6357142857142857,
+      "positive_qid": "Q270142",
+      "negative_qid": "Q1006445",
+      "l1_jw_to_source": 0.6675070028011204,
       "label": "negative"
     }
   ]

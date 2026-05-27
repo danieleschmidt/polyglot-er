@@ -1,80 +1,80 @@
 {
   "language_pair": "en_fr",
-  "n_positives": 388,
-  "n_negatives": 388,
+  "n_positives": 2857,
+  "n_negatives": 2857,
   "results": {
     "t3": {
-      "TP": 264,
-      "FP": 10,
-      "TN": 378,
-      "FN": 124,
-      "precision": 0.9635036496350365,
-      "recall": 0.6804123711340206,
-      "f1": 0.797583081570997
+      "TP": 2042,
+      "FP": 426,
+      "TN": 2431,
+      "FN": 815,
+      "precision": 0.8273905996758509,
+      "recall": 0.7147357367868393,
+      "f1": 0.7669483568075117
     },
     "t4": {
-      "TP": 301,
-      "FP": 13,
-      "TN": 375,
-      "FN": 87,
-      "precision": 0.9585987261146497,
-      "recall": 0.7757731958762887,
-      "f1": 0.8575498575498576
+      "TP": 2311,
+      "FP": 150,
+      "TN": 2707,
+      "FN": 546,
+      "precision": 0.9390491670052824,
+      "recall": 0.8088904445222261,
+      "f1": 0.8691237307258367
     },
     "combined": {
-      "TP": 331,
-      "FP": 21,
-      "TN": 367,
-      "FN": 57,
-      "precision": 0.9403409090909091,
-      "recall": 0.8530927835051546,
-      "f1": 0.8945945945945946
+      "TP": 2465,
+      "FP": 509,
+      "TN": 2348,
+      "FN": 392,
+      "precision": 0.8288500336247479,
+      "recall": 0.8627931396569829,
+      "f1": 0.8454810495626822
     }
   },
   "negative_sample": [
     {
-      "l1_title": "John Singer Sargent",
-      "l2_title": "Jean II de Legnica",
+      "l1_title": "Lyudmila Karachkina",
+      "l2_title": "Ilian Kiriakov",
       "bucket": "person",
-      "positive_qid": "Q155626",
-      "negative_qid": "Q442604",
-      "l1_jw_to_source": 0.62729044834308,
+      "positive_qid": "Q242809",
+      "negative_qid": "Q2419917",
+      "l1_jw_to_source": 0.664327485380117,
       "label": "negative"
     },
     {
-      "l1_title": "Princess Birgitta of Sweden",
-      "l2_title": "Christine Goitschel",
+      "l1_title": "Simone Weil",
+      "l2_title": "Simone Thomalla",
       "bucket": "person",
-      "positive_qid": "Q232695",
-      "negative_qid": "Q272707",
-      "l1_jw_to_source": 0.6565487793557968,
+      "positive_qid": "Q157309",
+      "negative_qid": "Q100269",
+      "l1_jw_to_source": 0.8521212121212122,
       "label": "negative"
     },
     {
-      "l1_title": "Christine Goitschel",
-      "l2_title": "Birgitte de Suède",
+      "l1_title": "Pope Gregory IX",
+      "l2_title": "Grégoire X",
       "bucket": "person",
-      "positive_qid": "Q272707",
-      "negative_qid": "Q232695",
-      "l1_jw_to_source": 0.6565487793557968,
+      "positive_qid": "Q124831",
+      "negative_qid": "Q161740",
+      "l1_jw_to_source": 0.9866666666666667,
       "label": "negative"
     },
     {
-      "l1_title": "Élisabeth of France",
-      "l2_title": "Élisabeth II",
+      "l1_title": "Franco Davín",
+      "l2_title": "Francesco Soriano",
       "bucket": "person",
-      "positive_qid": "Q274709",
-      "negative_qid": "Q9682",
-      "l1_jw_to_source": 0.6959064327485379,
+      "positive_qid": "Q529577",
+      "negative_qid": "Q1376058",
+      "l1_jw_to_source": 0.8558823529411764,
       "label": "negative"
     },
     {
-      "l1_title": "Marcel Lefebvre",
-      "l2_title": "Stephen Adams",
+      "l1_title": "Wratislaus of Brno",
+      "l2_title": "Gautier de Montbéliard",
       "bucket": "person",
-      "positive_qid": "Q312675",
-      "negative_qid": "Q3498494",
-      "l1_jw_to_source": 0.6361111111111111,
+      "positive_qid": "Q721160",
+      "negative_qid": "Q2323177",
+      "l1_jw_to_source": 0.6904761904761906,
       "label": "negative"
     }
   ]

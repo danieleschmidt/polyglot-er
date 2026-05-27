@@ -1,162 +1,162 @@
 {
   "en_de": {
     "language_pair": "en_de",
-    "n_positives": 369,
-    "n_negatives": 369,
+    "n_positives": 2807,
+    "n_negatives": 2807,
     "results": {
       "t3": {
-        "TP": 269,
-        "FP": 13,
-        "TN": 356,
-        "FN": 100,
-        "precision": 0.9539007092198581,
-        "recall": 0.7289972899728997,
-        "f1": 0.8264208909370199
+        "TP": 2159,
+        "FP": 542,
+        "TN": 2265,
+        "FN": 648,
+        "precision": 0.7993335801554979,
+        "recall": 0.7691485571784824,
+        "f1": 0.7839506172839505
       },
       "t4": {
-        "TP": 293,
-        "FP": 8,
-        "TN": 361,
-        "FN": 76,
-        "precision": 0.973421926910299,
-        "recall": 0.7940379403794038,
-        "f1": 0.8746268656716417
+        "TP": 2326,
+        "FP": 155,
+        "TN": 2652,
+        "FN": 481,
+        "precision": 0.9375251914550584,
+        "recall": 0.8286426790167438,
+        "f1": 0.8797276853252647
       },
       "combined": {
-        "TP": 309,
-        "FP": 20,
-        "TN": 349,
-        "FN": 60,
-        "precision": 0.939209726443769,
-        "recall": 0.8373983739837398,
-        "f1": 0.8853868194842406
+        "TP": 2454,
+        "FP": 629,
+        "TN": 2178,
+        "FN": 353,
+        "precision": 0.7959779435614661,
+        "recall": 0.8742429640185251,
+        "f1": 0.8332767402376909
       }
     },
     "negative_sample": [
       {
-        "l1_title": "Franz Liszt",
-        "l2_title": "Fatima Mernissi",
+        "l1_title": "Wilhelm Hemprich",
+        "l2_title": "Wilhelm Schuster (Ornithologe)",
         "bucket": "person",
-        "positive_qid": "Q41309",
-        "negative_qid": "Q242376",
-        "l1_jw_to_source": 0.5959595959595959,
+        "positive_qid": "Q62240",
+        "negative_qid": "Q28739740",
+        "l1_jw_to_source": 0.8666666666666667,
         "label": "negative"
       },
       {
-        "l1_title": "Susanne Cramer",
-        "l2_title": "Frans Crabbe",
+        "l1_title": "Martin Bormann",
+        "l2_title": "Martin Hohmann",
         "bucket": "person",
-        "positive_qid": "Q102783",
-        "negative_qid": "Q1445420",
-        "l1_jw_to_source": 0.6150516150516151,
+        "positive_qid": "Q76367",
+        "negative_qid": "Q86790",
+        "l1_jw_to_source": 0.9428571428571428,
         "label": "negative"
       },
       {
-        "l1_title": "Ernst Mecklenburg",
-        "l2_title": "Frans Crabbe",
+        "l1_title": "Carl Hierholzer",
+        "l2_title": "Carl Holzmann",
         "bucket": "person",
-        "positive_qid": "Q97230",
-        "negative_qid": "Q1445420",
-        "l1_jw_to_source": 0.6294391882627176,
+        "positive_qid": "Q72985",
+        "negative_qid": "Q88656",
+        "l1_jw_to_source": 0.8584615384615384,
         "label": "negative"
       },
       {
-        "l1_title": "Hjalmar Schacht",
-        "l2_title": "Heinrich Schneier",
+        "l1_title": "Armin Veh",
+        "l2_title": "Herman Schell",
         "bucket": "person",
-        "positive_qid": "Q151691",
-        "negative_qid": "Q1598801",
-        "l1_jw_to_source": 0.584640522875817,
+        "positive_qid": "Q61392",
+        "negative_qid": "Q71338",
+        "l1_jw_to_source": 0.6538461538461539,
         "label": "negative"
       },
       {
-        "l1_title": "Ferdinand Gregorovius",
-        "l2_title": "Alexandre Guy Pingré",
+        "l1_title": "Walter Felsenstein",
+        "l2_title": "Walter Schellenberg (SS-Mitglied)",
         "bucket": "person",
-        "positive_qid": "Q61425",
-        "negative_qid": "Q705731",
-        "l1_jw_to_source": 0.6281440781440781,
+        "positive_qid": "Q78934",
+        "negative_qid": "Q57781",
+        "l1_jw_to_source": 0.8596491228070176,
         "label": "negative"
       }
     ]
   },
   "en_fr": {
     "language_pair": "en_fr",
-    "n_positives": 388,
-    "n_negatives": 388,
+    "n_positives": 2857,
+    "n_negatives": 2857,
     "results": {
       "t3": {
-        "TP": 264,
-        "FP": 10,
-        "TN": 378,
-        "FN": 124,
-        "precision": 0.9635036496350365,
-        "recall": 0.6804123711340206,
-        "f1": 0.797583081570997
+        "TP": 2042,
+        "FP": 426,
+        "TN": 2431,
+        "FN": 815,
+        "precision": 0.8273905996758509,
+        "recall": 0.7147357367868393,
+        "f1": 0.7669483568075117
       },
       "t4": {
-        "TP": 301,
-        "FP": 13,
-        "TN": 375,
-        "FN": 87,
-        "precision": 0.9585987261146497,
-        "recall": 0.7757731958762887,
-        "f1": 0.8575498575498576
+        "TP": 2311,
+        "FP": 150,
+        "TN": 2707,
+        "FN": 546,
+        "precision": 0.9390491670052824,
+        "recall": 0.8088904445222261,
+        "f1": 0.8691237307258367
       },
       "combined": {
-        "TP": 331,
-        "FP": 21,
-        "TN": 367,
-        "FN": 57,
-        "precision": 0.9403409090909091,
-        "recall": 0.8530927835051546,
-        "f1": 0.8945945945945946
+        "TP": 2465,
+        "FP": 509,
+        "TN": 2348,
+        "FN": 392,
+        "precision": 0.8288500336247479,
+        "recall": 0.8627931396569829,
+        "f1": 0.8454810495626822
       }
     },
     "negative_sample": [
       {
-        "l1_title": "John Singer Sargent",
-        "l2_title": "Jean II de Legnica",
+        "l1_title": "Lyudmila Karachkina",
+        "l2_title": "Ilian Kiriakov",
         "bucket": "person",
-        "positive_qid": "Q155626",
-        "negative_qid": "Q442604",
-        "l1_jw_to_source": 0.62729044834308,
+        "positive_qid": "Q242809",
+        "negative_qid": "Q2419917",
+        "l1_jw_to_source": 0.664327485380117,
         "label": "negative"
       },
       {
-        "l1_title": "Princess Birgitta of Sweden",
-        "l2_title": "Christine Goitschel",
+        "l1_title": "Simone Weil",
+        "l2_title": "Simone Thomalla",
         "bucket": "person",
-        "positive_qid": "Q232695",
-        "negative_qid": "Q272707",
-        "l1_jw_to_source": 0.6565487793557968,
+        "positive_qid": "Q157309",
+        "negative_qid": "Q100269",
+        "l1_jw_to_source": 0.8521212121212122,
         "label": "negative"
       },
       {
-        "l1_title": "Christine Goitschel",
-        "l2_title": "Birgitte de Suède",
+        "l1_title": "Pope Gregory IX",
+        "l2_title": "Grégoire X",
         "bucket": "person",
-        "positive_qid": "Q272707",
-        "negative_qid": "Q232695",
-        "l1_jw_to_source": 0.6565487793557968,
+        "positive_qid": "Q124831",
+        "negative_qid": "Q161740",
+        "l1_jw_to_source": 0.9866666666666667,
         "label": "negative"
       },
       {
-        "l1_title": "Élisabeth of France",
-        "l2_title": "Élisabeth II",
+        "l1_title": "Franco Davín",
+        "l2_title": "Francesco Soriano",
         "bucket": "person",
-        "positive_qid": "Q274709",
-        "negative_qid": "Q9682",
-        "l1_jw_to_source": 0.6959064327485379,
+        "positive_qid": "Q529577",
+        "negative_qid": "Q1376058",
+        "l1_jw_to_source": 0.8558823529411764,
         "label": "negative"
       },
       {
-        "l1_title": "Marcel Lefebvre",
-        "l2_title": "Stephen Adams",
+        "l1_title": "Wratislaus of Brno",
+        "l2_title": "Gautier de Montbéliard",
         "bucket": "person",
-        "positive_qid": "Q312675",
-        "negative_qid": "Q3498494",
-        "l1_jw_to_source": 0.6361111111111111,
+        "positive_qid": "Q721160",
+        "negative_qid": "Q2323177",
+        "l1_jw_to_source": 0.6904761904761906,
         "label": "negative"
       }
     ]
@@ -244,162 +244,162 @@
   },
   "en_ar": {
     "language_pair": "en_ar",
-    "n_positives": 390,
-    "n_negatives": 389,
+    "n_positives": 2839,
+    "n_negatives": 2838,
     "results": {
       "t3": {
-        "TP": 60,
-        "FP": 0,
-        "TN": 389,
-        "FN": 330,
-        "precision": 1.0,
-        "recall": 0.15384615384615385,
-        "f1": 0.2666666666666667
+        "TP": 579,
+        "FP": 50,
+        "TN": 2788,
+        "FN": 2260,
+        "precision": 0.9205087440381559,
+        "recall": 0.20394505107432195,
+        "f1": 0.33391003460207613
       },
       "t4": {
-        "TP": 181,
-        "FP": 24,
-        "TN": 365,
-        "FN": 209,
-        "precision": 0.8829268292682927,
-        "recall": 0.4641025641025641,
-        "f1": 0.6084033613445379
+        "TP": 1154,
+        "FP": 194,
+        "TN": 2644,
+        "FN": 1685,
+        "precision": 0.8560830860534124,
+        "recall": 0.40648115533638607,
+        "f1": 0.5512299976116551
       },
       "combined": {
-        "TP": 218,
-        "FP": 24,
-        "TN": 365,
-        "FN": 172,
-        "precision": 0.9008264462809917,
-        "recall": 0.558974358974359,
-        "f1": 0.6898734177215189
+        "TP": 1536,
+        "FP": 232,
+        "TN": 2606,
+        "FN": 1303,
+        "precision": 0.8687782805429864,
+        "recall": 0.5410355759070095,
+        "f1": 0.6668113739960928
       }
     },
     "negative_sample": [
       {
-        "l1_title": "Kerim Çalhanoğlu",
-        "l2_title": "سليم الحص",
+        "l1_title": "Ferreira de Castro",
+        "l2_title": "فريديريك باربييه (أمين مكتبة)",
         "bucket": "person",
-        "positive_qid": "Q100025380",
-        "negative_qid": "Q2094707",
-        "l1_jw_to_source": 0.5634157509157509,
+        "positive_qid": "Q1000729",
+        "negative_qid": "Q1004154",
+        "l1_jw_to_source": 0.7307142857142858,
         "label": "negative"
       },
       {
-        "l1_title": "Noah Fatar",
-        "l2_title": "ناتان شارانسكي",
+        "l1_title": "Patrick Walsh (bishop of Down and Connor)",
+        "l2_title": "باتريك كولمان",
         "bucket": "person",
-        "positive_qid": "Q100026920",
-        "negative_qid": "Q360961",
-        "l1_jw_to_source": 0.6944444444444445,
+        "positive_qid": "Q1000820",
+        "negative_qid": "Q100296",
+        "l1_jw_to_source": 0.6912020905923345,
         "label": "negative"
       },
       {
-        "l1_title": "Amadou Traoré",
-        "l2_title": "أحمد طالب حميد",
+        "l1_title": "Buddy Emmons",
+        "l2_title": "بادي إبسن",
         "bucket": "person",
-        "positive_qid": "Q100031473",
-        "negative_qid": "Q16119485",
-        "l1_jw_to_source": 0.6424501424501424,
+        "positive_qid": "Q1001188",
+        "negative_qid": "Q1001214",
+        "l1_jw_to_source": 0.8914141414141414,
         "label": "negative"
       },
       {
-        "l1_title": "Etienne Green",
-        "l2_title": "مايرون في. جورج",
+        "l1_title": "Buddy Banks (bassist)",
+        "l2_title": "بادي بانكس (قائد فرقة)",
         "bucket": "person",
-        "positive_qid": "Q100035544",
-        "negative_qid": "Q1000070",
-        "l1_jw_to_source": 0.5649572649572651,
+        "positive_qid": "Q1001117",
+        "negative_qid": "Q1001119",
+        "l1_jw_to_source": 0.9118997493734337,
         "label": "negative"
       },
       {
-        "l1_title": "Bud Scott",
-        "l2_title": "باد أولسون",
+        "l1_title": "Buddy Banks (saxophonist)",
+        "l2_title": "بادي بانكس",
         "bucket": "person",
-        "positive_qid": "Q1000534",
-        "negative_qid": "Q1000502",
-        "l1_jw_to_source": 0.8222222222222222,
+        "positive_qid": "Q1001119",
+        "negative_qid": "Q1001117",
+        "l1_jw_to_source": 0.9118997493734337,
         "label": "negative"
       }
     ]
   },
   "en_zh": {
     "language_pair": "en_zh",
-    "n_positives": 384,
-    "n_negatives": 384,
+    "n_positives": 2796,
+    "n_negatives": 2796,
     "results": {
       "t3": {
-        "TP": 56,
-        "FP": 8,
-        "TN": 376,
-        "FN": 328,
-        "precision": 0.875,
-        "recall": 0.14583333333333334,
-        "f1": 0.25000000000000006
+        "TP": 357,
+        "FP": 59,
+        "TN": 2737,
+        "FN": 2439,
+        "precision": 0.8581730769230769,
+        "recall": 0.1276824034334764,
+        "f1": 0.22229140722291407
       },
       "t4": {
-        "TP": 146,
-        "FP": 14,
-        "TN": 370,
-        "FN": 238,
-        "precision": 0.9125,
-        "recall": 0.3802083333333333,
-        "f1": 0.5367647058823529
+        "TP": 965,
+        "FP": 158,
+        "TN": 2638,
+        "FN": 1831,
+        "precision": 0.8593054318788959,
+        "recall": 0.34513590844062947,
+        "f1": 0.49247256953304414
       },
       "combined": {
-        "TP": 174,
-        "FP": 20,
-        "TN": 364,
-        "FN": 210,
-        "precision": 0.8969072164948454,
-        "recall": 0.453125,
-        "f1": 0.6020761245674741
+        "TP": 1156,
+        "FP": 206,
+        "TN": 2590,
+        "FN": 1640,
+        "precision": 0.8487518355359766,
+        "recall": 0.413447782546495,
+        "f1": 0.5560365560365561
       }
     },
     "negative_sample": [
       {
         "l1_title": "Sappho",
-        "l2_title": "謝韶光",
+        "l2_title": "白砂沙帆",
         "bucket": "person",
         "positive_qid": "Q17892",
-        "negative_qid": "Q1002661",
-        "l1_jw_to_source": 0.5747863247863249,
+        "negative_qid": "Q100454524",
+        "l1_jw_to_source": 0.6666666666666666,
         "label": "negative"
       },
       {
-        "l1_title": "Joscelin III, Count of Edessa",
-        "l2_title": "乔治林二世",
+        "l1_title": "Charlaine Harris",
+        "l2_title": "雪若比·狄恩",
         "bucket": "person",
-        "positive_qid": "Q503875",
-        "negative_qid": "Q55503",
-        "l1_jw_to_source": 0.993103448275862,
+        "positive_qid": "Q233566",
+        "negative_qid": "Q101064944",
+        "l1_jw_to_source": 0.8516666666666668,
         "label": "negative"
       },
       {
-        "l1_title": "Vitali Klitschko",
-        "l2_title": "楊國樞",
+        "l1_title": "Gong Li",
+        "l2_title": "鍾玲",
         "bucket": "person",
-        "positive_qid": "Q31919",
-        "negative_qid": "Q9298773",
-        "l1_jw_to_source": 0.576388888888889,
+        "positive_qid": "Q150903",
+        "negative_qid": "Q19841138",
+        "l1_jw_to_source": 0.7380952380952381,
         "label": "negative"
       },
       {
-        "l1_title": "Karolos Papoulias",
-        "l2_title": "小林俊彦",
+        "l1_title": "Zi Yu (entertainer)",
+        "l2_title": "孙位",
         "bucket": "person",
-        "positive_qid": "Q57303",
-        "negative_qid": "Q1002730",
-        "l1_jw_to_source": 0.5936245843366587,
+        "positive_qid": "Q128001981",
+        "negative_qid": "Q10112313",
+        "l1_jw_to_source": 0.7106000294854784,
         "label": "negative"
       },
       {
-        "l1_title": "Li Ang (writer)",
-        "l2_title": "梁时泰",
+        "l1_title": "Olena Khomrova",
+        "l2_title": "瓦列里·克列伊苗诺夫",
         "bucket": "person",
-        "positive_qid": "Q699704",
-        "negative_qid": "Q100264027",
-        "l1_jw_to_source": 0.6357142857142857,
+        "positive_qid": "Q270142",
+        "negative_qid": "Q1006445",
+        "l1_jw_to_source": 0.6675070028011204,
         "label": "negative"
       }
     ]

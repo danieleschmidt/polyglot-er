@@ -1,80 +1,80 @@
 {
   "language_pair": "en_ar",
-  "n_positives": 390,
-  "n_negatives": 389,
+  "n_positives": 2839,
+  "n_negatives": 2838,
   "results": {
     "t3": {
-      "TP": 60,
-      "FP": 0,
-      "TN": 389,
-      "FN": 330,
-      "precision": 1.0,
-      "recall": 0.15384615384615385,
-      "f1": 0.2666666666666667
+      "TP": 579,
+      "FP": 50,
+      "TN": 2788,
+      "FN": 2260,
+      "precision": 0.9205087440381559,
+      "recall": 0.20394505107432195,
+      "f1": 0.33391003460207613
     },
     "t4": {
-      "TP": 181,
-      "FP": 24,
-      "TN": 365,
-      "FN": 209,
-      "precision": 0.8829268292682927,
-      "recall": 0.4641025641025641,
-      "f1": 0.6084033613445379
+      "TP": 1154,
+      "FP": 194,
+      "TN": 2644,
+      "FN": 1685,
+      "precision": 0.8560830860534124,
+      "recall": 0.40648115533638607,
+      "f1": 0.5512299976116551
     },
     "combined": {
-      "TP": 218,
-      "FP": 24,
-      "TN": 365,
-      "FN": 172,
-      "precision": 0.9008264462809917,
-      "recall": 0.558974358974359,
-      "f1": 0.6898734177215189
+      "TP": 1536,
+      "FP": 232,
+      "TN": 2606,
+      "FN": 1303,
+      "precision": 0.8687782805429864,
+      "recall": 0.5410355759070095,
+      "f1": 0.6668113739960928
     }
   },
   "negative_sample": [
     {
-      "l1_title": "Kerim Çalhanoğlu",
-      "l2_title": "سليم الحص",
+      "l1_title": "Ferreira de Castro",
+      "l2_title": "فريديريك باربييه (أمين مكتبة)",
       "bucket": "person",
-      "positive_qid": "Q100025380",
-      "negative_qid": "Q2094707",
-      "l1_jw_to_source": 0.5634157509157509,
+      "positive_qid": "Q1000729",
+      "negative_qid": "Q1004154",
+      "l1_jw_to_source": 0.7307142857142858,
       "label": "negative"
     },
     {
-      "l1_title": "Noah Fatar",
-      "l2_title": "ناتان شارانسكي",
+      "l1_title": "Patrick Walsh (bishop of Down and Connor)",
+      "l2_title": "باتريك كولمان",
       "bucket": "person",
-      "positive_qid": "Q100026920",
-      "negative_qid": "Q360961",
-      "l1_jw_to_source": 0.6944444444444445,
+      "positive_qid": "Q1000820",
+      "negative_qid": "Q100296",
+      "l1_jw_to_source": 0.6912020905923345,
       "label": "negative"
     },
     {
-      "l1_title": "Amadou Traoré",
-      "l2_title": "أحمد طالب حميد",
+      "l1_title": "Buddy Emmons",
+      "l2_title": "بادي إبسن",
       "bucket": "person",
-      "positive_qid": "Q100031473",
-      "negative_qid": "Q16119485",
-      "l1_jw_to_source": 0.6424501424501424,
+      "positive_qid": "Q1001188",
+      "negative_qid": "Q1001214",
+      "l1_jw_to_source": 0.8914141414141414,
       "label": "negative"
     },
     {
-      "l1_title": "Etienne Green",
-      "l2_title": "مايرون في. جورج",
+      "l1_title": "Buddy Banks (bassist)",
+      "l2_title": "بادي بانكس (قائد فرقة)",
       "bucket": "person",
-      "positive_qid": "Q100035544",
-      "negative_qid": "Q1000070",
-      "l1_jw_to_source": 0.5649572649572651,
+      "positive_qid": "Q1001117",
+      "negative_qid": "Q1001119",
+      "l1_jw_to_source": 0.9118997493734337,
       "label": "negative"
     },
     {
-      "l1_title": "Bud Scott",
-      "l2_title": "باد أولسون",
+      "l1_title": "Buddy Banks (saxophonist)",
+      "l2_title": "بادي بانكس",
       "bucket": "person",
-      "positive_qid": "Q1000534",
-      "negative_qid": "Q1000502",
-      "l1_jw_to_source": 0.8222222222222222,
+      "positive_qid": "Q1001119",
+      "negative_qid": "Q1001117",
+      "l1_jw_to_source": 0.9118997493734337,
       "label": "negative"
     }
   ]

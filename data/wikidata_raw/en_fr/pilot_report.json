@@ -1,6 +1,6 @@
 {
   "language_pair": "en_fr",
-  "n_pairs": 388,
+  "n_pairs": 2857,
   "t4_threshold_sweep": {
     "t4_thresholds": [
       0.5,
@@ -15,108 +15,127 @@
     "rows": [
       {
         "t4_threshold": 0.5,
-        "t3_recall": 0.6804123711340206,
-        "t4_recall": 0.9304123711340206,
-        "combined_recall": 0.9458762886597938,
-        "t3_marginal_over_t4": 0.015463917525773196,
-        "both": 258,
-        "t3_only": 6,
-        "t4_only": 103,
-        "neither": 21
+        "t3_recall": 0.7147357367868393,
+        "t4_recall": 0.9187959397969898,
+        "combined_recall": 0.9334966748337417,
+        "t3_marginal_over_t4": 0.014700735036751837,
+        "both": 2000,
+        "t3_only": 42,
+        "t4_only": 625,
+        "neither": 190
       },
       {
         "t4_threshold": 0.6,
-        "t3_recall": 0.6804123711340206,
-        "t4_recall": 0.904639175257732,
-        "combined_recall": 0.9278350515463918,
-        "t3_marginal_over_t4": 0.023195876288659795,
-        "both": 255,
-        "t3_only": 9,
-        "t4_only": 96,
-        "neither": 28
+        "t3_recall": 0.7147357367868393,
+        "t4_recall": 0.8918445922296114,
+        "combined_recall": 0.9142457122856142,
+        "t3_marginal_over_t4": 0.0224011200560028,
+        "both": 1978,
+        "t3_only": 64,
+        "t4_only": 570,
+        "neither": 245
       },
       {
         "t4_threshold": 0.65,
-        "t3_recall": 0.6804123711340206,
-        "t4_recall": 0.8737113402061856,
-        "combined_recall": 0.9123711340206185,
-        "t3_marginal_over_t4": 0.03865979381443299,
-        "both": 249,
-        "t3_only": 15,
-        "t4_only": 90,
-        "neither": 34
+        "t3_recall": 0.7147357367868393,
+        "t4_recall": 0.8673433671683585,
+        "combined_recall": 0.8977948897444872,
+        "t3_marginal_over_t4": 0.030451522576128806,
+        "both": 1955,
+        "t3_only": 87,
+        "t4_only": 523,
+        "neither": 292
       },
       {
         "t4_threshold": 0.7,
-        "t3_recall": 0.6804123711340206,
-        "t4_recall": 0.8221649484536082,
-        "combined_recall": 0.8788659793814433,
-        "t3_marginal_over_t4": 0.05670103092783505,
-        "both": 242,
-        "t3_only": 22,
-        "t4_only": 77,
-        "neither": 47
+        "t3_recall": 0.7147357367868393,
+        "t4_recall": 0.8386419320966049,
+        "combined_recall": 0.8816940847042352,
+        "t3_marginal_over_t4": 0.04305215260763038,
+        "both": 1919,
+        "t3_only": 123,
+        "t4_only": 477,
+        "neither": 338
       },
       {
         "t4_threshold": 0.75,
-        "t3_recall": 0.6804123711340206,
-        "t4_recall": 0.7757731958762887,
-        "combined_recall": 0.8530927835051546,
-        "t3_marginal_over_t4": 0.07731958762886598,
-        "both": 234,
-        "t3_only": 30,
-        "t4_only": 67,
-        "neither": 57
+        "t3_recall": 0.7147357367868393,
+        "t4_recall": 0.8088904445222261,
+        "combined_recall": 0.8627931396569829,
+        "t3_marginal_over_t4": 0.05390269513475674,
+        "both": 1888,
+        "t3_only": 154,
+        "t4_only": 423,
+        "neither": 392
       },
       {
         "t4_threshold": 0.8,
-        "t3_recall": 0.6804123711340206,
-        "t4_recall": 0.7319587628865979,
-        "combined_recall": 0.8221649484536082,
-        "t3_marginal_over_t4": 0.09020618556701031,
-        "both": 229,
-        "t3_only": 35,
-        "t4_only": 55,
-        "neither": 69
+        "t3_recall": 0.7147357367868393,
+        "t4_recall": 0.7752887644382219,
+        "combined_recall": 0.8428421421071054,
+        "t3_marginal_over_t4": 0.06755337766888345,
+        "both": 1849,
+        "t3_only": 193,
+        "t4_only": 366,
+        "neither": 449
       },
       {
         "t4_threshold": 0.85,
-        "t3_recall": 0.6804123711340206,
-        "t4_recall": 0.6829896907216495,
-        "combined_recall": 0.7938144329896907,
-        "t3_marginal_over_t4": 0.11082474226804123,
-        "both": 221,
-        "t3_only": 43,
-        "t4_only": 44,
-        "neither": 80
+        "t3_recall": 0.7147357367868393,
+        "t4_recall": 0.7273363668183409,
+        "combined_recall": 0.8179908995449773,
+        "t3_marginal_over_t4": 0.09065453272663633,
+        "both": 1783,
+        "t3_only": 259,
+        "t4_only": 295,
+        "neither": 520
       },
       {
         "t4_threshold": 0.9,
-        "t3_recall": 0.6804123711340206,
-        "t4_recall": 0.6443298969072165,
-        "combined_recall": 0.7654639175257731,
-        "t3_marginal_over_t4": 0.1211340206185567,
-        "both": 217,
-        "t3_only": 47,
-        "t4_only": 33,
-        "neither": 91
+        "t3_recall": 0.7147357367868393,
+        "t4_recall": 0.6832341617080854,
+        "combined_recall": 0.7952397619880994,
+        "t3_marginal_over_t4": 0.112005600280014,
+        "both": 1722,
+        "t3_only": 320,
+        "t4_only": 230,
+        "neither": 585
       }
     ]
   },
   "t3_only_inspection_at_default": {
-    "n": 30,
-    "t4_score_min": 0.24262891709804535,
-    "t4_score_median": 0.6506144404411316,
-    "t4_score_max": 0.7488013505935669,
+    "n": 154,
+    "t4_score_min": 0.20624375343322754,
+    "t4_score_median": 0.6255788207054138,
+    "t4_score_max": 0.7495635747909546,
     "by_bucket": {
-      "person": 5,
-      "organization": 7,
-      "city": 5,
-      "country": 7,
-      "work_of_art": 2,
-      "business": 4
+      "person": 34,
+      "organization": 21,
+      "city": 38,
+      "country": 15,
+      "film": 11,
+      "work_of_art": 4,
+      "business": 31
     },
     "samples": [
+      {
+        "bucket": "country",
+        "l1": "Tanzania",
+        "l2": "Tanzanie",
+        "t4_score": 0.206
+      },
+      {
+        "bucket": "business",
+        "l1": "Pan Am",
+        "l2": "Pan American World Airways",
+        "t4_score": 0.208
+      },
+      {
+        "bucket": "organization",
+        "l1": "Rexist Party",
+        "l2": "Rex",
+        "t4_score": 0.222
+      },
       {
         "bucket": "country",
         "l1": "Grenada",
@@ -130,52 +149,34 @@
         "t4_score": 0.267
       },
       {
-        "bucket": "city",
-        "l1": "Nanjing",
-        "l2": "Nankin",
-        "t4_score": 0.337
-      },
-      {
-        "bucket": "city",
-        "l1": "Palermo",
-        "l2": "Palerme",
-        "t4_score": 0.462
-      },
-      {
-        "bucket": "city",
-        "l1": "Frankfurt",
-        "l2": "Francfort-sur-l'Oder",
-        "t4_score": 0.467
+        "bucket": "organization",
+        "l1": "Chapter",
+        "l2": "Chapitre de religieux",
+        "t4_score": 0.272
       },
       {
         "bucket": "person",
-        "l1": "Guaram I",
-        "l2": "Gouaram Ier d'Ibérie",
-        "t4_score": 0.494
+        "l1": "Liudolf of Lotharingia",
+        "l2": "Liudolf de Zutphen",
+        "t4_score": 0.282
       },
       {
-        "bucket": "organization",
-        "l1": "Sauber Motorsport",
-        "l2": "Sauber",
-        "t4_score": 0.521
+        "bucket": "country",
+        "l1": "Mauritius",
+        "l2": "Maurice",
+        "t4_score": 0.306
       },
       {
-        "bucket": "organization",
-        "l1": "Lutheranism",
-        "l2": "Luthéranisme",
-        "t4_score": 0.556
+        "bucket": "city",
+        "l1": "Groningen",
+        "l2": "Groningue",
+        "t4_score": 0.312
       },
       {
-        "bucket": "person",
-        "l1": "Bolesław of Oleśnica",
-        "l2": "Boleslas d'Oleśnica",
-        "t4_score": 0.6
-      },
-      {
-        "bucket": "organization",
-        "l1": "Masters Tournament",
-        "l2": "Masters de golf",
-        "t4_score": 0.61
+        "bucket": "city",
+        "l1": "Roermond",
+        "l2": "Ruremonde",
+        "t4_score": 0.312
       }
     ]
   }

@@ -1,6 +1,6 @@
 {
   "language_pair": "en_de",
-  "n_pairs": 369,
+  "n_pairs": 2807,
   "t4_threshold_sweep": {
     "t4_thresholds": [
       0.5,
@@ -15,110 +15,128 @@
     "rows": [
       {
         "t4_threshold": 0.5,
-        "t3_recall": 0.7289972899728997,
-        "t4_recall": 0.9186991869918699,
-        "combined_recall": 0.9322493224932249,
-        "t3_marginal_over_t4": 0.013550135501355014,
-        "both": 264,
-        "t3_only": 5,
-        "t4_only": 75,
-        "neither": 25
+        "t3_recall": 0.7691485571784824,
+        "t4_recall": 0.9319558247239045,
+        "combined_recall": 0.9397933737085857,
+        "t3_marginal_over_t4": 0.007837548984681154,
+        "both": 2137,
+        "t3_only": 22,
+        "t4_only": 479,
+        "neither": 169
       },
       {
         "t4_threshold": 0.6,
-        "t3_recall": 0.7289972899728997,
-        "t4_recall": 0.8780487804878049,
-        "combined_recall": 0.8997289972899729,
-        "t3_marginal_over_t4": 0.02168021680216802,
-        "both": 261,
-        "t3_only": 8,
-        "t4_only": 63,
-        "neither": 37
+        "t3_recall": 0.7691485571784824,
+        "t4_recall": 0.9013181332383328,
+        "combined_recall": 0.9184182401140008,
+        "t3_marginal_over_t4": 0.017100106875667972,
+        "both": 2111,
+        "t3_only": 48,
+        "t4_only": 419,
+        "neither": 229
       },
       {
         "t4_threshold": 0.65,
-        "t3_recall": 0.7289972899728997,
-        "t4_recall": 0.8563685636856369,
-        "combined_recall": 0.8834688346883469,
-        "t3_marginal_over_t4": 0.02710027100271003,
-        "both": 259,
-        "t3_only": 10,
-        "t4_only": 57,
-        "neither": 43
+        "t3_recall": 0.7691485571784824,
+        "t4_recall": 0.8856430352689705,
+        "combined_recall": 0.908443177769861,
+        "t3_marginal_over_t4": 0.02280014250089063,
+        "both": 2095,
+        "t3_only": 64,
+        "t4_only": 391,
+        "neither": 257
       },
       {
         "t4_threshold": 0.7,
-        "t3_recall": 0.7289972899728997,
-        "t4_recall": 0.8211382113821138,
-        "combined_recall": 0.8617886178861789,
-        "t3_marginal_over_t4": 0.04065040650406504,
-        "both": 254,
-        "t3_only": 15,
-        "t4_only": 49,
-        "neither": 51
+        "t3_recall": 0.7691485571784824,
+        "t4_recall": 0.8592803705023156,
+        "combined_recall": 0.8934805842536516,
+        "t3_marginal_over_t4": 0.034200213751335945,
+        "both": 2063,
+        "t3_only": 96,
+        "t4_only": 349,
+        "neither": 299
       },
       {
         "t4_threshold": 0.75,
-        "t3_recall": 0.7289972899728997,
-        "t4_recall": 0.7940379403794038,
-        "combined_recall": 0.8373983739837398,
-        "t3_marginal_over_t4": 0.04336043360433604,
-        "both": 253,
-        "t3_only": 16,
-        "t4_only": 40,
-        "neither": 60
+        "t3_recall": 0.7691485571784824,
+        "t4_recall": 0.8286426790167438,
+        "combined_recall": 0.8742429640185251,
+        "t3_marginal_over_t4": 0.04560028500178126,
+        "both": 2031,
+        "t3_only": 128,
+        "t4_only": 295,
+        "neither": 353
       },
       {
         "t4_threshold": 0.8,
-        "t3_recall": 0.7289972899728997,
-        "t4_recall": 0.7669376693766937,
-        "combined_recall": 0.8184281842818428,
-        "t3_marginal_over_t4": 0.051490514905149054,
-        "both": 250,
-        "t3_only": 19,
-        "t4_only": 33,
-        "neither": 67
+        "t3_recall": 0.7691485571784824,
+        "t4_recall": 0.7997862486640541,
+        "combined_recall": 0.8603491271820449,
+        "t3_marginal_over_t4": 0.060562878517990734,
+        "both": 1989,
+        "t3_only": 170,
+        "t4_only": 256,
+        "neither": 392
       },
       {
         "t4_threshold": 0.85,
-        "t3_recall": 0.7289972899728997,
-        "t4_recall": 0.7289972899728997,
-        "combined_recall": 0.7994579945799458,
-        "t3_marginal_over_t4": 0.07046070460704607,
-        "both": 243,
-        "t3_only": 26,
-        "t4_only": 26,
-        "neither": 74
+        "t3_recall": 0.7691485571784824,
+        "t4_recall": 0.7616672604203776,
+        "combined_recall": 0.8436052725329534,
+        "t3_marginal_over_t4": 0.0819380121125757,
+        "both": 1929,
+        "t3_only": 230,
+        "t4_only": 209,
+        "neither": 439
       },
       {
         "t4_threshold": 0.9,
-        "t3_recall": 0.7289972899728997,
-        "t4_recall": 0.6937669376693767,
-        "combined_recall": 0.7831978319783198,
-        "t3_marginal_over_t4": 0.08943089430894309,
-        "both": 236,
-        "t3_only": 33,
-        "t4_only": 20,
-        "neither": 80
+        "t3_recall": 0.7691485571784824,
+        "t4_recall": 0.7189169932312077,
+        "combined_recall": 0.8232988956180977,
+        "t3_marginal_over_t4": 0.10438190238688992,
+        "both": 1866,
+        "t3_only": 293,
+        "t4_only": 152,
+        "neither": 496
       }
     ]
   },
   "t3_only_inspection_at_default": {
-    "n": 16,
-    "t4_score_min": 0.35609036684036255,
-    "t4_score_median": 0.615763783454895,
-    "t4_score_max": 0.7066907286643982,
+    "n": 128,
+    "t4_score_min": 0.20758765935897827,
+    "t4_score_median": 0.6503774523735046,
+    "t4_score_max": 0.7490794062614441,
     "by_bucket": {
-      "person": 3,
-      "organization": 1,
-      "city": 1,
-      "country": 1,
-      "film": 1,
+      "person": 23,
+      "organization": 16,
+      "city": 22,
+      "country": 3,
+      "film": 18,
       "book": 1,
-      "work_of_art": 5,
-      "business": 3
+      "work_of_art": 10,
+      "business": 35
     },
     "samples": [
+      {
+        "bucket": "business",
+        "l1": "Pan Am",
+        "l2": "Pan American World Airways",
+        "t4_score": 0.208
+      },
+      {
+        "bucket": "city",
+        "l1": "Reggio Emilia",
+        "l2": "Reggio nell’Emilia",
+        "t4_score": 0.344
+      },
+      {
+        "bucket": "person",
+        "l1": "Aref Tayfour",
+        "l2": "Arif Taifur",
+        "t4_score": 0.346
+      },
       {
         "bucket": "business",
         "l1": "APA Corporation",
@@ -132,52 +150,34 @@
         "t4_score": 0.37
       },
       {
+        "bucket": "work_of_art",
+        "l1": "Tefillin Barbie",
+        "l2": "Tefillin-Barbie",
+        "t4_score": 0.387
+      },
+      {
+        "bucket": "organization",
+        "l1": "Houbigant Parfum",
+        "l2": "Houbigant",
+        "t4_score": 0.398
+      },
+      {
         "bucket": "book",
         "l1": "Wernigerode Armorial",
         "l2": "Wernigeroder Wappenbuch",
         "t4_score": 0.399
       },
       {
-        "bucket": "business",
-        "l1": "Yle",
-        "l2": "Yleisradio",
-        "t4_score": 0.412
+        "bucket": "film",
+        "l1": "Step Up Revolution",
+        "l2": "Step Up: Miami Heat",
+        "t4_score": 0.404
       },
       {
-        "bucket": "business",
-        "l1": "Schwinn Bicycle Company",
-        "l2": "Schwinn",
-        "t4_score": 0.467
-      },
-      {
-        "bucket": "work_of_art",
-        "l1": "Nomoli figurine",
-        "l2": "Nomoli",
-        "t4_score": 0.524
-      },
-      {
-        "bucket": "city",
-        "l1": "Mysore",
-        "l2": "Mysuru",
-        "t4_score": 0.531
-      },
-      {
-        "bucket": "country",
-        "l1": "Cook Islands",
-        "l2": "Cookinseln",
-        "t4_score": 0.592
-      },
-      {
-        "bucket": "work_of_art",
-        "l1": "Bitterfeld Arch",
-        "l2": "Bitterfelder Bogen",
-        "t4_score": 0.616
-      },
-      {
-        "bucket": "person",
-        "l1": "Fatema Mernissi",
-        "l2": "Fatima Mernissi",
-        "t4_score": 0.632
+        "bucket": "organization",
+        "l1": "Carmelites",
+        "l2": "Karmeliten",
+        "t4_score": 0.408
       }
     ]
   }
