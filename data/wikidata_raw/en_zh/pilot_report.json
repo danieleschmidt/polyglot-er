@@ -1,0 +1,123 @@
+{
+  "language_pair": "en_zh",
+  "n_pairs": 384,
+  "t4_threshold_sweep": {
+    "t4_thresholds": [
+      0.5,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9
+    ],
+    "rows": [
+      {
+        "t4_threshold": 0.5,
+        "t3_recall": 0.046875,
+        "t4_recall": 0.7734375,
+        "combined_recall": 0.7760416666666666,
+        "t3_marginal_over_t4": 0.0026041666666666665,
+        "both": 17,
+        "t3_only": 1,
+        "t4_only": 280,
+        "neither": 86
+      },
+      {
+        "t4_threshold": 0.6,
+        "t3_recall": 0.046875,
+        "t4_recall": 0.6015625,
+        "combined_recall": 0.6041666666666666,
+        "t3_marginal_over_t4": 0.0026041666666666665,
+        "both": 17,
+        "t3_only": 1,
+        "t4_only": 214,
+        "neither": 152
+      },
+      {
+        "t4_threshold": 0.65,
+        "t3_recall": 0.046875,
+        "t4_recall": 0.5052083333333334,
+        "combined_recall": 0.5078125,
+        "t3_marginal_over_t4": 0.0026041666666666665,
+        "both": 17,
+        "t3_only": 1,
+        "t4_only": 177,
+        "neither": 189
+      },
+      {
+        "t4_threshold": 0.7,
+        "t3_recall": 0.046875,
+        "t4_recall": 0.4375,
+        "combined_recall": 0.4401041666666667,
+        "t3_marginal_over_t4": 0.0026041666666666665,
+        "both": 17,
+        "t3_only": 1,
+        "t4_only": 151,
+        "neither": 215
+      },
+      {
+        "t4_threshold": 0.75,
+        "t3_recall": 0.046875,
+        "t4_recall": 0.3802083333333333,
+        "combined_recall": 0.3828125,
+        "t3_marginal_over_t4": 0.0026041666666666665,
+        "both": 17,
+        "t3_only": 1,
+        "t4_only": 129,
+        "neither": 237
+      },
+      {
+        "t4_threshold": 0.8,
+        "t3_recall": 0.046875,
+        "t4_recall": 0.3255208333333333,
+        "combined_recall": 0.3307291666666667,
+        "t3_marginal_over_t4": 0.005208333333333333,
+        "both": 16,
+        "t3_only": 2,
+        "t4_only": 109,
+        "neither": 257
+      },
+      {
+        "t4_threshold": 0.85,
+        "t3_recall": 0.046875,
+        "t4_recall": 0.2604166666666667,
+        "combined_recall": 0.265625,
+        "t3_marginal_over_t4": 0.005208333333333333,
+        "both": 16,
+        "t3_only": 2,
+        "t4_only": 84,
+        "neither": 282
+      },
+      {
+        "t4_threshold": 0.9,
+        "t3_recall": 0.046875,
+        "t4_recall": 0.19270833333333334,
+        "combined_recall": 0.20052083333333334,
+        "t3_marginal_over_t4": 0.0078125,
+        "both": 15,
+        "t3_only": 3,
+        "t4_only": 59,
+        "neither": 307
+      }
+    ]
+  },
+  "t3_only_inspection_at_default": {
+    "n": 1,
+    "t4_score_min": 0.3391668498516083,
+    "t4_score_median": 0.3391668498516083,
+    "t4_score_max": 0.3391668498516083,
+    "by_bucket": {
+      "business": 1
+    },
+    "samples": [
+      {
+        "bucket": "business",
+        "l1": "Jysk",
+        "l2": "JYSK北欧睡眠",
+        "t4_score": 0.339
+      }
+    ]
+  }
+}

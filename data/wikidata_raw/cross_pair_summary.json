@@ -1,0 +1,570 @@
+{
+  "en_de": {
+    "language_pair": "en_de",
+    "n_pairs": 369,
+    "t4_threshold_sweep": {
+      "t4_thresholds": [
+        0.5,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9
+      ],
+      "rows": [
+        {
+          "t4_threshold": 0.5,
+          "t3_recall": 0.7289972899728997,
+          "t4_recall": 0.9186991869918699,
+          "combined_recall": 0.9322493224932249,
+          "t3_marginal_over_t4": 0.013550135501355014,
+          "both": 264,
+          "t3_only": 5,
+          "t4_only": 75,
+          "neither": 25
+        },
+        {
+          "t4_threshold": 0.6,
+          "t3_recall": 0.7289972899728997,
+          "t4_recall": 0.8780487804878049,
+          "combined_recall": 0.8997289972899729,
+          "t3_marginal_over_t4": 0.02168021680216802,
+          "both": 261,
+          "t3_only": 8,
+          "t4_only": 63,
+          "neither": 37
+        },
+        {
+          "t4_threshold": 0.65,
+          "t3_recall": 0.7289972899728997,
+          "t4_recall": 0.8563685636856369,
+          "combined_recall": 0.8834688346883469,
+          "t3_marginal_over_t4": 0.02710027100271003,
+          "both": 259,
+          "t3_only": 10,
+          "t4_only": 57,
+          "neither": 43
+        },
+        {
+          "t4_threshold": 0.7,
+          "t3_recall": 0.7289972899728997,
+          "t4_recall": 0.8211382113821138,
+          "combined_recall": 0.8617886178861789,
+          "t3_marginal_over_t4": 0.04065040650406504,
+          "both": 254,
+          "t3_only": 15,
+          "t4_only": 49,
+          "neither": 51
+        },
+        {
+          "t4_threshold": 0.75,
+          "t3_recall": 0.7289972899728997,
+          "t4_recall": 0.7940379403794038,
+          "combined_recall": 0.8373983739837398,
+          "t3_marginal_over_t4": 0.04336043360433604,
+          "both": 253,
+          "t3_only": 16,
+          "t4_only": 40,
+          "neither": 60
+        },
+        {
+          "t4_threshold": 0.8,
+          "t3_recall": 0.7289972899728997,
+          "t4_recall": 0.7669376693766937,
+          "combined_recall": 0.8184281842818428,
+          "t3_marginal_over_t4": 0.051490514905149054,
+          "both": 250,
+          "t3_only": 19,
+          "t4_only": 33,
+          "neither": 67
+        },
+        {
+          "t4_threshold": 0.85,
+          "t3_recall": 0.7289972899728997,
+          "t4_recall": 0.7289972899728997,
+          "combined_recall": 0.7994579945799458,
+          "t3_marginal_over_t4": 0.07046070460704607,
+          "both": 243,
+          "t3_only": 26,
+          "t4_only": 26,
+          "neither": 74
+        },
+        {
+          "t4_threshold": 0.9,
+          "t3_recall": 0.7289972899728997,
+          "t4_recall": 0.6937669376693767,
+          "combined_recall": 0.7831978319783198,
+          "t3_marginal_over_t4": 0.08943089430894309,
+          "both": 236,
+          "t3_only": 33,
+          "t4_only": 20,
+          "neither": 80
+        }
+      ]
+    },
+    "t3_only_inspection_at_default": {
+      "n": 16,
+      "t4_score_min": 0.35609036684036255,
+      "t4_score_median": 0.615763783454895,
+      "t4_score_max": 0.7066907286643982,
+      "by_bucket": {
+        "person": 3,
+        "organization": 1,
+        "city": 1,
+        "country": 1,
+        "film": 1,
+        "book": 1,
+        "work_of_art": 5,
+        "business": 3
+      },
+      "samples": [
+        {
+          "bucket": "business",
+          "l1": "APA Corporation",
+          "l2": "Apache Corporation",
+          "t4_score": 0.356
+        },
+        {
+          "bucket": "person",
+          "l1": "Svetoslav Slavchev",
+          "l2": "Swetoslaw Slawtschew",
+          "t4_score": 0.37
+        },
+        {
+          "bucket": "book",
+          "l1": "Wernigerode Armorial",
+          "l2": "Wernigeroder Wappenbuch",
+          "t4_score": 0.399
+        },
+        {
+          "bucket": "business",
+          "l1": "Yle",
+          "l2": "Yleisradio",
+          "t4_score": 0.412
+        },
+        {
+          "bucket": "business",
+          "l1": "Schwinn Bicycle Company",
+          "l2": "Schwinn",
+          "t4_score": 0.467
+        },
+        {
+          "bucket": "work_of_art",
+          "l1": "Nomoli figurine",
+          "l2": "Nomoli",
+          "t4_score": 0.524
+        },
+        {
+          "bucket": "city",
+          "l1": "Mysore",
+          "l2": "Mysuru",
+          "t4_score": 0.531
+        },
+        {
+          "bucket": "country",
+          "l1": "Cook Islands",
+          "l2": "Cookinseln",
+          "t4_score": 0.592
+        },
+        {
+          "bucket": "work_of_art",
+          "l1": "Bitterfeld Arch",
+          "l2": "Bitterfelder Bogen",
+          "t4_score": 0.616
+        },
+        {
+          "bucket": "person",
+          "l1": "Fatema Mernissi",
+          "l2": "Fatima Mernissi",
+          "t4_score": 0.632
+        }
+      ]
+    }
+  },
+  "en_zh": {
+    "language_pair": "en_zh",
+    "n_pairs": 384,
+    "t4_threshold_sweep": {
+      "t4_thresholds": [
+        0.5,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9
+      ],
+      "rows": [
+        {
+          "t4_threshold": 0.5,
+          "t3_recall": 0.046875,
+          "t4_recall": 0.7734375,
+          "combined_recall": 0.7760416666666666,
+          "t3_marginal_over_t4": 0.0026041666666666665,
+          "both": 17,
+          "t3_only": 1,
+          "t4_only": 280,
+          "neither": 86
+        },
+        {
+          "t4_threshold": 0.6,
+          "t3_recall": 0.046875,
+          "t4_recall": 0.6015625,
+          "combined_recall": 0.6041666666666666,
+          "t3_marginal_over_t4": 0.0026041666666666665,
+          "both": 17,
+          "t3_only": 1,
+          "t4_only": 214,
+          "neither": 152
+        },
+        {
+          "t4_threshold": 0.65,
+          "t3_recall": 0.046875,
+          "t4_recall": 0.5052083333333334,
+          "combined_recall": 0.5078125,
+          "t3_marginal_over_t4": 0.0026041666666666665,
+          "both": 17,
+          "t3_only": 1,
+          "t4_only": 177,
+          "neither": 189
+        },
+        {
+          "t4_threshold": 0.7,
+          "t3_recall": 0.046875,
+          "t4_recall": 0.4375,
+          "combined_recall": 0.4401041666666667,
+          "t3_marginal_over_t4": 0.0026041666666666665,
+          "both": 17,
+          "t3_only": 1,
+          "t4_only": 151,
+          "neither": 215
+        },
+        {
+          "t4_threshold": 0.75,
+          "t3_recall": 0.046875,
+          "t4_recall": 0.3802083333333333,
+          "combined_recall": 0.3828125,
+          "t3_marginal_over_t4": 0.0026041666666666665,
+          "both": 17,
+          "t3_only": 1,
+          "t4_only": 129,
+          "neither": 237
+        },
+        {
+          "t4_threshold": 0.8,
+          "t3_recall": 0.046875,
+          "t4_recall": 0.3255208333333333,
+          "combined_recall": 0.3307291666666667,
+          "t3_marginal_over_t4": 0.005208333333333333,
+          "both": 16,
+          "t3_only": 2,
+          "t4_only": 109,
+          "neither": 257
+        },
+        {
+          "t4_threshold": 0.85,
+          "t3_recall": 0.046875,
+          "t4_recall": 0.2604166666666667,
+          "combined_recall": 0.265625,
+          "t3_marginal_over_t4": 0.005208333333333333,
+          "both": 16,
+          "t3_only": 2,
+          "t4_only": 84,
+          "neither": 282
+        },
+        {
+          "t4_threshold": 0.9,
+          "t3_recall": 0.046875,
+          "t4_recall": 0.19270833333333334,
+          "combined_recall": 0.20052083333333334,
+          "t3_marginal_over_t4": 0.0078125,
+          "both": 15,
+          "t3_only": 3,
+          "t4_only": 59,
+          "neither": 307
+        }
+      ]
+    },
+    "t3_only_inspection_at_default": {
+      "n": 1,
+      "t4_score_min": 0.3391668498516083,
+      "t4_score_median": 0.3391668498516083,
+      "t4_score_max": 0.3391668498516083,
+      "by_bucket": {
+        "business": 1
+      },
+      "samples": [
+        {
+          "bucket": "business",
+          "l1": "Jysk",
+          "l2": "JYSK北欧睡眠",
+          "t4_score": 0.339
+        }
+      ]
+    }
+  },
+  "en_ru": {
+    "language_pair": "en_ru",
+    "n_pairs": 375,
+    "t4_threshold_sweep": {
+      "t4_thresholds": [
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7,
+        0.72,
+        0.75,
+        0.78,
+        0.8,
+        0.85,
+        0.9
+      ],
+      "rows": [
+        {
+          "t4_threshold": 0.5,
+          "t3_recall": 0.45066666666666666,
+          "t4_recall": 0.9173333333333333,
+          "combined_recall": 0.928,
+          "t3_marginal_over_t4": 0.010666666666666666,
+          "t4_marginal_over_t3": 0.47733333333333333,
+          "both": 165,
+          "t3_only": 4,
+          "t4_only": 179,
+          "neither": 27
+        },
+        {
+          "t4_threshold": 0.55,
+          "t3_recall": 0.45066666666666666,
+          "t4_recall": 0.8746666666666667,
+          "combined_recall": 0.8933333333333333,
+          "t3_marginal_over_t4": 0.018666666666666668,
+          "t4_marginal_over_t3": 0.44266666666666665,
+          "both": 162,
+          "t3_only": 7,
+          "t4_only": 166,
+          "neither": 40
+        },
+        {
+          "t4_threshold": 0.6,
+          "t3_recall": 0.45066666666666666,
+          "t4_recall": 0.8293333333333334,
+          "combined_recall": 0.8613333333333333,
+          "t3_marginal_over_t4": 0.032,
+          "t4_marginal_over_t3": 0.4106666666666667,
+          "both": 157,
+          "t3_only": 12,
+          "t4_only": 154,
+          "neither": 52
+        },
+        {
+          "t4_threshold": 0.65,
+          "t3_recall": 0.45066666666666666,
+          "t4_recall": 0.7946666666666666,
+          "combined_recall": 0.84,
+          "t3_marginal_over_t4": 0.04533333333333334,
+          "t4_marginal_over_t3": 0.3893333333333333,
+          "both": 152,
+          "t3_only": 17,
+          "t4_only": 146,
+          "neither": 60
+        },
+        {
+          "t4_threshold": 0.7,
+          "t3_recall": 0.45066666666666666,
+          "t4_recall": 0.736,
+          "combined_recall": 0.8053333333333333,
+          "t3_marginal_over_t4": 0.06933333333333333,
+          "t4_marginal_over_t3": 0.3546666666666667,
+          "both": 143,
+          "t3_only": 26,
+          "t4_only": 133,
+          "neither": 73
+        },
+        {
+          "t4_threshold": 0.72,
+          "t3_recall": 0.45066666666666666,
+          "t4_recall": 0.704,
+          "combined_recall": 0.784,
+          "t3_marginal_over_t4": 0.08,
+          "t4_marginal_over_t3": 0.3333333333333333,
+          "both": 139,
+          "t3_only": 30,
+          "t4_only": 125,
+          "neither": 81
+        },
+        {
+          "t4_threshold": 0.75,
+          "t3_recall": 0.45066666666666666,
+          "t4_recall": 0.6666666666666666,
+          "combined_recall": 0.7573333333333333,
+          "t3_marginal_over_t4": 0.09066666666666667,
+          "t4_marginal_over_t3": 0.30666666666666664,
+          "both": 135,
+          "t3_only": 34,
+          "t4_only": 115,
+          "neither": 91
+        },
+        {
+          "t4_threshold": 0.78,
+          "t3_recall": 0.45066666666666666,
+          "t4_recall": 0.616,
+          "combined_recall": 0.7253333333333334,
+          "t3_marginal_over_t4": 0.10933333333333334,
+          "t4_marginal_over_t3": 0.27466666666666667,
+          "both": 128,
+          "t3_only": 41,
+          "t4_only": 103,
+          "neither": 103
+        },
+        {
+          "t4_threshold": 0.8,
+          "t3_recall": 0.45066666666666666,
+          "t4_recall": 0.5893333333333334,
+          "combined_recall": 0.7093333333333334,
+          "t3_marginal_over_t4": 0.12,
+          "t4_marginal_over_t3": 0.25866666666666666,
+          "both": 124,
+          "t3_only": 45,
+          "t4_only": 97,
+          "neither": 109
+        },
+        {
+          "t4_threshold": 0.85,
+          "t3_recall": 0.45066666666666666,
+          "t4_recall": 0.5013333333333333,
+          "combined_recall": 0.6506666666666666,
+          "t3_marginal_over_t4": 0.14933333333333335,
+          "t4_marginal_over_t3": 0.2,
+          "both": 113,
+          "t3_only": 56,
+          "t4_only": 75,
+          "neither": 131
+        },
+        {
+          "t4_threshold": 0.9,
+          "t3_recall": 0.45066666666666666,
+          "t4_recall": 0.41333333333333333,
+          "combined_recall": 0.6026666666666667,
+          "t3_marginal_over_t4": 0.18933333333333333,
+          "t4_marginal_over_t3": 0.152,
+          "both": 98,
+          "t3_only": 71,
+          "t4_only": 57,
+          "neither": 149
+        }
+      ]
+    },
+    "t3_only_inspection_at_default": {
+      "n": 34,
+      "by_bucket": {
+        "person": 11,
+        "organization": 4,
+        "city": 10,
+        "country": 2,
+        "film": 4,
+        "work_of_art": 1,
+        "business": 2
+      },
+      "t4_score_min": 0.22550258040428162,
+      "t4_score_median": 0.6590516567230225,
+      "t4_score_max": 0.7475704550743103,
+      "near_threshold": 8,
+      "samples": [
+        {
+          "bucket": "city",
+          "l1": "Cardiff",
+          "l2": "Кардифф",
+          "t4_score": 0.226
+        },
+        {
+          "bucket": "city",
+          "l1": "Malmö",
+          "l2": "Мальмё",
+          "t4_score": 0.316
+        },
+        {
+          "bucket": "city",
+          "l1": "Nanjing",
+          "l2": "Нанкин",
+          "t4_score": 0.36
+        },
+        {
+          "bucket": "city",
+          "l1": "Bad Salzuflen",
+          "l2": "Бад-Зальцуфлен",
+          "t4_score": 0.364
+        },
+        {
+          "bucket": "person",
+          "l1": "Aybar Zhaksylykov",
+          "l2": "Айбар Болатулы Жаксылыков",
+          "t4_score": 0.503
+        },
+        {
+          "bucket": "film",
+          "l1": "Godzilla",
+          "l2": "Годзилла",
+          "t4_score": 0.536
+        },
+        {
+          "bucket": "person",
+          "l1": "Levi Roach",
+          "l2": "Леви Роуч",
+          "t4_score": 0.539
+        },
+        {
+          "bucket": "country",
+          "l1": "Dominica",
+          "l2": "Доминика",
+          "t4_score": 0.568
+        },
+        {
+          "bucket": "business",
+          "l1": "TogliattiAzot",
+          "l2": "Тольяттиазот",
+          "t4_score": 0.578
+        },
+        {
+          "bucket": "person",
+          "l1": "Seth Jarvis",
+          "l2": "Сет Джарвис",
+          "t4_score": 0.581
+        },
+        {
+          "bucket": "country",
+          "l1": "Sint Maarten",
+          "l2": "Синт-Мартен",
+          "t4_score": 0.582
+        },
+        {
+          "bucket": "film",
+          "l1": "Alligator II: The Mutation",
+          "l2": "Аллигатор 2: Мутация",
+          "t4_score": 0.583
+        },
+        {
+          "bucket": "city",
+          "l1": "Mogadishu",
+          "l2": "Могадишо",
+          "t4_score": 0.607
+        },
+        {
+          "bucket": "business",
+          "l1": "Kamaz",
+          "l2": "КАМАЗ",
+          "t4_score": 0.612
+        },
+        {
+          "bucket": "city",
+          "l1": "Glasgow",
+          "l2": "Глазго",
+          "t4_score": 0.626
+        }
+      ]
+    }
+  }
+}

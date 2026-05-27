@@ -1,0 +1,184 @@
+{
+  "language_pair": "en_de",
+  "n_pairs": 369,
+  "t4_threshold_sweep": {
+    "t4_thresholds": [
+      0.5,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9
+    ],
+    "rows": [
+      {
+        "t4_threshold": 0.5,
+        "t3_recall": 0.7289972899728997,
+        "t4_recall": 0.9186991869918699,
+        "combined_recall": 0.9322493224932249,
+        "t3_marginal_over_t4": 0.013550135501355014,
+        "both": 264,
+        "t3_only": 5,
+        "t4_only": 75,
+        "neither": 25
+      },
+      {
+        "t4_threshold": 0.6,
+        "t3_recall": 0.7289972899728997,
+        "t4_recall": 0.8780487804878049,
+        "combined_recall": 0.8997289972899729,
+        "t3_marginal_over_t4": 0.02168021680216802,
+        "both": 261,
+        "t3_only": 8,
+        "t4_only": 63,
+        "neither": 37
+      },
+      {
+        "t4_threshold": 0.65,
+        "t3_recall": 0.7289972899728997,
+        "t4_recall": 0.8563685636856369,
+        "combined_recall": 0.8834688346883469,
+        "t3_marginal_over_t4": 0.02710027100271003,
+        "both": 259,
+        "t3_only": 10,
+        "t4_only": 57,
+        "neither": 43
+      },
+      {
+        "t4_threshold": 0.7,
+        "t3_recall": 0.7289972899728997,
+        "t4_recall": 0.8211382113821138,
+        "combined_recall": 0.8617886178861789,
+        "t3_marginal_over_t4": 0.04065040650406504,
+        "both": 254,
+        "t3_only": 15,
+        "t4_only": 49,
+        "neither": 51
+      },
+      {
+        "t4_threshold": 0.75,
+        "t3_recall": 0.7289972899728997,
+        "t4_recall": 0.7940379403794038,
+        "combined_recall": 0.8373983739837398,
+        "t3_marginal_over_t4": 0.04336043360433604,
+        "both": 253,
+        "t3_only": 16,
+        "t4_only": 40,
+        "neither": 60
+      },
+      {
+        "t4_threshold": 0.8,
+        "t3_recall": 0.7289972899728997,
+        "t4_recall": 0.7669376693766937,
+        "combined_recall": 0.8184281842818428,
+        "t3_marginal_over_t4": 0.051490514905149054,
+        "both": 250,
+        "t3_only": 19,
+        "t4_only": 33,
+        "neither": 67
+      },
+      {
+        "t4_threshold": 0.85,
+        "t3_recall": 0.7289972899728997,
+        "t4_recall": 0.7289972899728997,
+        "combined_recall": 0.7994579945799458,
+        "t3_marginal_over_t4": 0.07046070460704607,
+        "both": 243,
+        "t3_only": 26,
+        "t4_only": 26,
+        "neither": 74
+      },
+      {
+        "t4_threshold": 0.9,
+        "t3_recall": 0.7289972899728997,
+        "t4_recall": 0.6937669376693767,
+        "combined_recall": 0.7831978319783198,
+        "t3_marginal_over_t4": 0.08943089430894309,
+        "both": 236,
+        "t3_only": 33,
+        "t4_only": 20,
+        "neither": 80
+      }
+    ]
+  },
+  "t3_only_inspection_at_default": {
+    "n": 16,
+    "t4_score_min": 0.35609036684036255,
+    "t4_score_median": 0.615763783454895,
+    "t4_score_max": 0.7066907286643982,
+    "by_bucket": {
+      "person": 3,
+      "organization": 1,
+      "city": 1,
+      "country": 1,
+      "film": 1,
+      "book": 1,
+      "work_of_art": 5,
+      "business": 3
+    },
+    "samples": [
+      {
+        "bucket": "business",
+        "l1": "APA Corporation",
+        "l2": "Apache Corporation",
+        "t4_score": 0.356
+      },
+      {
+        "bucket": "person",
+        "l1": "Svetoslav Slavchev",
+        "l2": "Swetoslaw Slawtschew",
+        "t4_score": 0.37
+      },
+      {
+        "bucket": "book",
+        "l1": "Wernigerode Armorial",
+        "l2": "Wernigeroder Wappenbuch",
+        "t4_score": 0.399
+      },
+      {
+        "bucket": "business",
+        "l1": "Yle",
+        "l2": "Yleisradio",
+        "t4_score": 0.412
+      },
+      {
+        "bucket": "business",
+        "l1": "Schwinn Bicycle Company",
+        "l2": "Schwinn",
+        "t4_score": 0.467
+      },
+      {
+        "bucket": "work_of_art",
+        "l1": "Nomoli figurine",
+        "l2": "Nomoli",
+        "t4_score": 0.524
+      },
+      {
+        "bucket": "city",
+        "l1": "Mysore",
+        "l2": "Mysuru",
+        "t4_score": 0.531
+      },
+      {
+        "bucket": "country",
+        "l1": "Cook Islands",
+        "l2": "Cookinseln",
+        "t4_score": 0.592
+      },
+      {
+        "bucket": "work_of_art",
+        "l1": "Bitterfeld Arch",
+        "l2": "Bitterfelder Bogen",
+        "t4_score": 0.616
+      },
+      {
+        "bucket": "person",
+        "l1": "Fatema Mernissi",
+        "l2": "Fatima Mernissi",
+        "t4_score": 0.632
+      }
+    ]
+  }
+}
