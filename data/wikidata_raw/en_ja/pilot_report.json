@@ -15,127 +15,170 @@
     "rows": [
       {
         "t4_threshold": 0.5,
-        "t3_recall": 0.06837606837606838,
+        "t3_recall": 0.35327635327635326,
         "t4_recall": 0.7122507122507122,
-        "combined_recall": 0.7122507122507122,
-        "t3_marginal_over_t4": 0.0,
-        "both": 24,
-        "t3_only": 0,
-        "t4_only": 226,
-        "neither": 101
+        "combined_recall": 0.7834757834757835,
+        "t3_marginal_over_t4": 0.07122507122507123,
+        "both": 99,
+        "t3_only": 25,
+        "t4_only": 151,
+        "neither": 76
       },
       {
         "t4_threshold": 0.6,
-        "t3_recall": 0.06837606837606838,
+        "t3_recall": 0.35327635327635326,
         "t4_recall": 0.5698005698005698,
-        "combined_recall": 0.5698005698005698,
-        "t3_marginal_over_t4": 0.0,
-        "both": 24,
-        "t3_only": 0,
-        "t4_only": 176,
-        "neither": 151
+        "combined_recall": 0.6780626780626781,
+        "t3_marginal_over_t4": 0.10826210826210826,
+        "both": 86,
+        "t3_only": 38,
+        "t4_only": 114,
+        "neither": 113
       },
       {
         "t4_threshold": 0.65,
-        "t3_recall": 0.06837606837606838,
+        "t3_recall": 0.35327635327635326,
         "t4_recall": 0.50997150997151,
-        "combined_recall": 0.50997150997151,
-        "t3_marginal_over_t4": 0.0,
-        "both": 24,
-        "t3_only": 0,
-        "t4_only": 155,
-        "neither": 172
+        "combined_recall": 0.6381766381766382,
+        "t3_marginal_over_t4": 0.1282051282051282,
+        "both": 79,
+        "t3_only": 45,
+        "t4_only": 100,
+        "neither": 127
       },
       {
         "t4_threshold": 0.7,
-        "t3_recall": 0.06837606837606838,
+        "t3_recall": 0.35327635327635326,
         "t4_recall": 0.41025641025641024,
-        "combined_recall": 0.4131054131054131,
-        "t3_marginal_over_t4": 0.002849002849002849,
-        "both": 23,
-        "t3_only": 1,
-        "t4_only": 121,
-        "neither": 206
+        "combined_recall": 0.5811965811965812,
+        "t3_marginal_over_t4": 0.17094017094017094,
+        "both": 64,
+        "t3_only": 60,
+        "t4_only": 80,
+        "neither": 147
       },
       {
         "t4_threshold": 0.75,
-        "t3_recall": 0.06837606837606838,
+        "t3_recall": 0.35327635327635326,
         "t4_recall": 0.3418803418803419,
-        "combined_recall": 0.35327635327635326,
-        "t3_marginal_over_t4": 0.011396011396011397,
-        "both": 20,
-        "t3_only": 4,
-        "t4_only": 100,
-        "neither": 227
+        "combined_recall": 0.5498575498575499,
+        "t3_marginal_over_t4": 0.20797720797720798,
+        "both": 51,
+        "t3_only": 73,
+        "t4_only": 69,
+        "neither": 158
       },
       {
         "t4_threshold": 0.8,
-        "t3_recall": 0.06837606837606838,
+        "t3_recall": 0.35327635327635326,
         "t4_recall": 0.301994301994302,
-        "combined_recall": 0.31339031339031337,
-        "t3_marginal_over_t4": 0.011396011396011397,
-        "both": 20,
-        "t3_only": 4,
-        "t4_only": 86,
-        "neither": 241
+        "combined_recall": 0.5270655270655271,
+        "t3_marginal_over_t4": 0.22507122507122507,
+        "both": 45,
+        "t3_only": 79,
+        "t4_only": 61,
+        "neither": 166
       },
       {
         "t4_threshold": 0.85,
-        "t3_recall": 0.06837606837606838,
+        "t3_recall": 0.35327635327635326,
         "t4_recall": 0.2564102564102564,
-        "combined_recall": 0.2706552706552707,
-        "t3_marginal_over_t4": 0.014245014245014245,
-        "both": 19,
-        "t3_only": 5,
-        "t4_only": 71,
-        "neither": 256
+        "combined_recall": 0.49002849002849,
+        "t3_marginal_over_t4": 0.2336182336182336,
+        "both": 42,
+        "t3_only": 82,
+        "t4_only": 48,
+        "neither": 179
       },
       {
         "t4_threshold": 0.9,
-        "t3_recall": 0.06837606837606838,
+        "t3_recall": 0.35327635327635326,
         "t4_recall": 0.19943019943019943,
-        "combined_recall": 0.21652421652421652,
-        "t3_marginal_over_t4": 0.017094017094017096,
-        "both": 18,
-        "t3_only": 6,
-        "t4_only": 52,
-        "neither": 275
+        "combined_recall": 0.4444444444444444,
+        "t3_marginal_over_t4": 0.245014245014245,
+        "both": 38,
+        "t3_only": 86,
+        "t4_only": 32,
+        "neither": 195
       }
     ]
   },
   "t3_only_inspection_at_default": {
-    "n": 4,
-    "t4_score_min": 0.6565829515457153,
-    "t4_score_median": 0.7100717425346375,
-    "t4_score_max": 0.7101150751113892,
+    "n": 73,
+    "t4_score_min": 0.24114957451820374,
+    "t4_score_median": 0.5731133818626404,
+    "t4_score_max": 0.7450300455093384,
     "by_bucket": {
-      "organization": 2,
-      "business": 2
+      "person": 22,
+      "organization": 7,
+      "city": 16,
+      "country": 5,
+      "film": 4,
+      "book": 1,
+      "chemical": 1,
+      "work_of_art": 4,
+      "business": 13
     },
     "samples": [
       {
+        "bucket": "organization",
+        "l1": "Yamaha Corporation",
+        "l2": "ヤマハ",
+        "t4_score": 0.241
+      },
+      {
+        "bucket": "person",
+        "l1": "Taira no Kiyomori",
+        "l2": "平清盛",
+        "t4_score": 0.286
+      },
+      {
+        "bucket": "book",
+        "l1": "Kojiki Taishō",
+        "l2": "乞食大将",
+        "t4_score": 0.315
+      },
+      {
         "bucket": "business",
-        "l1": "Meta Platforms",
-        "l2": "Meta",
-        "t4_score": 0.657
+        "l1": "Kia",
+        "l2": "起亜",
+        "t4_score": 0.316
+      },
+      {
+        "bucket": "business",
+        "l1": "Gazprom",
+        "l2": "ガスプロム",
+        "t4_score": 0.325
+      },
+      {
+        "bucket": "business",
+        "l1": "Juventus FC",
+        "l2": "ユヴェントスFC",
+        "t4_score": 0.325
+      },
+      {
+        "bucket": "business",
+        "l1": "GE Energy",
+        "l2": "GEエナジー",
+        "t4_score": 0.345
       },
       {
         "bucket": "organization",
-        "l1": "Baidu",
-        "l2": "百度",
-        "t4_score": 0.704
+        "l1": "Suez",
+        "l2": "スエズ",
+        "t4_score": 0.352
       },
       {
         "bucket": "business",
-        "l1": "Kamaz",
-        "l2": "KAMAZ",
-        "t4_score": 0.71
+        "l1": "Nokia",
+        "l2": "ノキア",
+        "t4_score": 0.353
       },
       {
         "bucket": "organization",
-        "l1": "Nasdaq",
-        "l2": "NASDAQ",
-        "t4_score": 0.71
+        "l1": "Ubisoft",
+        "l2": "ユービーアイソフト",
+        "t4_score": 0.374
       }
     ]
   }

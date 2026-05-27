@@ -16,6 +16,24 @@ try:
 except ImportError:
     _PYPINYIN_AVAILABLE = False
 
+try:
+    import pykakasi  # type: ignore[import-not-found]
+    _KAKASI = pykakasi.kakasi()
+    _PYKAKASI_AVAILABLE = True
+except ImportError:
+    _KAKASI = None
+    _PYKAKASI_AVAILABLE = False
+
+
+# Hiragana and Katakana Unicode ranges. Their presence in a string is a
+# strong signal that the kanji should be read in Japanese, not Mandarin.
+def _has_japanese_kana(text: str) -> bool:
+    for ch in text:
+        # Hiragana ぁ-ゔ, Katakana ァ-ヺ, half-width katakana ｦ-ｯ
+        if "぀" <= ch <= "ゟ" or "゠" <= ch <= "ヿ":
+            return True
+    return False
+
 # ---------------------------------------------------------------------------
 # Cyrillic → Latin (BGN/PCGN-inspired, simplified)
 # ---------------------------------------------------------------------------
@@ -247,27 +265,49 @@ def transliterate_hangul(text: str) -> str:
     return "".join(out)
 
 
-def transliterate_to_latin(text: str) -> str:
+def transliterate_japanese(text: str) -> str:
+    """
+    Transliterate Japanese (kanji + kana) to Hepburn romaji via pykakasi.
+
+    pykakasi resolves kanji to Japanese readings (the central problem with
+    routing Japanese kanji through pypinyin, which gives Mandarin readings).
+    Hiragana and katakana are also handled. When pykakasi is unavailable,
+    falls back to ``transliterate_cjk`` for kanji and passthrough for kana.
+    """
+    if not _PYKAKASI_AVAILABLE:
+        return transliterate_cjk(text)
+    parts = _KAKASI.convert(text)
+    return " ".join(p["hepburn"] for p in parts if p.get("hepburn"))
+
+
+def transliterate_to_latin(text: str, lang: str = "") -> str:
     """
     Auto-detect script and transliterate to Latin.
 
-    Handles Cyrillic, CJK, and Arabic. Latin text is returned unchanged.
+    Handles Cyrillic, CJK, Hangul, Arabic, and Japanese (when ``lang="ja"``
+    or kana is present). Latin text is returned unchanged.
+
+    The optional ``lang`` parameter is the BCP-47 language code of the
+    source text. It disambiguates CJK content: pure kanji is ambiguous
+    between Chinese (Mandarin pypinyin readings) and Japanese (Hepburn
+    via pykakasi). Without the hint, the heuristic is "kana present →
+    Japanese; otherwise → Chinese."
 
     Args:
         text: Input string in any supported script
+        lang: Optional language hint (e.g. "ja", "zh", "ko")
 
     Returns:
         Latin-script representation (approximate)
-
-    Examples:
-        >>> transliterate_to_latin("Путин")
-        'Putin'
-        >>> transliterate_to_latin("Putin")
-        'Putin'
     """
     from .script_detect import detect_script, ScriptFamily
 
     script = detect_script(text)
+
+    # Japanese disambiguation: lang hint OR detected kana.
+    if script == ScriptFamily.CJK and (lang == "ja" or _has_japanese_kana(text)):
+        return transliterate_japanese(text)
+
     if script == ScriptFamily.CYRILLIC:
         return transliterate_cyrillic(text)
     if script == ScriptFamily.CJK:

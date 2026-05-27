@@ -93,16 +93,16 @@ class PhoneticMatcher(CrossLingualMatcher):
         Returns:
             Jaro-Winkler similarity score on transliterated forms
         """
-        latin_a = normalize_for_matching(transliterate_to_latin(name_a))
-        latin_b = normalize_for_matching(transliterate_to_latin(name_b))
+        latin_a = normalize_for_matching(transliterate_to_latin(name_a, lang=lang_a))
+        latin_b = normalize_for_matching(transliterate_to_latin(name_b, lang=lang_b))
         if not latin_a or not latin_b:
             return 0.0
         return float(_jaro_winkler(latin_a, latin_b))
 
     def match(self, name_a, name_b, lang_a="", lang_b="", tier=None) -> MatchResult:
         s = self.score(name_a, name_b, lang_a, lang_b)
-        latin_a = normalize_for_matching(transliterate_to_latin(name_a))
-        latin_b = normalize_for_matching(transliterate_to_latin(name_b))
+        latin_a = normalize_for_matching(transliterate_to_latin(name_a, lang=lang_a))
+        latin_b = normalize_for_matching(transliterate_to_latin(name_b, lang=lang_b))
         return MatchResult(
             is_match=s >= self.threshold,
             score=s,
