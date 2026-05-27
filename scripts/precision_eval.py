@@ -28,6 +28,7 @@ from jellyfish import jaro_winkler_similarity
 
 from polyglot_er.matchers.embedding import EmbeddingMatcher
 from polyglot_er.matchers.phonetic import PhoneticMatcher
+from polyglot_er.normalization.script_detect import is_same_script
 from polyglot_er.normalization.title_format import normalize_wiki_title
 
 
@@ -72,35 +73,49 @@ def build_hard_negatives(positives: list[dict], lang_a: str, lang_b: str) -> lis
 
 
 def evaluate(positives: list[dict], negatives: list[dict], l1: str, l2: str, t3, t4) -> dict:
-    """Run T3 and T4 against the merged set; tally TP/FP/TN/FN."""
-    def score(pair: dict) -> tuple[bool, float]:
+    """Run T3 and T4 against the merged set; tally TP/FP/TN/FN.
+
+    The ``combined`` tier reports the production cascade's script-dispatch
+    gate (Tier 1.5): for same-script pairs the T3 hit is suppressed and the
+    decision is T4-only; for cross-script pairs the decision is T3 hit OR T4
+    hit. The ``combined_ungated`` tier reports the pre-gate disjunction for
+    side-by-side comparison.
+    """
+    def score(pair: dict) -> tuple[bool, float, bool]:
         a = normalize_wiki_title(pair["l1_title"], l1)
         b = normalize_wiki_title(pair["l2_title"], l2)
         t3_hit = t3.match(a, b, lang_a=l1, lang_b=l2).is_match
         t4_score = float(t4.score(a, b, lang_a=l1, lang_b=l2))
-        return t3_hit, t4_score
+        same_script = is_same_script(a, b)
+        return t3_hit, t4_score, same_script
 
     tallies: dict[str, dict] = {
-        "t3":       Counter(),
-        "t4":       Counter(),
-        "combined": Counter(),
+        "t3":                Counter(),
+        "t4":                Counter(),
+        "combined":          Counter(),  # script-dispatch-gated (production)
+        "combined_ungated":  Counter(),  # pre-gate (legacy comparison)
     }
     # Score positives.
     for p in positives:
-        t3_hit, t4_score = score(p)
+        t3_hit, t4_score, same_script = score(p)
         t4_hit = t4_score >= TIER4_THRESHOLD
-        combined = t3_hit or t4_hit
+        # Script-dispatch gate: T3 is suppressed for same-script pairs.
+        gated_combined = (t3_hit and not same_script) or t4_hit
+        ungated_combined = t3_hit or t4_hit
         tallies["t3"]["TP" if t3_hit else "FN"] += 1
         tallies["t4"]["TP" if t4_hit else "FN"] += 1
-        tallies["combined"]["TP" if combined else "FN"] += 1
+        tallies["combined"]["TP" if gated_combined else "FN"] += 1
+        tallies["combined_ungated"]["TP" if ungated_combined else "FN"] += 1
     # Score negatives.
     for n in negatives:
-        t3_hit, t4_score = score(n)
+        t3_hit, t4_score, same_script = score(n)
         t4_hit = t4_score >= TIER4_THRESHOLD
-        combined = t3_hit or t4_hit
+        gated_combined = (t3_hit and not same_script) or t4_hit
+        ungated_combined = t3_hit or t4_hit
         tallies["t3"]["FP" if t3_hit else "TN"] += 1
         tallies["t4"]["FP" if t4_hit else "TN"] += 1
-        tallies["combined"]["FP" if combined else "TN"] += 1
+        tallies["combined"]["FP" if gated_combined else "TN"] += 1
+        tallies["combined_ungated"]["FP" if ungated_combined else "TN"] += 1
 
     def derive(c: Counter) -> dict:
         tp, fp, tn, fn = c["TP"], c["FP"], c["TN"], c["FN"]
@@ -133,9 +148,10 @@ def run_pair(l1: str, l2: str, cache_root: Path, t3, t4) -> dict:
 
     print()
     print(f"--- {l1}↔{l2}  positives={len(positives)} negatives={len(negatives)} ---")
-    _print_row("T3 only",   results["t3"])
-    _print_row("T4 only",   results["t4"])
-    _print_row("T3 or T4",  results["combined"])
+    _print_row("T3 only",      results["t3"])
+    _print_row("T4 only",      results["t4"])
+    _print_row("combined",     results["combined"])
+    _print_row("ungated",      results["combined_ungated"])
 
     out = cache_root / f"{l1}_{l2}" / "precision_eval.json"
     payload = {
@@ -169,17 +185,21 @@ def main(pairs: Iterable[tuple[str, str]] = (
 
     # Headline F1 table.
     print()
-    print("=" * 84)
-    print("HEADLINE F1 (combined cascade = T3 hit OR T4 >= 0.75)")
-    print("=" * 84)
-    print(f"  {'pair':<8} {'n+':>5} {'n-':>5}  {'precision':>10} {'recall':>10} {'F1':>8}")
+    print("=" * 96)
+    print("HEADLINE F1 (combined = script-dispatch gated; same-script → T4 only, cross-script → T3 ∨ T4)")
+    print("=" * 96)
+    print(f"  {'pair':<8} {'n+':>5} {'n-':>5}  "
+          f"{'gated P':>8} {'gated R':>8} {'gated F1':>9}   "
+          f"{'ungated P':>10} {'ungated R':>10} {'ungated F1':>11}")
     for key, payload in summary.items():
         c = payload["results"]["combined"]
+        u = payload["results"]["combined_ungated"]
         print(
             f"  {key:<8} {payload['n_positives']:>5} {payload['n_negatives']:>5}  "
-            f"{c['precision']:>10.1%} {c['recall']:>10.1%} {c['f1']:>8.1%}"
+            f"{c['precision']:>8.1%} {c['recall']:>8.1%} {c['f1']:>9.1%}   "
+            f"{u['precision']:>10.1%} {u['recall']:>10.1%} {u['f1']:>11.1%}"
         )
-    print("=" * 84)
+    print("=" * 96)
 
     out = cache_root / "precision_summary.json"
     out.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")

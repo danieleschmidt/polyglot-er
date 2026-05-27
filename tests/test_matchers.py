@@ -160,6 +160,42 @@ def test_cascade_empty_name():
     assert not result.is_match
 
 
+def test_cascade_script_dispatch_gate_bypasses_t3_for_same_script():
+    """Same-script pairs MUST NOT reach Tier 3 — the script-dispatch gate
+    routes them straight to Tier 4 to avoid the F1-negative T3+T4 overlap
+    on same-script regimes (§4.3 of the paper)."""
+    cascade = CascadeMatcher(force_tfidf=True, tier4_threshold=0.99, tier2_threshold=0.99)
+    # Two same-script Latin strings that share no surface form. Tier 2 won't
+    # fire (jw < 0.99), Tier 4 won't fire (cosine < 0.99 with force_tfidf).
+    # Without the gate, Tier 3 would transliterate (passthrough for Latin) and
+    # apply Jaro-Winkler on the raw strings. With the gate, Tier 3 is skipped
+    # and the cascade falls through to Tier 4, which is the final decider.
+    result = cascade.match(
+        "Bonjour le monde", "Bonjour le mondee",
+        lang_a="fr", lang_b="fr",
+    )
+    # The decisive tier should NOT be 3.
+    assert result.tier != 3, (
+        f"Same-script pair was decided at Tier 3 (gate failed); "
+        f"got tier={result.tier} score={result.score:.3f}"
+    )
+
+
+def test_cascade_script_dispatch_gate_allows_t3_for_cross_script():
+    """Cross-script pairs MUST still flow through Tier 3."""
+    cascade = CascadeMatcher(force_tfidf=True, tier4_threshold=0.99)
+    result = cascade.match(
+        "Putin", "Путин",
+        lang_a="en", lang_b="ru",
+        entity_type_a="PER", entity_type_b="PER",
+    )
+    # Cross-script — Tier 3 should be the decisive tier.
+    assert result.tier == 3, (
+        f"Cross-script pair did not reach Tier 3; got tier={result.tier}"
+    )
+    assert result.is_match
+
+
 def test_cascade_threshold_adjustment():
     """Lower threshold should produce more matches."""
     cascade_strict = CascadeMatcher(force_tfidf=True, tier4_threshold=0.99)

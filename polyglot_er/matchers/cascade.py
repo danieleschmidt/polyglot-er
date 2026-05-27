@@ -4,15 +4,24 @@ Cross-Lingual Entity Resolution Cascade
 5-tier cascade mirroring the DocGraph entity fusion pipeline, extended with
 multilingual/cross-script support:
 
-  Tier 0 — Unicode normalization + lowercase
-  Tier 1 — Entity type check (skip cross-type pairs)
-  Tier 2 — Same-script fuzzy (Jaro-Winkler ≥ 0.85)
-  Tier 3 — Cross-script phonetic (transliteration + Jaro-Winkler ≥ 0.82)
-  Tier 4 — Multilingual embedding cosine ≥ 0.75
+  Tier 0   — Unicode normalization + lowercase
+  Tier 1   — Entity type check (skip cross-type pairs)
+  Tier 1.5 — Script-dispatch gate: same-script pairs bypass Tier 3
+  Tier 2   — Same-script fuzzy (Jaro-Winkler ≥ 0.85)
+  Tier 3   — Cross-script phonetic (transliteration + Jaro-Winkler ≥ 0.82)
+  Tier 4   — Multilingual embedding cosine ≥ 0.75
 
 Each tier can emit a definitive answer (match / no-match) or abstain to let
 the next tier decide. A pair that survives to Tier 4 without a definitive
 early answer is resolved by the embedding matcher.
+
+**Script-dispatch gate (Tier 1.5).** Same-script pairs (detected via
+``is_same_script``) bypass the Tier-3 cross-script phonetic stage entirely
+and flow Tier-2 → Tier-4 only. Empirically (§4.3 of the paper), the
+Tier-3 + Tier-4 disjunction is F1-negative on same-script pairs because the
+multilingual embedding already handles them and Tier-3 contributes mostly
+false positives; the script-dispatch gate operationalizes that finding into
+the architecture. Cross-script pairs continue through Tier-3 → Tier-4.
 """
 
 from typing import Optional
@@ -129,9 +138,17 @@ class CascadeMatcher(CrossLingualMatcher):
             return MatchResult(is_match=True, score=1.0, tier=0, method="Cascade/exact")
 
         # ------------------------------------------------------------------
+        # Tier 1.5: Script-dispatch gate
+        # ------------------------------------------------------------------
+        # Detect whether both sides of the pair are in the same script family.
+        # Same-script pairs bypass Tier 3 (the cross-script phonetic stage)
+        # entirely and go Tier-2 → Tier-4 only. See module docstring for the
+        # empirical justification (§4.3 of the paper).
+        same_script = is_same_script(name_a, name_b)
+
+        # ------------------------------------------------------------------
         # Tier 2: Same-script fuzzy (Jaro-Winkler)
         # ------------------------------------------------------------------
-        same_script = is_same_script(name_a, name_b)
         if same_script:
             jw = float(_jaro_winkler(norm_a, norm_b))
             if jw >= self.tier2_threshold:
@@ -142,15 +159,16 @@ class CascadeMatcher(CrossLingualMatcher):
                     method="Cascade/same-script-fuzzy",
                     details={"jaro_winkler": jw},
                 )
-            # If same-script but below threshold, still check embedding
-            # (don't hard-reject — two same-script names can be very different)
+            # If same-script but below threshold, fall through to Tier 4
+            # (skipping Tier 3 per the script-dispatch gate).
 
         # ------------------------------------------------------------------
-        # Tier 3: Cross-script phonetic
+        # Tier 3: Cross-script phonetic (cross-script pairs only)
         # ------------------------------------------------------------------
-        phonetic_result = self._phonetic.match(name_a, name_b, lang_a, lang_b, tier=3)
-        if phonetic_result.is_match:
-            return phonetic_result
+        if not same_script:
+            phonetic_result = self._phonetic.match(name_a, name_b, lang_a, lang_b, tier=3)
+            if phonetic_result.is_match:
+                return phonetic_result
 
         # ------------------------------------------------------------------
         # Tier 4: Multilingual embedding
