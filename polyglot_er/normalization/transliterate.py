@@ -170,6 +170,83 @@ def transliterate_arabic(text: str) -> str:
     return "".join(_ARABIC_TO_LATIN.get(ch, ch) for ch in text)
 
 
+# ---------------------------------------------------------------------------
+# Hangul → Latin via Revised Romanization of Korean (RR; simplified)
+# ---------------------------------------------------------------------------
+# Hangul syllables live in U+AC00..U+D7A3 and decompose deterministically as
+#   syllable = initial * 21 * 28 + medial * 28 + final + 0xAC00
+# We romanize each jamo via lookup and concatenate. This is simplified RR —
+# it does not perform the consonant-cluster sandhi rules of full RR (which
+# require lookahead across syllable boundaries), but the per-syllable output
+# is faithful enough for Jaro-Winkler-based matching.
+
+_HANGUL_INITIAL: tuple[str, ...] = (
+    "g", "kk", "n", "d", "tt", "r", "m", "b", "pp", "s",
+    "ss", "", "j", "jj", "ch", "k", "t", "p", "h",
+)
+_HANGUL_MEDIAL: tuple[str, ...] = (
+    "a", "ae", "ya", "yae", "eo", "e", "yeo", "ye", "o", "wa",
+    "wae", "oe", "yo", "u", "wo", "we", "wi", "yu", "eu", "ui", "i",
+)
+_HANGUL_FINAL: tuple[str, ...] = (
+    "", "g", "kk", "gs", "n", "nj", "nh", "d", "l", "lg",
+    "lm", "lb", "ls", "lt", "lp", "lh", "m", "b", "bs", "s",
+    "ss", "ng", "j", "ch", "k", "t", "p", "h",
+)
+
+_HANGUL_SYLLABLE_BASE = 0xAC00
+_HANGUL_SYLLABLE_END = 0xD7A3
+
+
+def transliterate_hangul(text: str) -> str:
+    """
+    Transliterate Korean Hangul text to Latin via simplified Revised Romanization.
+
+    Each Hangul syllable in U+AC00..U+D7A3 decomposes to (initial, medial, final)
+    jamo, each romanized through the standard RR mappings. Syllables are joined
+    with spaces so downstream Jaro-Winkler aligns word-by-word; this matches the
+    spacing convention used by the pypinyin path.
+
+    Args:
+        text: String containing Hangul syllables
+
+    Returns:
+        Latin romanization (simplified RR)
+
+    Examples:
+        >>> transliterate_hangul("율리야")
+        'yul ri ya'
+        >>> transliterate_hangul("리프니츠카야")
+        'ri peu ni cheu ka ya'
+    """
+    out: list[str] = []
+    syllables: list[str] = []
+
+    def flush() -> None:
+        if syllables:
+            out.append(" ".join(syllables))
+            syllables.clear()
+
+    for ch in text:
+        code = ord(ch)
+        if _HANGUL_SYLLABLE_BASE <= code <= _HANGUL_SYLLABLE_END:
+            offset = code - _HANGUL_SYLLABLE_BASE
+            initial_idx = offset // (21 * 28)
+            medial_idx = (offset // 28) % 21
+            final_idx = offset % 28
+            syllable = (
+                _HANGUL_INITIAL[initial_idx]
+                + _HANGUL_MEDIAL[medial_idx]
+                + _HANGUL_FINAL[final_idx]
+            )
+            syllables.append(syllable)
+        else:
+            flush()
+            out.append(ch)
+    flush()
+    return "".join(out)
+
+
 def transliterate_to_latin(text: str) -> str:
     """
     Auto-detect script and transliterate to Latin.
@@ -195,6 +272,8 @@ def transliterate_to_latin(text: str) -> str:
         return transliterate_cyrillic(text)
     if script == ScriptFamily.CJK:
         return transliterate_cjk(text)
+    if script == ScriptFamily.HANGUL:
+        return transliterate_hangul(text)
     if script == ScriptFamily.ARABIC:
         return transliterate_arabic(text)
     # LATIN, GREEK, DEVANAGARI, OTHER — return as-is

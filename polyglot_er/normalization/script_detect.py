@@ -15,7 +15,8 @@ class ScriptFamily(str, Enum):
 
     LATIN = "Latin"
     CYRILLIC = "Cyrillic"
-    CJK = "CJK"           # Chinese, Japanese Kanji, Korean Hanja
+    CJK = "CJK"           # Chinese ideographs + Japanese kanji + Japanese kana
+    HANGUL = "Hangul"     # Korean Hangul (alphabetic syllabary)
     ARABIC = "Arabic"
     DEVANAGARI = "Devanagari"
     GREEK = "Greek"
@@ -32,6 +33,8 @@ def _char_script(char: str) -> ScriptFamily:
 
     name_upper = name.upper()
 
+    if "HANGUL" in name_upper:
+        return ScriptFamily.HANGUL
     if "LATIN" in name_upper:
         return ScriptFamily.LATIN
     if "CYRILLIC" in name_upper:
@@ -49,12 +52,29 @@ def _char_script(char: str) -> ScriptFamily:
     return ScriptFamily.OTHER
 
 
+# Scripts that the transliterator can convert to Latin. When a string mixes
+# Latin with one of these, the non-Latin part is the side that needs work, so
+# the script detector should report the non-Latin script for routing.
+_TRANSLITERABLE_NON_LATIN = (
+    ScriptFamily.CYRILLIC,
+    ScriptFamily.CJK,
+    ScriptFamily.HANGUL,
+    ScriptFamily.ARABIC,
+    ScriptFamily.DEVANAGARI,
+    ScriptFamily.GREEK,
+    ScriptFamily.HEBREW,
+)
+
+
 def detect_script(text: str) -> ScriptFamily:
     """
     Detect the dominant script family of a text string.
 
-    Counts script family assignments for each non-whitespace character
-    and returns the plurality winner. Falls back to OTHER for empty/punctuation.
+    Counts script family assignments for each non-whitespace character.
+    When the text mixes Latin with a transliterable non-Latin script, the
+    non-Latin script is reported — the cascade should route on the side
+    that needs transliteration, not the side that doesn't. Falls back to
+    OTHER for empty/punctuation.
 
     Args:
         text: Input string
@@ -71,6 +91,10 @@ def detect_script(text: str) -> ScriptFamily:
         <ScriptFamily.CJK: 'CJK'>
         >>> detect_script("فلاديمير بوتين")
         <ScriptFamily.ARABIC: 'Arabic'>
+        >>> detect_script("율리야 리프니츠카야")
+        <ScriptFamily.HANGUL: 'Hangul'>
+        >>> detect_script("新少林寺/SHAOLIN")   # mixed Latin+CJK routes as CJK
+        <ScriptFamily.CJK: 'CJK'>
     """
     if not text or not text.strip():
         return ScriptFamily.OTHER
@@ -85,6 +109,12 @@ def detect_script(text: str) -> ScriptFamily:
 
     if not counts:
         return ScriptFamily.OTHER
+
+    # If the string mixes Latin with a transliterable script, return the
+    # transliterable one — that side is where the cascade has work to do.
+    for non_latin in _TRANSLITERABLE_NON_LATIN:
+        if counts.get(non_latin, 0) > 0 and counts.get(ScriptFamily.LATIN, 0) > 0:
+            return non_latin
 
     return counts.most_common(1)[0][0]
 

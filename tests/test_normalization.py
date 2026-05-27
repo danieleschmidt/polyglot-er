@@ -132,6 +132,36 @@ def test_transliterate_to_latin_arabic():
     assert len(result) > 0
 
 
+def test_script_detect_hangul():
+    from polyglot_er.normalization.script_detect import detect_script, ScriptFamily
+
+    assert detect_script("율리야 리프니츠카야") == ScriptFamily.HANGUL
+    assert detect_script("샤미트 카치루") == ScriptFamily.HANGUL
+
+
+def test_script_detect_mixed_latin_cjk_routes_as_cjk():
+    """Mixed Latin+CJK strings should route as CJK so the kanji side gets
+    transliterated. The pre-fix plurality vote classified anything with even
+    one Latin character as LATIN, which silently dropped the CJK content from
+    the transliteration pipeline."""
+    from polyglot_er.normalization.script_detect import detect_script, ScriptFamily
+
+    assert detect_script("新少林寺/SHAOLIN") == ScriptFamily.CJK
+    assert detect_script("百度 (search engine)") == ScriptFamily.CJK
+
+
+def test_transliterate_to_latin_hangul():
+    """Hangul should be romanized via simplified RR, not pass through
+    unchanged. The pre-fix behavior (passthrough) made T3 catch zero pairs
+    in en↔ko evaluation."""
+    out = transliterate_to_latin("율리야 리프니츠카야")
+    assert "yul" in out
+    # No Hangul codepoints should remain.
+    assert not any("가" <= c <= "힣" for c in out), out
+    # Output is alphanumeric + whitespace
+    assert all(c.isalpha() or c.isspace() for c in out), out
+
+
 def test_transliterate_to_latin_cjk_uses_pinyin():
     """CJK ideographs should pinyin-transliterate, not fall through to codepoint hex.
 

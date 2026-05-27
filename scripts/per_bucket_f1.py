@@ -180,7 +180,10 @@ def _print_tier_winner(summary: dict) -> None:
 
 def main() -> None:
     cache_root = Path("data/wikidata_raw")
-    pairs = [("en", "de"), ("en", "fr"), ("en", "ru"), ("en", "ar"), ("en", "zh")]
+    pairs = [
+        ("en", "de"), ("en", "fr"), ("en", "ru"), ("en", "ar"),
+        ("en", "zh"), ("en", "ja"), ("en", "ko"),
+    ]
     t3 = PhoneticMatcher(threshold=TIER3_THRESHOLD)
     t4 = EmbeddingMatcher(threshold=0.0, force_tfidf=False)
     logger.info("T4 backend: %s", t4.backend_name)

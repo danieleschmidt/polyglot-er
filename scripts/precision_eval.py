@@ -149,7 +149,10 @@ def run_pair(l1: str, l2: str, cache_root: Path, t3, t4) -> dict:
     return payload
 
 
-def main(pairs: Iterable[tuple[str, str]] = (("en", "de"), ("en", "fr"), ("en", "ru"), ("en", "ar"), ("en", "zh"))) -> None:
+def main(pairs: Iterable[tuple[str, str]] = (
+    ("en", "de"), ("en", "fr"), ("en", "ru"), ("en", "ar"),
+    ("en", "zh"), ("en", "ja"), ("en", "ko"),
+)) -> None:
     cache_root = Path("data/wikidata_raw")
     t3 = PhoneticMatcher(threshold=TIER3_THRESHOLD)
     t4 = EmbeddingMatcher(threshold=0.0, force_tfidf=False)

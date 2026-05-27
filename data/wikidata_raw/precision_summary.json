@@ -403,5 +403,167 @@
         "label": "negative"
       }
     ]
+  },
+  "en_ja": {
+    "language_pair": "en_ja",
+    "n_positives": 351,
+    "n_negatives": 351,
+    "results": {
+      "t3": {
+        "TP": 24,
+        "FP": 0,
+        "TN": 351,
+        "FN": 327,
+        "precision": 1.0,
+        "recall": 0.06837606837606838,
+        "f1": 0.128
+      },
+      "t4": {
+        "TP": 120,
+        "FP": 11,
+        "TN": 340,
+        "FN": 231,
+        "precision": 0.916030534351145,
+        "recall": 0.3418803418803419,
+        "f1": 0.4979253112033195
+      },
+      "combined": {
+        "TP": 124,
+        "FP": 11,
+        "TN": 340,
+        "FN": 227,
+        "precision": 0.9185185185185185,
+        "recall": 0.35327635327635326,
+        "f1": 0.5102880658436214
+      }
+    },
+    "negative_sample": [
+      {
+        "l1_title": "Magnus the Good",
+        "l2_title": "ジーン・スピーグル・ハワード",
+        "bucket": "person",
+        "positive_qid": "Q310999",
+        "negative_qid": "Q5249301",
+        "l1_jw_to_source": 0.6097953216374269,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Vitali Klitschko",
+        "l2_title": "エレーナ・リアシェンコ",
+        "bucket": "person",
+        "positive_qid": "Q31919",
+        "negative_qid": "Q452674",
+        "l1_jw_to_source": 0.6361111111111111,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Yamagata Aritomo",
+        "l2_title": "藤原璋子",
+        "bucket": "person",
+        "positive_qid": "Q297636",
+        "negative_qid": "Q900258",
+        "l1_jw_to_source": 0.6268518518518519,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Fujiwara no Morosuke",
+        "l2_title": "藤原顕季",
+        "bucket": "person",
+        "positive_qid": "Q325207",
+        "negative_qid": "Q3090620",
+        "l1_jw_to_source": 0.9252777777777778,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Emperor Nijō",
+        "l2_title": "宇多天皇",
+        "bucket": "person",
+        "positive_qid": "Q440149",
+        "negative_qid": "Q349267",
+        "l1_jw_to_source": 0.8787878787878788,
+        "label": "negative"
+      }
+    ]
+  },
+  "en_ko": {
+    "language_pair": "en_ko",
+    "n_positives": 338,
+    "n_negatives": 337,
+    "results": {
+      "t3": {
+        "TP": 59,
+        "FP": 0,
+        "TN": 337,
+        "FN": 279,
+        "precision": 1.0,
+        "recall": 0.17455621301775148,
+        "f1": 0.29722921914357686
+      },
+      "t4": {
+        "TP": 107,
+        "FP": 10,
+        "TN": 327,
+        "FN": 231,
+        "precision": 0.9145299145299145,
+        "recall": 0.3165680473372781,
+        "f1": 0.4703296703296704
+      },
+      "combined": {
+        "TP": 141,
+        "FP": 10,
+        "TN": 327,
+        "FN": 197,
+        "precision": 0.9337748344370861,
+        "recall": 0.4171597633136095,
+        "f1": 0.5766871165644171
+      }
+    },
+    "negative_sample": [
+      {
+        "l1_title": "Yulia Lipnitskaya",
+        "l2_title": "비탈리 클리치코",
+        "bucket": "person",
+        "positive_qid": "Q4262660",
+        "negative_qid": "Q31919",
+        "l1_jw_to_source": 0.6232298474945533,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Shamit Kachru",
+        "l2_title": "잘로몬 보흐너",
+        "bucket": "person",
+        "positive_qid": "Q368407",
+        "negative_qid": "Q215967",
+        "l1_jw_to_source": 0.6683760683760683,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Vitali Klitschko",
+        "l2_title": "비탈리 뭇코",
+        "bucket": "person",
+        "positive_qid": "Q31919",
+        "negative_qid": "Q1320362",
+        "l1_jw_to_source": 0.8625,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Salomon Bochner",
+        "l2_title": "샤미트 카치루",
+        "bucket": "person",
+        "positive_qid": "Q215967",
+        "negative_qid": "Q368407",
+        "l1_jw_to_source": 0.6683760683760683,
+        "label": "negative"
+      },
+      {
+        "l1_title": "Anna Vissi",
+        "l2_title": "율리야 리프니츠카야",
+        "bucket": "person",
+        "positive_qid": "Q229606",
+        "negative_qid": "Q4262660",
+        "l1_jw_to_source": 0.5954248366013072,
+        "label": "negative"
+      }
+    ]
   }
 }
